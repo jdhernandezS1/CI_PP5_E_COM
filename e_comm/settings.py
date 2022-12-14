@@ -138,8 +138,8 @@ MEDIA_URL = '/media/'
 # Cloudinary storage
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'herokupp4',
-    'API_KEY': '481378976244669',
+    'CLOUD_NAME': 'djvwk7zf2',
+    'API_KEY': '386261439123383',
     'API_SECRET': os.environ.get('CLOUDINARY_KEY'),
 }
 
