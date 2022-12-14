@@ -1,0 +1,1 @@
+web: gunicorn e_comm.wsgi
