@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: rgba(141, 141, 141, 0.925) no-repeat center center fixed;
+    background: #8b8b94a9 no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: black;
     font-family: 'Lato';
 }
 

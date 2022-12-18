@@ -40,8 +40,8 @@
   <title>Capricci {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
-  <header class="container-fluid fixed-top p-2">
+<body class="text-black">
+  <header class="container-fluid absolute-top p-2 bg-white">
     <div class="row">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -67,9 +67,9 @@
           <li class="list-inline-item dropdown">
             <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
-              <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
+              <div class="text-center row">
+                <div><ion-icon name="person-outline"></ion-icon></div>
+                <p class="my-0"> My Account</p>
               </div>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -113,7 +113,6 @@
   {% block postloadjs %}
   {% endblock %}
 
-  <h1>Hello, Capricci</h1>
 
 </body>
 
