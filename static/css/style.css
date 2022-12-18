@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('https://www.centrobreggia.ch/magazine_pics/manor%20home_5111.jpg') no-repeat center center fixed;
+    background: rgba(141, 141, 141, 0.925) no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
