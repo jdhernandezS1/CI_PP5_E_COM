@@ -88,13 +88,13 @@
           </li>
           <li class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-              <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+              <div class="text-center row">
+                <div> <ion-icon name="cart-outline"></ion-icon></div>
                 <p class="my-0 text-dark">
                   {% if grand_total %}
-                  ${{ grand_total|floatformat:2 }}
+                   ${{ grand_total|floatformat:2 }}
                   {% else %}
-                  $0.00
+                   $0.00
                   {% endif %}
                 </p>
               </div>
