@@ -100,7 +100,13 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# Cloudinary storage
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'djvwk7zf2',
+    'API_KEY': '386261439123383',
+    'API_SECRET': os.environ.get('CLOUDINARY_KEY'),
+}
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -159,17 +165,11 @@ USE_TZ = True
 
 STATIC_URL = '/pp5/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 
-# Cloudinary storage
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'djvwk7zf2',
-    'API_KEY': '386261439123383',
-    'API_SECRET': os.environ.get('CLOUDINARY_KEY'),
-}
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Default primary key field type
