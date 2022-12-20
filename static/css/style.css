@@ -67,8 +67,13 @@ body {
   .container {
     max-width: 80%;
   }
+ 
 }
-
+@media (max-width: 991px) {
+    #nav_pc {
+        display: none;
+    }
+}
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
