@@ -9,6 +9,9 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
 }
+h1{
+    font-family: 'Dancing Script', cursive;
+}
 .font-dancing{
     font-family: 'Dancing Script', cursive;
 }
