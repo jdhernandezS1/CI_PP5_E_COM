@@ -9,12 +9,14 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
 }
-h1{
-    font-family: 'Dancing Script', cursive;
-}
+
 .font-dancing{
     font-family: 'Dancing Script', cursive;
 }
+.font-sunshine{
+    font-family: 'Sunshiney', cursive;
+}
+font-family: 'Dancing Script', cursive;
 /* from Bulma */
 .icon {
     align-items: center;
@@ -23,7 +25,9 @@ h1{
     height: 1.5rem;
     width: 1.5rem;
 }
-
+#logo {
+    background-image: url("{% static 'media/images/logo.jpeg' %}");
+}
 .logo-font {
     text-transform: uppercase;
 }
