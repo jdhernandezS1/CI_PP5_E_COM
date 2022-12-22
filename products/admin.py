@@ -16,7 +16,18 @@ class CatAdmin(admin.ModelAdmin):
     """
     Post model class For posts in Blog
     """
-    list_display = ('title', 'slug', 'created_on')
-    prepopulated_fields = {'slug': ('title',)}
-    search_fields = ['title']
-    list_filter = ('title', 'created_on')
+    list_display = (
+        'title',
+        'slug',
+        'created_on'
+        )
+    prepopulated_fields = {
+        'slug': ('title',)
+        }
+    search_fields = [
+        'title'
+        ]
+    list_filter = (
+        'title',
+        'created_on'
+        )
