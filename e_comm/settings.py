@@ -97,8 +97,8 @@ DATABASES = {
 }
 
 DATABASES = {
-    'test': dj_database_url.parse(os.environ.get('DATABASE_URL')),
-    'default': {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
+    'test': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
