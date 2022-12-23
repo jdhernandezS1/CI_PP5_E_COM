@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light row w-100 p-0" id="nav_pc">
   <div class="pl-5">
     <a href="{% url 'home' %}" class="nav-link main-logo-link" id="logo">
-      <h2 class=" text-dark my-0 text-capitalize font-weight-bold font-dancing">Capricci </h2>
+      <h2 class=" text-danger my-0 text-capitalize font-weight-bold font-dancing">Capricci </h2>
     </a>
   </div>
   <div class="w-75 my-auto py-1 px-5">
@@ -12,49 +12,54 @@
         <div class="input-group-append ">
           <button class="form-control btn btn-light border border-black rounded-right" type="submit">
             <span class="icon text-black font-weight-bold">
-              <ion-icon name="search-outline"></ion-icon>
+              <ion-icon name="search-outline" class="text-danger"></ion-icon>
             </span>
           </button>
         </div>
       </div>
     </form>
   </div>
-  <div class="my-auto py-1 py-lg-0 p-0">
+  <div class="my-auto p-0">
     <ul class="navbar-nav">
       <li class="list-inline-item dropdown">
-        <a class="text-dark nav-link p-0" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          <div class="text-center row p-0">
-            <div class="p-0 w-100">
-              <ion-icon name="person"></ion-icon>
-            </div>
-            <div class="w-100">
+        <a class="text-dark nav-link text-center row" href="#" id="user-options" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <!-- <div class="text-center row p-0"> -->
+          <div class="w-100">
             {% if request.user.is_authenticated %}
-              <p class="my-0 p-0 w-100">{{user}}</p>
-              {% else %}
-              <p class="my-0 p-0 w-100">Account</p>
-              {% endif %}
-            </div>
-            <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center" aria-labelledby="user-options">
-              {% if request.user.is_authenticated %}
-              {% if request.user.is_superuser %}
-              <a href="" class="dropdown-item p-2 rounded">Product Management</a>
-              {% endif %}
-              <a href="" class="dropdown-item p-2 rounded">My Profile</a>
-              <a href="{% url 'account_logout' %}" class="dropdown-item p-2 rounded">Logout</a>
-              {% else %}
-              <a href="{% url 'account_signup' %}" class="dropdown-item p-2 rounded">Register</a>
-              <a href="{% url 'account_login' %}" class="dropdown-item p-2 rounded">Login</a>
-              {% endif %}
-            </div>
+            <ion-icon name="person" class="text-primary"></ion-icon>
+            {% else %}
+            <ion-icon name="person-add" class="text-primary"></ion-icon>
+            {% endif %}
           </div>
+          <p class="my-0 p-0 w-100 text-capitalize">
+            {% if request.user.is_authenticated %}
+            {{user}}
+            {% else %}
+            Account
+            {% endif %}
+          </p>
+          <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center"
+            aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="" class="dropdown-item p-2 rounded">Product Management</a>
+            {% endif %}
+            <a href="" class="dropdown-item p-2 rounded">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item p-2 rounded">Logout</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item p-2 rounded">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item p-2 rounded">Login</a>
+            {% endif %}
+          </div>
+          <!-- </div> -->
         </a>
       </li>
       <li class="list-inline-item">
         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
           <div class="text-center row px-5 ">
             <div class="w-100">
-              <ion-icon name="cart"></ion-icon>
+              <ion-icon name="cart" class="text-danger"></ion-icon>
             </div>
             <div>
               <p class="my-0 text-dark ">
