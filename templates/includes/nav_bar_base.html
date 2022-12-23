@@ -28,13 +28,13 @@
             <div class="p-0 w-100">
               <ion-icon name="person"></ion-icon>
             </div>
-            {% if request.user.is_authenticated %}
             <div class="w-100">
+            {% if request.user.is_authenticated %}
               <p class="my-0 p-0 w-100">{{user}}</p>
               {% else %}
               <p class="my-0 p-0 w-100">Account</p>
+              {% endif %}
             </div>
-            {% endif %}
             <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
