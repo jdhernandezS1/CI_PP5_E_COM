@@ -24,7 +24,7 @@
             <div class="row">
                 {% if prod_list %}
                 {% for product in prod_list %}
-                <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 rounded p-0  hvr-float-shadow ">
+                <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 rounded p-0  hvr-float-shadow bg-light">
                     <div class="card h-100 border-0">
                         <div class="p-1">
                             {% if "placeholder" in product.featured_image.url %}
@@ -32,22 +32,22 @@
                                 src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg"
                                 alt="{{product.title}}">
                             {% else %}
-                            <img class="card-img-top border-black rounded" src=" {{ product.featured_image.url }}" alt="{{product.title}}">
+                            <img class="card-img-top rounded p-2" src=" {{ product.featured_image.url }}" alt="{{product.title}}">
                             {% endif %}
                         </div>
-                        <div class="card-body pb-0">
+                        <div class="card-body pb-0 pt-0">
                             <p class="mb-0">{{ product.name }}</p>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer pt-3 border-0 text-left text-white bg-black">
                             <div class="row">
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold"> <small>CHF</small>
                                         {{ product.price }}</p>
                                     {% if product.scount %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.scount }}%
+                                    <small class="text-white"><i class="fas fa-star mr-1"></i>{{ product.scount }}%
                                         Off</small>
                                     {% else %}
-                                    <small class="text-muted"></small>
+                                    <small class="text-white"></small>
                                     {% endif %}
                                 </div>
                             </div>
