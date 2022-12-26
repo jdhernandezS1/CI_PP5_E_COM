@@ -18,27 +18,27 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
-    <div class="row">
-        <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
+    <div class="row p-0 w-100">
+        <div class="product-container col-12 m-1 text-center">
             <div class="row">
                 {% if prod_list %}
                 {% for product in prod_list %}
-                <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 rounded p-0  hvr-float-shadow bg-light">
-                    <div class="card h-100 border-0">
-                        <div class="p-1">
+                <div class="col-sm-5 col-md-3 col-lg-3 col-xl-2 m-xl-3 rounded p-0  hvr-float-shadow bg-light m-1">
+                    <div class="card h-100 border-0 rounded-top p-0 bg-info">
+                        <div class="pt-1 px-1 bg-info rounded-top">
                             {% if "placeholder" in product.featured_image.url %}
-                            <img class="card-img-top rounded"
+                            <img class="card-img-top rounded-top"
                                 src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg"
                                 alt="{{product.title}}">
                             {% else %}
-                            <img class="card-img-top rounded p-2" src=" {{ product.featured_image.url }}" alt="{{product.title}}">
+                            <img class="card-img-top rounded-top" src=" {{ product.featured_image.url }}"
+                                alt="{{product.title}}">
                             {% endif %}
                         </div>
-                        <div class="card-body pb-0 pt-0">
-                            <p class="mb-0">{{ product.name }}</p>
+                        <div class="card-body pb-0 pt-0 bg-info">
+                            <p class="mb-0">{{ product.title }}</p>
                         </div>
-                        <div class="card-footer pt-3 border-0 text-left text-white bg-black">
+                        <div class="card-footer pt-2 border-0 text-left text-white bg-black rounded m-2">
                             <div class="row">
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold"> <small>CHF</small>
@@ -54,26 +54,7 @@
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
-                </div>
-                {% endif %}
+
                 {% endfor %}
             </div>
         </div>
