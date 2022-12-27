@@ -11,6 +11,33 @@
 
 {% block content %}
 
-<h1>cart</h1>
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <h2 class="mt-5 logo-font mb-4 text-center">Shopping Bag</h2>
+            <hr class="w-75 bg-info">
+            <hr class="w-50 bg-info">
+            <hr class="w-25 bg-info">
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+                <div class="table-responsive rounded"></div>
+            {% else %}
+            <div class="text-black">
+                <p class="lead mb-5">Your bag is empty.</p>
+                <a href="{% url 'prods' %}" class="btn btn-outline-black rounded-0 btn-lg text-black">
+                    <span class="icon">
+                        <ion-icon name="chevron-back-circle"></ion-icon>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}
