@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: rgba(116, 110, 110, 0.527) no-repeat center center fixed;
+    background: no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: black;
