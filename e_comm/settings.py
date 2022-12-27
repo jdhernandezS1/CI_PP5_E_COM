@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     # Local Applications
     'home',
     'products',
+    'cart',
 ]
 
 MIDDLEWARE = [
