@@ -23,38 +23,39 @@
             <div class="row">
                 {% if prod_list %}
                 {% for product in prod_list %}
-                <div class="col-sm-5 col-md-3 col-lg-3 col-xl-2 m-xl-3 rounded p-0  hvr-float-shadow bg-light m-1">
-                    <div class="card h-100 border-0 rounded-top p-0 bg-info">
-                        <div class="pt-1 px-1 bg-infogi rounded-top">
-                            {% if "placeholder" in product.featured_image.url %}
-                            <img class="card-img-top rounded-top"
-                                src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg"
-                                alt="{{product.title}}">
-                            {% else %}
-                            <img class="card-img-top rounded-top" src=" {{ product.featured_image.url }}"
-                                alt="{{product.title}}">
-                            {% endif %}
-                        </div>
-                        <div class="card-body pb-0 pt-0 bg-info">
-                            <p class="mb-0">{{ product.title }}</p>
-                        </div>
-                        <div class="card-footer pt-2 border-0 text-left text-white bg-black rounded m-2">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold"> <small>CHF</small>
-                                        {{ product.price }}</p>
-                                    {% if product.scount %}
-                                    <small class="text-white"><i class="fas fa-star mr-1"></i>{{ product.scount }}%
-                                        Off</small>
-                                    {% else %}
-                                    <small class="text-white"></small>
-                                    {% endif %}
+                <div class="col-sm-5 col-md-3 col-lg-3 col-xl-2 m-xl-3 rounded p-0  hvr-float-shadow bg-white mx-2 mt-5">
+                    <a class="text-black text-decoration-none" href="{% url 'prod_detail' product.title_slug%}">
+                        <div class="card h-100 border-0 rounded-top p-0 bg-white">
+                            <div class="pt-1 px-1 bg-white rounded-top">
+                                {% if "placeholder" in product.featured_image.url %}
+                                <img class="card-img-top rounded-top"
+                                    src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg"
+                                    alt="{{product.title}}">
+                                {% else %}
+                                <img class="card-img-top rounded-top" src=" {{ product.featured_image.url }}"
+                                    alt="{{product.title}}">
+                                {% endif %}
+                            </div>
+                            <div class="card-body pb-0 pt-0 bg-white">
+                                <p class="mb-0">{{ product.title }}</p>
+                            </div>
+                            <div class="card-footer pt-2 border-0 text-left text-white bg-black rounded m-2">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="lead mb-0 text-left font-weight-bold"> <small>CHF</small>
+                                            {{ product.price }}</p>
+                                        {% if product.scount %}
+                                        <small class="text-white"><i class="fas fa-star mr-1"></i>{{ product.scount }}%
+                                            Off</small>
+                                        {% else %}
+                                        <small class="text-white"></small>
+                                        {% endif %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
                 {% endfor %}
             </div>
         </div>

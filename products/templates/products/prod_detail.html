@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="text-center mt-3">
+    <h1>{{prod.title|safe}}</h1>
+    <hr class="w-75 bg-black">
+    <hr class="w-50 bg-black">
+</div>
+<div class="row text-center mt-5">
+    <div class="w-25  mx-auto d-block">
+        {% if "placeholder" in product.featured_image.url %}
+        <img class="card-img-top rounded-top img-fluid"
+            src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="{{prod.title}}">
+        {% else %}
+        <img class="card-img-top rounded-top img-fluid" src=" {{ prod.featured_image.url }}" alt="{{prod.title}}">
+        {% endif %}
+    </div>
+    <div class="container w-25 text-left">
+        <p class="">{{prod.title|safe}}</p>
+        <p class="">
+            <ion-icon name="card-outline"></ion-icon> Price: CHF {{prod.price|safe}}
+        </p>
+        <p class="">
+            <ion-icon name="pricetags"></ion-icon> Category: {{prod.category|safe}}
+        </p>
+        <p class="">{{prod.description|safe}}</p>
+        <div class="text-black">
+            <a href="{% url 'prods' %}" class="btn btn-outline-black rounded-0 btn-lg text-black">
+                <span class="icon">
+                    <ion-icon name="chevron-back-circle"></ion-icon>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

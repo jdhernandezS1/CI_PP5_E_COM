@@ -13,4 +13,8 @@ urlpatterns = [
         views.ProdList.as_view(),
         name='prods'
         ),
+    path(
+        'prods/<slug:slug>/',
+        views.ProdDetail.as_view(),
+        name="prod_detail"),
 ]
