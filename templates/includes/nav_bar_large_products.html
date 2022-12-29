@@ -7,9 +7,9 @@
             </a>
             <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="all-products-link">
                 <a href="{% url 'prods' %}" class="dropdown-item">All Products</a>
-                <a href="{% url 'prods_cat' categ='price'%}" class="dropdown-item ">By Price</a>
                 <a href="{% url 'prods_cat' categ='category'%}" class="dropdown-item">By Category</a>
-                <a href="{% url 'prods_cat' categ='title'%}" class="dropdown-item">By other</a>
+                <a href="{% url 'prods_cat' categ='price'%}" class="dropdown-item ">By Price</a>
+                <a href="{% url 'prods_cat' categ='scount'%}" class="dropdown-item">By Scount</a>
             </div>
         </li>
 
