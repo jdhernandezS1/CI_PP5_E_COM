@@ -3,8 +3,9 @@ Imports
 """
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import render,  get_object_or_404
-from django.shortcuts import reverse, get_list_or_404
+from django.shortcuts import render, get_object_or_404
+from django.shortcuts import reverse, get_list_or_404, redirect
+from django.db.models import Q
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
@@ -24,9 +25,24 @@ class ProdList(generic.ListView):
     paginate_by = 6
 
 
+def ProdSearch(request):
+    """
+    A view to search products
+    """
+    products = Prod.objects.all()
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.success(request, 'Please write a key word to search')
+                return redirect('prods')
+    # prod_list
+
+
 class ProdCat(generic.ListView):
     """
-    A class for the products ordered by "created on"
+    A class for the products Categories
     """
     def get(self, request, categ):
         """
