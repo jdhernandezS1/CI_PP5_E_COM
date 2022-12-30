@@ -30,12 +30,12 @@ def ProdSearch(request):
     A view to search products
     """
     products = Prod.objects.all()
-    message = "Please write a key word to search an article"
+    message = "Please write a key word"
     if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, message)
+                messages.success(request, message)
                 return redirect(reverse('prods'))
             q1 = Q(title__icontains=query)
             q2 = Q(description__icontains=query)
