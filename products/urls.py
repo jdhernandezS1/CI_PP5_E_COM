@@ -19,8 +19,8 @@ urlpatterns = [
         name='s_prods'
         ),
     path(
-        '<slug:categ>',
-        views.ProdCat.as_view(),
+        'cat/',
+        views.ProdCat,
         name='prods_cat'
     ),
     path(

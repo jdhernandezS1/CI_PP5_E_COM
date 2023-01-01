@@ -7,15 +7,13 @@
             </a>
             <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="all-products-link">
                 <a href="{% url 'prods' %}" class="dropdown-item">All Products</a>
-                <a href="{% url 'prods_cat' categ='category'%}" class="dropdown-item" data-toggle="dropdown"
+                <a href="{% url 'prods_cat' %}?categ=category" class="dropdown-item" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">By Category</a>
                 <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="Catehory pascua">
-                    <a href="{% url 'prods_cat' categ='category'%}" class="dropdown-item">Pascua</a>
-                    <a href="{% url 'prods_cat' categ='category'%}" class="dropdown-item">Pascua</a>
-                    <a href="{% url 'prods_cat' categ='category'%}" class="dropdown-item">Pascua</a>
+                    <a href="{% url 'prods_cat' %}?categ=pascua" class="dropdown-item">Pasqua</a>
                 </div>
-                <a href="{% url 'prods_cat' categ='price'%}" class="dropdown-item ">By Price</a>
-                <a href="{% url 'prods_cat' categ='scount'%}" class="dropdown-item">By Scount</a>
+                <a href="{% url 'prods_cat' %}?order=price"class="dropdown-item ">By Price</a>
+                <a href="{% url 'prods_cat' %}?order=scount" class="dropdown-item">By Scount</a>
             </div>
         </li>
 

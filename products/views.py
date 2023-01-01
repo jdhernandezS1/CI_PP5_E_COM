@@ -45,29 +45,42 @@ def ProdSearch(request):
         'prod_list': prod_list,
         'search_term': query,
     }
-    return render(request, 'products/products.html', context)
+    return render(
+        request,
+        'products/products.html',
+        context
+        )
 
     # prod_list
 
 
-class ProdCat(generic.ListView):
+def ProdCat(request):
     """
-    A class for the products Categories
+    Get Products Function to get in order
     """
-    def get(self, request, categ):
-        """
-        Get Products Function to get in order
-        """
-        queryset = Prod.objects.order_by(categ)
-        prod_list = get_list_or_404(queryset)
-        context = {
-                    "prod_list": prod_list
-                    # "form": Form()
-                }
-        return render(
-            request,
-            "products/products.html",
-            context,
+    prod_list = Prod.objects.all()
+    orders = None
+    categories = None
+    if request.GET:
+        if 'categ' in request.GET:
+            categories = str(request.GET['categ'])
+            categories = get_object_or_404(Cat, title=categories).id
+            prod_list = get_list_or_404(prod_list, category=categories)
+
+        if 'order' in request.GET:
+            orders = request.GET['order']
+            queryset = prod_list.order_by(orders)
+            prod_list = get_list_or_404(queryset)
+    context = {
+                "prod_list": prod_list,
+                "categories": categories,
+                "orders": orders
+                # "form": Form()
+            }
+    return render(
+        request,
+        "products/products.html",
+        context
         )
 
 
