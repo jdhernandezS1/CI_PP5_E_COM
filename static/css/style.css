@@ -94,6 +94,8 @@ body {
         z-index: 1030;
     }
     #nav_phone{
+        width: 0px;
+        padding: 0px;
         visibility: collapse;
       }
     .header-container {
