@@ -78,6 +78,9 @@ font-family: 'Dancing Script', cursive;
   .container {
     max-width: 80%;
   }
+  #nav_phone{
+    display: none;
+  }
  
 }
 @media (max-width: 991px) {

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light row w-100 p-0" id="nav_pc">
+<nav class="navbar navbar-expand-lg navbar-light bg-light row w-100 p-0 m-0" id="nav_pc">
   <div class="pl-5">
     <a href="{% url 'home' %}" class="nav-link main-logo-link" id="logo">
       <h2 class=" text-danger my-0 text-capitalize font-weight-bold font-dancing">Capricci </h2>
@@ -56,7 +56,8 @@
         </a>
       </li>
       <li class="list-inline-item">
-        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'cart' %}">
+        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+          href="{% url 'cart' %}">
           <div class="text-center row px-5 ">
             <div class="w-100">
               <ion-icon name="cart" class="text-danger"></ion-icon>

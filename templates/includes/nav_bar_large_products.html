@@ -1,4 +1,4 @@
-<div class="collapse navbar-collapse p-0 m-0 text-white" id="main-nav">
+<div class="collapse navbar-collapse p-0 m-0 text-white w-100 bg-black" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto p-3">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-products-link"
@@ -12,7 +12,7 @@
                 <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="Catehory pascua">
                     <a href="{% url 'prods_cat' %}?categ=pascua" class="dropdown-item">Pasqua</a>
                 </div>
-                <a href="{% url 'prods_cat' %}?order=price"class="dropdown-item ">By Price</a>
+                <a href="{% url 'prods_cat' %}?order=price" class="dropdown-item ">By Price</a>
                 <a href="{% url 'prods_cat' %}?order=scount" class="dropdown-item">By Scount</a>
             </div>
         </li>
