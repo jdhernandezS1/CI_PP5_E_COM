@@ -78,9 +78,7 @@ body {
   .container {
     max-width: 80%;
   }
-  #nav_phone{
-    visibility: collapse;
-  }
+
  
 }
 @media (max-width: 991px) {
@@ -97,8 +95,14 @@ body {
         left: 0;
         z-index: 1030;
     }
-
+    #nav_phone{
+        visibility: collapse;
+      }
     .header-container {
         padding-top: 164px;
+    }
+    #logo{
+        visibility: hidden;
+        
     }
 }
