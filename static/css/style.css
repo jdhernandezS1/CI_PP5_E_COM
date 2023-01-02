@@ -79,7 +79,7 @@ font-family: 'Dancing Script', cursive;
     max-width: 80%;
   }
   #nav_phone{
-    display: none;
+    visibility: collapse;
   }
  
 }
