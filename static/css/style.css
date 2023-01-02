@@ -9,7 +9,9 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
 }
-
+.bg-one{
+    background-color: #ff7a3ce0
+}
 .font-dancing{
     font-family: 'Dancing Script', cursive;
 }
