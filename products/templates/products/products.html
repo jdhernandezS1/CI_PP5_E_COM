@@ -20,13 +20,15 @@
     </div>
     <div class="row p-0 w-100">
         <div class="product-container col-12 m-1 text-center">
-            <div class="row">
+            <div class="row  ">
                 {% if prod_list %}
                 {% for product in prod_list %}
-                <div class="col-sm-5 col-md-3 col-lg-3 col-xl-2 m-xl-3 rounded p-0  hvr-float-shadow bg-white mx-2 mt-5">
+                <div
+                    class="col-sm-10 col-md-5 col-lg-3 col-xl-3 m-xl-3 rounded p-0  hvr-float-shadow bg-white mx-2 mt-5">
                     <a class="text-black text-decoration-none" href="{% url 'prod_detail' product.title_slug%}">
                         <div class="card h-100 border-0 rounded-top p-0 bg-white">
-                            <div class="pt-1 px-1 bg-white rounded-top">
+                            <div class="pt-1 px-1 bg-white rounded-top d-flex justify-content-center">
+                                <small class="mb-0 position-absolute bg-one rounded p-2 w-75 text-center " >{{ product.title }}</small>
                                 {% if "placeholder" in product.featured_image.url %}
                                 <img class="card-img-top rounded-top"
                                     src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg"
@@ -36,19 +38,14 @@
                                     alt="{{product.title}}">
                                 {% endif %}
                             </div>
-                            <div class="card-body pb-0 pt-0 bg-white">
-                                <p class="mb-0">{{ product.title }}</p>
-                            </div>
-                            <div class="card-footer pt-2 border-0 text-left text-white bg-one rounded m-2">
+                            <div class="card-footer pt-2 border-0 text-left bg-one rounded mt-3">
                                 <div class="row">
                                     <div class="col">
                                         <p class="lead mb-0 text-left font-weight-bold"> <small>CHF</small>
                                             {{ product.price }}</p>
                                         {% if product.scount %}
-                                        <small class="text-white"><i class="fas fa-star mr-1"></i>{{ product.scount }}%
+                                        <small class=""><ion-icon name="alert-outline"></ion-icon>{{ product.scount }}%
                                             Off</small>
-                                        {% else %}
-                                        <small class="text-white"></small>
                                         {% endif %}
                                     </div>
                                 </div>

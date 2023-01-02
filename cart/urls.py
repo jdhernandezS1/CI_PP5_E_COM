@@ -8,5 +8,7 @@ from . import views
 # ~~~~~~~~~~
 
 urlpatterns = [
-    path('', views.cart, name='cart'),
+    path('', views.Cart, name='cart'),
+    path('add/<prod_id>/', views.AddCart, name='add_to_cart'),
+
 ]
