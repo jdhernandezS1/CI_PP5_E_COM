@@ -23,6 +23,7 @@
             <div class="row  ">
                 {% if prod_list %}
                 {% for product in prod_list %}
+                {% if product.quantity >= 1%}
                 <div
                     class="col-sm-10 col-md-5 col-lg-3 col-xl-3 m-xl-3 rounded p-0  hvr-float-shadow bg-white mx-2 mt-5">
                     <a class="text-black text-decoration-none" href="{% url 'prod_detail' product.title_slug%}">
@@ -44,7 +45,7 @@
                                         <p class="lead mb-0 text-left font-weight-bold"> <small>CHF</small>
                                             {{ product.price }}</p>
                                         {% if product.scount %}
-                                        <small class=""><ion-icon name="alert-outline"></ion-icon>{{ product.scount }}%
+                                        <small class=""><ion-icon name="timer"></ion-icon> {{ product.scount }}%
                                             Off</small>
                                         {% endif %}
                                     </div>
@@ -53,6 +54,7 @@
                         </div>
                     </a>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

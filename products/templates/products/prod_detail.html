@@ -38,32 +38,31 @@
 
         <form class="form" action="{% url 'add_to_cart' prod.id %}" method="POST">
             {% csrf_token %}
-            <div class="form-row">
-                <div class="col-12">
-                    <p class="mt-3"><strong>Quantity:</strong></p>
-                    <div class="form-group w-50">
-                        <div class="input-group">
-                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
-                                max="99" data-item_id="{{ prod.id }}" id="id_qty_{{ prod.id }}">
-                        </div>
+            <div class="w-100 text-center d-flex justify-content-center">
+                <div class="w-50 input-group mb-3 ">
+                    <div class="input-group-prepend">
+                        <p class="input-group-text"><strong>Quantity:</strong></p>
                     </div>
+                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
+                    max="{{prod.quantity}}" data-item_id="{{ prod.id }}" id="id_qty_{{ prod.id }}">
                 </div>
-
-                <div class="col-12">
-                    <button  type="submit" class="btn btn-black rounded text-uppercase m-0" value="Add to Cart">
-                        <ion-icon name="bag-add-outline"></ion-icon> <span> to Cart</span> 
-                    </button>
-                    <a href="{% url 'prods_cat' %}" class="btn rounded-0 btn-lg text-black w-50">
-                        <span class="icon">
-                            <ion-icon name="chevron-back-circle"></ion-icon>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                </div>
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </div>
-        </form>
 
+            <div class="col-12">
+                <button type="submit" class="btn btn-black rounded text-uppercase m-0" value="Add to Cart">
+                    <ion-icon name="bag-add-outline"></ion-icon> <span>Add to Cart</span>
+                </button>
+                <a href="{% url 'prods_cat' %}" class="btn rounded-0 btn-lg text-black w-50">
+                    <span class="icon">
+                        <ion-icon name="chevron-back-circle"></ion-icon>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            </div>
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
     </div>
+    </form>
+
+</div>
 </div>
 {% endblock %}

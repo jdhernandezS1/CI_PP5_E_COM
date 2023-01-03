@@ -7,7 +7,6 @@ from django.shortcuts import render
 # ~~~~~~~~~~
 
 
-
 def Cart(request):
     """
     cart page view
