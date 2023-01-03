@@ -15,16 +15,6 @@ from .models import Cat, Prod
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-class ProdList(generic.ListView):
-    """
-    A class for the products ordered by "created on"
-    """
-    model = Prod
-    queryset = Prod.objects.all().order_by('-created_on')
-    template_name = 'products/products.html'
-    paginate_by = 6
-
-
 def ProdSearch(request):
     """
     A view to search products
@@ -36,7 +26,7 @@ def ProdSearch(request):
             query = request.GET['q']
             if not query:
                 messages.success(request, message)
-                return redirect(reverse('prods'))
+                return redirect(reverse('prods_cat'))
             q1 = Q(title__icontains=query)
             q2 = Q(description__icontains=query)
             queries = q1 | q2

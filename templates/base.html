@@ -68,11 +68,11 @@
     </nav>
 
     <!-- messagess -->
-    <div class="container position-relative row text-center">
+    <div class="container position-relative row text-center d-flex justify-content-center">
       {% for message in messages %}
-      <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+      <div class="alert {{ message.tags }} alert-dismissible fade show p-2 m-0" id="msg" role="alert">
         {{ message | safe }}
-        <button type="button" class="btn btn-close p-0 mx-2 position-absolute top-0 end-0 bg-transparent"
+        <button type="button" class="btn btn-close bg-transparent"
           aria-label="Close">
           <ion-icon name="close-outline"></ion-icon>
         </button>

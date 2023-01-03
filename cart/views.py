@@ -18,9 +18,9 @@ def Cart(request):
 
 def AddCart(request, prod_id):
     """
-    Add product to the cart 
+    Add product to the cart
     """
-    message="The Product Was Added to the cart"
+    message = "The Product Was Added to the cart"
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})

@@ -9,17 +9,12 @@ from . import views
 
 urlpatterns = [
     path(
-        '',
-        views.ProdList.as_view(),
-        name='prods'
-        ),
-    path(
         'result/',
         views.ProdSearch,
         name='s_prods'
         ),
     path(
-        'cat/',
+        '',
         views.ProdCat,
         name='prods_cat'
     ),
