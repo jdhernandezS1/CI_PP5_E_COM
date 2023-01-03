@@ -22,7 +22,7 @@ def cart_contents(request):
 
     grand_total = delivery + total
 
-    cart = {
+    contexts = {
         'cart_items': cart_items,
         'total': total,
         'product_count': product_count,
@@ -31,4 +31,4 @@ def cart_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
-    return cart
+    return contexts
