@@ -5,16 +5,16 @@
                 <h2 class=" text-danger my-0 text-capitalize font-weight-bold font-dancing">Capricci </h2>
             </a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown ">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0 btn btn-outline-warning" aria-labelledby="all-products-link">
                 <a href="{% url 'prods_cat' %}" class="dropdown-item">All Products</a>
                 <a href="{% url 'prods_cat' %}?categ=category" class="dropdown-item" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">By Category</a>
-                <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="Catehory pascua">
+                <div class="dropdown-menu border-0 " aria-labelledby="Catehory pascua">
                     <a href="{% url 'prods_cat' %}?categ=pascua" class="dropdown-item">Pasqua</a>
                 </div>
                 <a href="{% url 'prods_cat' %}?order=price" class="dropdown-item ">By Price</a>
@@ -27,7 +27,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Type 1
             </a>
-            <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="clothing-link">
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="" class="dropdown-item">Option 1</a>
             </div>
         </li>

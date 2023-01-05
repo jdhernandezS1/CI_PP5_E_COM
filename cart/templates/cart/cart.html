@@ -38,7 +38,7 @@
                     {% for item in cart_items%}
                     <tbody>
                         <tr>
-                            <th scope="row">{{item.product.title}}</th>
+                            <th scope="row"> <a class="text-white" href="{% url 'prod_detail' item.product.title_slug%}">{{item.product.title}}</a></th>
                             <td>
                                 <div class="col-sm-8 col-md-8 col-lg-8 col-xl-7   mx-auto d-block">
                                     {% if "placeholder" in item.product.featured_image.url %}
