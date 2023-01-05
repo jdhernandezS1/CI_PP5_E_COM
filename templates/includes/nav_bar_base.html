@@ -4,7 +4,7 @@
       <h2 class=" text-danger my-0 text-capitalize font-weight-bold font-dancing">Capricci </h2>
     </a>
   </div>
-  <div class="w-75 my-auto py-1 px-5">
+  <div class="w-75 my-auto py-1 px-3">
     <form method="GET" action="{% url 's_prods' %}" class="">
       <div class="input-group w-100 ">
         <input class="form-control bg-light text-dark border border-black font-weight-bold rounded-left" type="text"
@@ -58,16 +58,16 @@
       <li class="list-inline-item">
         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
           href="{% url 'cart' %}">
-          <div class="text-center row px-5 ">
+          <div class="text-center row px-3 ">
             <div class="w-100">
               <ion-icon name="cart" class="text-danger"></ion-icon>
             </div>
-            <div>
+            <div class="w-100">
               <p class="my-0 text-dark ">
                 {% if grand_total %}
-                ${{ grand_total|floatformat:2 }}
+                CHF {{ grand_total|floatformat:2 }}
                 {% else %}
-                $0.00
+                CHF 0.00
                 {% endif %}
               </p>
             </div>
