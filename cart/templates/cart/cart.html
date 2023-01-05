@@ -11,11 +11,11 @@
 
 {% block content %}
 
-<div class="overlay"></div>
-<div class="container mb-2">
+<div class="overlay w-100"></div>
+<div class="container mb-2 m-0 p-0 w-100 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
     <div class="row">
         <div class="col">
-            <h2 class="mt-5 logo-font mb-4 text-center">Shopping Bag</h2>
+            <h2 class="mt-5 logo-font mb-4 text-center">Shopping Cart</h2>
             <hr class="w-75 bg-info">
             <hr class="w-50 bg-info">
             <hr class="w-25 bg-info">
@@ -23,9 +23,42 @@
     </div>
 
     <div class="row">
-        <div class="col">
-            {% if bag_items %}
-                <div class="table-responsive rounded"></div>
+        <div class="col d-flex justify-content-center">
+            {% if cart_items %}
+            <div class="table-responsive m-2 ">
+
+                <table class="table table-bordered table-dark rounded">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="2">Article</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                    </thead>
+                    {% for item in cart_items%}
+                    <tbody>
+                        <tr>
+                            <th scope="row">{{item.product.title}}</th>
+                            <td>
+                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-7   mx-auto d-block">
+                                    {% if "placeholder" in item.product.featured_image.url %}
+                                    <img class="card-img-top rounded-top img-fluid"
+                                        src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg"
+                                        alt="{{item.product.title}}">
+                                    {% else %}
+                                    <img class="card-img-top rounded-top img-fluid"
+                                        src=" {{ item.product.featured_image.url }}" alt="{{item.product.title}}">
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td>{{item.temp_tot}} (x1 {{item.product.price}})</td>
+                            <td>{{item.quantity}}</td>
+                        </tr>
+                    </tbody>
+                    <!-- {{cart_items | safe}} -->
+                    {% endfor %}
+                </table>
+            </div>
             {% else %}
             <div class="text-black">
                 <p class="lead mb-5">Your bag is empty.</p>
