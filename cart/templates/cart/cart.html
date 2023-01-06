@@ -12,9 +12,9 @@
 {% block content %}
 
 <div class="overlay w-100"></div>
-<div class="container mb-2 m-0 p-0 w-100 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-    <div class="row">
-        <div class="col">
+<div class="mb-2 m-0 p-0 w-100 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+    <div class="row col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 mx-auto">
+        <div class="col p-0 mx-auto">
             <h2 class="mt-5 logo-font mb-4 text-center">Shopping Cart</h2>
             <hr class="w-75 bg-info">
             <hr class="w-50 bg-info">
@@ -22,25 +22,34 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col d-flex justify-content-center">
+    <div class="row col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 mx-auto">
+        <div class="col p-0">
             {% if cart_items %}
-            <div class="table-responsive m-2 ">
+            <div class="table-responsive ">
 
-                <table class="table table-bordered table-dark rounded">
-                    <thead>
+                <table class="table table-bordered table-hover rounded w-75 mx-auto">
+                    <thead class="bg-one">
                         <tr>
                             <th scope="col" colspan="2">Article</th>
-                            <th scope="col">Price</th>
+                            <th scope="col">Price CHF</th>
                             <th scope="col">Quantity</th>
+                            <th scope="col">Total CHF</th>
                         </tr>
                     </thead>
                     {% for item in cart_items%}
                     <tbody>
-                        <tr>
-                            <th scope="row"> <a class="text-white" href="{% url 'prod_detail' item.product.title_slug%}">{{item.product.title}}</a></th>
+                        <tr class=" 
+                        {% if item.number|divisibleby:'2' %} 
+                        table-warning 
+                        {%else %} 
+                        table-info 
+                        {%endif%}
+                        ">
+                            <th scope="row"> <a class="text-capitalize text-black"
+                                    href="{% url 'prod_detail' item.product.title_slug%}">{{item.product.title}} <p>
+                                        REF: {{item.product.pk}}</p></a></th>
                             <td>
-                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-7   mx-auto d-block">
+                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-5  h-100 mx-auto d-block">
                                     {% if "placeholder" in item.product.featured_image.url %}
                                     <img class="card-img-top rounded-top img-fluid"
                                         src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg"
@@ -51,13 +60,34 @@
                                     {% endif %}
                                 </div>
                             </td>
-                            <td>{{item.temp_tot}} (x1 {{item.product.price}})</td>
+                            <td>{{item.product.price}}</td>
                             <td>{{item.quantity}}</td>
+                            <td>{{item.temp_tot}} </td>
                         </tr>
                     </tbody>
                     <!-- {{cart_items | safe}} -->
                     {% endfor %}
                 </table>
+            </div>
+            <div class="w-75 p-3 mx-auto">
+                <p class="text-capitalize d-flex flex-row-reverse">total item cost {{total}}</p>
+                <p class="text-capitalize d-flex flex-row-reverse">total shipping {{free_delivery_delta}}</p>
+                <p class="text-capitalize d-flex flex-row-reverse">total: {{grand_total}}</p>
+            </div>
+            <div class="w-100 text-center container">
+                <a href="{% url 'prods_cat' %}" class="btn btn-outline-success rounded btn-lg text-black border-0">
+                    <span class="icon">
+                        <ion-icon name="chevron-back-circle"></ion-icon>
+                    </span>
+                    <span class="text- font-weight-light">Keep Shopping</span>
+                </a>
+                <a href="{% url 'prods_cat' %}" class="btn btn-outline-success rounded btn-lg text-black border-0">
+                    <span class="icon">
+                        <ion-icon name="card"></ion-icon>
+                    </span>
+                    <span class="text-uppercase font-weight-light">checkout</span>
+                </a>
+                
             </div>
             {% else %}
             <div class="text-black">
