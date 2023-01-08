@@ -68,17 +68,8 @@
     </nav>
 
     <!-- messagess -->
-    <div class="container position-relative row text-center d-flex justify-content-center">
-      {% for message in messages %}
-      <div class="alert {{ message.tags }} alert-dismissible fade show p-2 m-0" id="msg" role="alert">
-        {{ message | safe }}
-        <button type="button" class="btn btn-close bg-transparent"
-          aria-label="Close">
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-      </div>
-      {% endfor %}
-    </div>
+    {% include 'includes/messages.html' %}
+
 
   </header>
   <div class="p-0 m-0 bg-white text-black">
