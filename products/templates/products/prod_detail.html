@@ -34,7 +34,8 @@
         <p class="">
             <ion-icon name="pricetags"></ion-icon> Category: {{prod.category|safe}}
         </p>
-        <p class="">{{prod.description|safe}}</p>
+        <div class="d-flex justify-content-start">{{prod.description|safe}}
+        </div>
 
         <form class="form" action="{% url 'add_to_cart' prod.id %}" method="POST">
             {% csrf_token %}
@@ -44,7 +45,9 @@
                         <p class="input-group-text"><strong>Quantity:</strong></p>
                     </div>
                     <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
-                    max="{{prod.quantity}}" data-item_id="{{ prod.id }}" id="id_qty_{{ prod.id }}">
+                        max="{{prod.quantity}}" data-item_id="{{ prod.id }}" id="id_qty_{{ prod.id }}">
+                    <div id="up-button" class="spinner-button">+</div>
+                    <div id="down-button" class="spinner-button">-</div>
                 </div>
             </div>
 

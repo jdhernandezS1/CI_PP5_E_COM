@@ -9,15 +9,19 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
 }
-.bg-one{
+
+.bg-one {
     background-color: #ff7a3ce0
 }
-.font-dancing{
+
+.font-dancing {
     font-family: 'Dancing Script', cursive;
 }
-.font-sunshine{
+
+.font-sunshine {
     font-family: 'Sunshiney', cursive;
 }
+
 /* font-family: 'Dancing Script', cursive; */
 /* from Bulma */
 .icon {
@@ -68,22 +72,52 @@ body {
 .bg-black {
     background: #000 !important;
 }
+/*  Input style */
+input {
+    position: absolute;
+    z-index: 1;
+}
+
+.spinner-button {
+    position: absolute;
+    cursor: default;
+    z-index: 2;
+    background-color: #ccc;
+    width: 14.5px;
+    text-align: center;
+    margin: 0px;
+    pointer-events: none;
+    height: 10px;
+    line-height: 10px;
+}
+
+#up-button {
+    left: 40px;
+    top: 10px;
+}
+
+#down-button {
+    left: 40px;
+    top: 20px;
+}
 
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 
- 
+
 }
+
 @media (max-width: 991px) {
     #nav_pc {
         display: none;
     }
 }
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -93,15 +127,18 @@ body {
         left: 0;
         z-index: 1030;
     }
-    #nav_phone{
+
+    #nav_phone {
         width: 0px;
         padding: 0px;
         visibility: collapse;
-      }
+    }
+
     .header-container {
         padding-top: 164px;
     }
-    #logo{
+
+    #logo {
         visibility: hidden;
 
     }
