@@ -39,7 +39,10 @@ urlpatterns = [
         include('products.urls')),
     path(
         'cart/',
-        include('cart.urls')),    
+        include('cart.urls')),
+    path(
+        'pay/',
+        include('payup.urls')),
     path(
         'summernote/',
         include('django_summernote.urls')),
