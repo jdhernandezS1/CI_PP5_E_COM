@@ -11,9 +11,11 @@ body {
 }
 
 .bg-one {
-    background-color: #ff7a3ce0
+    background-color: #c13d00ea;
 }
-
+.bg-two {
+    background-color: #3c7fffcf;
+}
 .font-dancing {
     font-family: 'Dancing Script', cursive;
 }
@@ -92,7 +94,7 @@ input {
 }
 
 #up-button {
-    left: 40px;
+    left: ;
     top: 10px;
 }
 
