@@ -6,6 +6,7 @@ Imports
 from django import forms
 # Internal
 from .models import Order
+from crispy_forms.helper import FormHelper
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -37,14 +38,15 @@ class OrderForm(forms.ModelForm):
             'postcode': 'NPA',
             'street_address1': 'Address',
             'street_address2': 'Extra Address',
-            }
+        }
         # autofocus the first field
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
+                placeholder = f'{placeholders[field]}*'
             else:
-                placeholder = placeholders[field]
+                placeholder = f'{placeholders[field]}'
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            self.fields[field].label = False
+            self.fields[field].label = " "
+
