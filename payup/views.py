@@ -12,11 +12,21 @@ from django.contrib import messages
 from django.core.exceptions import ValidationError
 # Internal
 # from .models import
+from .forms import OrderForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-def payup(request):
+def PayUp(request):
     """
     Pay UP view
     """
-    return render(request, "home/index.html")
+    template = "payup/checkout.html"
+    orderform = OrderForm()
+    context = {
+        'order_form': orderform
+    }
+    return render(
+        request,
+        template,
+        context
+        )

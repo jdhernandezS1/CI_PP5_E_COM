@@ -102,7 +102,9 @@ input {
     left: 40px;
     top: 20px;
 }
-
+.requiredField .asteriskField{
+    visibility: hidden;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

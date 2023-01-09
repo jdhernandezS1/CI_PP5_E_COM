@@ -10,6 +10,6 @@ from . import views
 urlpatterns = [
     path(
         '',
-        views.payup,
+        views.PayUp,
         name="pay"),
 ]
