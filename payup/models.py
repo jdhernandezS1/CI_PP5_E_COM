@@ -77,19 +77,22 @@ class Order(models.Model):
         null=False,
         default=0
         )
+
     def _order_nbr_gen(self):
-            """
-            Generate a random and unique order number
-            """
-            return uuid.uuid4().hex.upper()
+        """
+        Generate a random and unique order number
+        """
+        return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
         Update total function
         """
+        percent = settings.STANDARD_DELIVERY_PERCENTAGE
+        delivery_quote = settings.FREE_DELIVERY_THRESHOLD
         self.order_total = self.lineitems.aggregate(Sum('prods_total'))['prods_total__sum']
-        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        if self.order_total < delivery_quote:
+            self.delivery_cost = self.order_total * percent / 100
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
@@ -106,6 +109,7 @@ class Order(models.Model):
 
     def __str__(self):
         return self.order_number
+
 
 class OrdProd(models.Model):
     """
@@ -136,6 +140,7 @@ class OrdProd(models.Model):
         blank=False,
         editable=False
         )
+
     def save(self, *args, **kwargs):
         """
         Update the order total.
