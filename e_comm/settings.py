@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.sites',
     'django_summernote',
-    # Allauth applications
+    # Allauth applications Credentials
     # Selected providers, more at https://django-allauth.readthedocs.io/en/latest/installation.html
     'allauth',
     'allauth.account',
@@ -61,6 +61,8 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'payup',
+    # Forms
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -76,6 +78,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'e_comm.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -93,6 +97,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'cart.contexts.cart_contents',
             ],
+            'builtins':[
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
