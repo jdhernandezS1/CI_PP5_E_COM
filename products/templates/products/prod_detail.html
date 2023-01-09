@@ -41,13 +41,11 @@
             {% csrf_token %}
             <div class="w-100 text-center d-flex justify-content-center">
                 <div class="w-50 input-group mb-3 ">
-                    <div class="input-group-prepend">
-                        <p class="input-group-text"><strong>Quantity:</strong></p>
+                    <div class="input-group-prepend ">
+                        <p class="input-group-text bg-two"><strong>Quantity:</strong></p>
                     </div>
                     <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
                         max="{{prod.quantity}}" data-item_id="{{ prod.id }}" id="id_qty_{{ prod.id }}">
-                    <div id="up-button" class="spinner-button">+</div>
-                    <div id="down-button" class="spinner-button">-</div>
                 </div>
             </div>
 
