@@ -35,9 +35,8 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-
+    delivery = round(delivery, 2)
     grand_total = delivery + total
-
     contexts = {
         'cart_items': cart_items,
         'total': total,
