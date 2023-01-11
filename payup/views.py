@@ -11,6 +11,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 import stripe
+# from flask import Flask, render_template, jsonify, request
 # Internal
 # from .models import
 from .forms import OrderForm
@@ -24,7 +25,7 @@ def PayUp(request):
     """
     Pay UP view
     """
-    cart = request.session.get('cart',{})
+    cart = request.session.get('cart', {})
     if not cart:
         messages.error(request, "Your cart is empty at the moment")
         return redirect(reverse('prods_cat'))
@@ -36,12 +37,11 @@ def PayUp(request):
     # 
     stripe.api_key = private_key
     intent = stripe.PaymentIntent.create(
-    amount=1099,
-    currency='chf',
-    # Verify your integration in this guide by including this parameter
-    metadata={'integration_check': 'accept_a_payment'},
-    # 
-)
+        amount=1099,
+        currency='chf',
+        # Verify your integration in this guide by including this parameter
+        metadata={'integration_check': 'accept_a_payment'},
+        )
 
     context = {
         'order_form': orderform,
