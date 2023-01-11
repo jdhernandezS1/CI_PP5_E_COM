@@ -26,6 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sunshiney&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'payup/css/payment.css' %}">
   {% endblock %}
 
   {% block core_js %}
@@ -45,8 +46,8 @@
   <!-- base local scripts in static files -->
   <script src="{% static 'script/script.js' %}"></script>
   <!-- Jquery -->
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
   <!-- Stripe -->
   <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
