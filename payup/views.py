@@ -52,7 +52,7 @@ def PayUp(request):
             Did you forget to set it in your environment?')
     context = {
         'order_form': orderform,
-        'stripe_public_key': public_key,
+        'public_key': public_key,
         'client_secret': intent.client_secret,
     }
     return render(
