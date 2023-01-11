@@ -23,7 +23,7 @@ def cart_contents(request):
         temp_tot = product.price * quantity
         number += 1
         cart_items.append({
-            'number':number,
+            'number': number,
             'prod_id': prod_id,
             'quantity': quantity,
             'product': product,
