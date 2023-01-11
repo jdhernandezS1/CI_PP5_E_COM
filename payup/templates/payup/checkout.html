@@ -80,5 +80,5 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'payment/js/stripe_elements.js' %}"></script>
+    <script src="{% static 'payup/js/stripe_elements.js' %}"></script>
 {% endblock %}

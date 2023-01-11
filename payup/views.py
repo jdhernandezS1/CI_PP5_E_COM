@@ -34,7 +34,7 @@ def PayUp(request):
     orderform = OrderForm()
     public_key = os.environ.get('STRIPE_PUBLIC_KEY')
     private_key = os.environ.get('STRIPE_SECRET_KEY')
-    # 
+    #
     stripe.api_key = private_key
     intent = stripe.PaymentIntent.create(
         amount=1099,
