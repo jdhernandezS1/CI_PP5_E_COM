@@ -43,7 +43,7 @@ def PayUp(request):
     intent = stripe.PaymentIntent.create(
         amount=stripe_total,
         currency='chf',
-         # Verify your integration in this guide by including this parameter
+        # Verify your integration in this guide by including this parameter
         metadata={'integration_check': 'accept_a_payment'},
     )
 
