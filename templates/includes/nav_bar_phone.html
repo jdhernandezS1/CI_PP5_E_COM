@@ -1,6 +1,6 @@
 <div class="mx-auto row">
     <div class="list-inline-item dropdown p-0 m-1">
-        <a class="text-white nav-link d-block d-lg-none text-center p-0 m-0 " href="#" id="user-options"
+        <a class="text-black nav-link d-block d-lg-none text-center p-0 m-0 " href="#" id="user-options"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <ion-icon name="person"></ion-icon>
             {% if request.user.is_authenticated %}
@@ -22,8 +22,8 @@
             {% endif %}
         </div>
     </div>
-    <div class="list-inline-item text-white p-0 m-1">
-        <a class="text-white nav-link d-block d-lg-none p-0 m-0" href="#" id="mobile-search" data-toggle="dropdown"
+    <div class="list-inline-item text-black p-0 m-1">
+        <a class="text-black nav-link d-block d-lg-none p-0 m-0" href="#" id="mobile-search" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div>
@@ -52,7 +52,7 @@
     <div class="list-inline-item p-0 m-1">
         <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none p-0 m-0"
             href="{% url 'cart' %}">
-            <div class="text-center text-white">
+            <div class="text-center text-black">
                 <div class="pr-1">
                     <ion-icon name="cart"></ion-icon>
                 </div>

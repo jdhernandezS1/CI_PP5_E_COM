@@ -1,53 +1,48 @@
-<div class="collapse navbar-collapse p-0 m-0 text-white w-100 bg-one" id="main-nav">
+<div class="collapse navbar-collapse p-0 m-0 text-black w-100 bg-white" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto p-3">
         <li class="nav-item dropdown" id="logo">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link" >
-                <h2 class="bg-white text-danger my-0 text-capitalize font-weight-bold font-dancing p-1 rounded">Capricci </h2>
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h2 class="bg-white text-danger my-0 text-capitalize font-weight-bold font-dancing p-1 rounded">Capricci
+                </h2>
             </a>
         </li>
         <li class="nav-item dropdown ">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-products-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold text-black mr-5 nav-link" href="{% url 'prods_cat' %}"
+                aria-expanded="false">
                 All Products
             </a>
-            <div class="dropdown-menu border-0 btn btn-outline-warning" aria-labelledby="all-products-link">
-                <a href="{% url 'prods_cat' %}" class="dropdown-item">All Products</a>
-                <a href="{% url 'prods_cat' %}?categ=category" class="dropdown-item" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">By Category</a>
-                <div class="dropdown-menu border-0 " aria-labelledby="Catehory pascua">
-                    <a href="{% url 'prods_cat' %}?categ=pascua" class="dropdown-item">Pasqua</a>
-                </div>
-                <a href="{% url 'prods_cat' %}?order=price" class="dropdown-item ">By Price</a>
-                <a href="{% url 'prods_cat' %}?order=scount" class="dropdown-item">By Scount</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5 dropdown-toggle" href="#" id="clothing-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Seasons
+            </a>
+            <div class="dropdown-menu bg-one btn btn-outline-warning" aria-labelledby="all-products-link">
+                <a href="{% url 'prods_cat' %}" class="dropdown-item">Winter</a>
+                <a href="{% url 'prods_cat' %}?categ=pascua" class="dropdown-item " data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Easter</a>
+                <a href="{% url 'prods_cat' %}?order=price" class="dropdown-item">Summer</a>
+                <a href="{% url 'prods_cat' %}?order=scount" class="dropdown-item">San valentin</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="clothing-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5 dropdown-toggle" href="#" id="homeware-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Type 1
+                Glasses
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Option 1</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="homeware-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Type 2
-            </a>
-            <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="homeware-link">
+            <div class="dropdown-menu border-0 bg-one btn btn-outline-warning" aria-labelledby="homeware-link">
                 <a href="" class="dropdown-item">Option 1</a>
             </div>
         </li>
 
         <li class="nav-item dropdown ">
-            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="specials-link" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Type 3
+            <a class="logo-font font-weight-bold nav-link text-black dropdown-toggle" href="#" id="specials-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Wear Accesories
             </a>
-            <div class="dropdown-menu border-0 btn-outline-warning" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0 bg-one btn btn-outline-warning" aria-labelledby="specials-link">
                 <a href="" class="dropdown-item">Option 1</a>
             </div>
         </li>
