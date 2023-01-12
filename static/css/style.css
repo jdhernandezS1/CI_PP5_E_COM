@@ -143,6 +143,7 @@ input {
 
     #nav_phone {
         display: none;
+        visibility: hidden;
     }
     #nav_pc {
         width: 100%;
@@ -155,5 +156,8 @@ input {
     #logo {
         display: none;
 
+    }
+    #nav_list{
+        flex-direction: row;
     }
 }
