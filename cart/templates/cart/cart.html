@@ -71,26 +71,31 @@
             </div>
             <div class="w-75 p-3 mx-auto">
                 <p class="text-capitalize d-flex flex-row-reverse">total item cost {{total}}</p>
-                <p class="text-capitalize d-flex flex-row-reverse">total shipping {{free_delivery_delta}}</p>
+                <p class="text-capitalize d-flex flex-row-reverse">total shipping {{delivery}}</p>
                 <p class="text-capitalize d-flex flex-row-reverse">total: {{grand_total}}</p>
             </div>
-            <div class="w-100 text-center container">
-                <a href="{% url 'prods_cat' %}" class="btn btn-outline-success rounded btn-lg text-black border-0">
-                    <span class="icon">
-                        <ion-icon name="chevron-back-circle"></ion-icon>
-                    </span>
-                    <span class="text- font-weight-light">Keep Shopping</span>
-                </a>
-                <a href="{% url 'pay' %}" class="btn btn-outline-success rounded btn-lg text-black border-0">
-                    <span class="icon">
-                        <ion-icon name="card"></ion-icon>
-                    </span>
-                    <span class="text-uppercase font-weight-light">checkout</span>
-                </a>
+            <div class="w-100 text-center container mx-auto row">
+                <div class="mx-auto">
+                    <a href="{% url 'prods_cat' %}" class="btn bg-warning rounded btn-lg text-black border-0">
+                        <span class="icon">
+                            <ion-icon name="chevron-back-circle"></ion-icon>
+                        </span>
+                        <span class="text- font-weight-light">Keep Shopping</span>
+                    </a>
+                </div>
+
+                <div class="mx-auto">
+                    <a href="{% url 'pay' %}" class="btn bg-success rounded btn-lg text-black border-0">
+                        <span class="icon">
+                            <ion-icon name="card"></ion-icon>
+                        </span>
+                        <span class="text-uppercase font-weight-light">checkout</span>
+                    </a>
+                </div>
                 
             </div>
             {% else %}
-            <div class="text-black">
+            <div class="text-black mx-auto text-center">
                 <p class="lead mb-5">Your bag is empty.</p>
                 <a href="{% url 'prods_cat' %}" class="btn btn-outline-black rounded-0 btn-lg text-black">
                     <span class="icon">
