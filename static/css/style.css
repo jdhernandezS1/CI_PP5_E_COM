@@ -10,12 +10,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* general Classes */
 .bg-one {
     background-color: #c13d00ea;
 }
+
 .bg-two {
     background-color: #3c7fffcf;
 }
+
 .font-dancing {
     font-family: 'Dancing Script', cursive;
 }
@@ -24,8 +27,11 @@ body {
     font-family: 'Sunshiney', cursive;
 }
 
-/* font-family: 'Dancing Script', cursive; */
-/* from Bulma */
+/* NAV BAR */
+#nav_phone {
+    width: 100%;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -74,6 +80,7 @@ body {
 .bg-black {
     background: #000 !important;
 }
+
 /*  Input style */
 input {
     position: absolute;
@@ -102,23 +109,24 @@ input {
     left: 40px;
     top: 20px;
 }
-.requiredField .asteriskField{
+
+.requiredField .asteriskField {
     visibility: hidden;
 }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
+
 
 
 }
 
 @media (max-width: 991px) {
     #nav_pc {
-        display: none;
+        width: 100%;
+        display:inline;
     }
 }
 
@@ -133,9 +141,7 @@ input {
     }
 
     #nav_phone {
-        width: 0px;
-        padding: 0px;
-        visibility: collapse;
+       display: none;
     }
 
     .header-container {
