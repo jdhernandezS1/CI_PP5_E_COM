@@ -20,7 +20,9 @@ def cart_contents(request):
         product = get_object_or_404(Prod, pk=prod_id)
         total += quantity * product.price
         product_count += quantity
-        temp_tot = product.price * quantity
+        temp_tot = product.price * quantity 
+        if product.scount > 0 :
+            temp_tot = temp_tot * ( product.scount / 100)
         number += 1
         cart_items.append({
             'number': number,

@@ -13,7 +13,7 @@ from products.models import Prod
 
 class Order(models.Model):
     order_number = models.CharField(
-        max_length=12,
+        max_length=40,
         null=False,
         editable=False
         )

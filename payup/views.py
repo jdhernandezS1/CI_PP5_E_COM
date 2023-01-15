@@ -16,6 +16,8 @@ import stripe
 from django.conf import settings
 from cart.contexts import cart_contents
 from .forms import OrderForm
+from .models import OrdProd, Order
+from products.models import Prod
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -25,6 +27,49 @@ def PayUp(request):
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+    if request.method == 'POST':
+        cart = request.session.get('cart', {})
+
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'canton': request.POST['canton'],
+            'postcode': request.POST['postcode'],
+            'city': request.POST['city'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+        }
+
+        order_form = OrderForm(form_data)
+        print(order_form)
+        if order_form.is_valid():
+            order = order_form.save()
+            for prod_id, quantity in cart.items():
+                try:
+                    product = Prod.objects.get(id=prod_id)
+                    if isinstance(quantity, int):
+                        products_order = OrdProd(
+                            order=order,
+                            product=product,
+                            quantity=quantity,
+                        )
+                        products_order.save()
+                except Prod.DoesNotExist:
+                    messages.error(request, (
+                        "A product in your cart does not exists"
+                        "Call us for help you!")
+                    )
+                    order.delete()
+                    return redirect(reverse('cart'))
+
+            request.session['save_info'] = 'save-info' in request.POST
+            # return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('home', args=[order.order_number]))
+        else:
+            messages.error(request, 'An error has occurred. \
+                Please check the information and try again.')
 
     bag = request.session.get('cart', {})
     if not bag:
@@ -54,3 +99,5 @@ def PayUp(request):
     }
 
     return render(request, template, context)
+
+    
