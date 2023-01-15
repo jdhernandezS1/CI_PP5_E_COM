@@ -5,9 +5,12 @@ Imports
 # 3rd party:
 from django.db import models
 import uuid
+from django.db.models import Sum
 from django.contrib.auth.models import User
 # Internal
 from products.models import Prod
+from django.conf import settings
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -90,7 +93,9 @@ class Order(models.Model):
         """
         percent = settings.STANDARD_DELIVERY_PERCENTAGE
         delivery_quote = settings.FREE_DELIVERY_THRESHOLD
-        self.order_total = self.lineitems.aggregate(Sum('prods_total'))['prods_total__sum']
+        a = 'prods_total'
+        b = 'prods_total__sum'
+        self.order_total = self.prodsorder.aggregate(Sum(a))[b] or 0
         if self.order_total < delivery_quote:
             self.delivery_cost = self.order_total * percent / 100
         else:
@@ -145,11 +150,10 @@ class OrdProd(models.Model):
         """
         Update the order total.
         """
-        if self.scount > 0:
-            self.prods_total = self.product.price * self.quantity * self.scount
-        else:
-            self.prods_total = self.product.price * self.quantity
+        self.prods_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.product.sku} on order {self.order.order_number}'
+        ref = self.product.title_slug
+        order = self.order.order_number
+        return f'Ref {ref} on order {order}'

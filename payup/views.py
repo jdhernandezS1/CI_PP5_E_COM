@@ -49,13 +49,17 @@ def PayUp(request):
             for prod_id, quantity in cart.items():
                 try:
                     product = Prod.objects.get(id=prod_id)
-                    if isinstance(quantity, int):
-                        products_order = OrdProd(
-                            order=order,
-                            product=product,
-                            quantity=quantity,
-                        )
-                        products_order.save()
+                    products_order = OrdProd(
+                        order=order,
+                        product=product,
+                        quantity=quantity,
+                    )
+                    products_order.save()
+                    messages.success(request, (
+                        "Thank you For buy with us!")
+                    )
+                    # del request.session['cart']
+                    # Solve error
                 except Prod.DoesNotExist:
                     messages.error(request, (
                         "A product in your cart does not exists"
@@ -65,19 +69,20 @@ def PayUp(request):
                     return redirect(reverse('cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            # return redirect(reverse('checkout_success', args=[order.order_number]))
-            return redirect(reverse('home', args=[order.order_number]))
+            args = [order.order_number]
+            # return redirect(reverse('checkout_success', args))
+            return redirect(reverse('cart'))
         else:
             messages.error(request, 'An error has occurred. \
                 Please check the information and try again.')
 
-    bag = request.session.get('cart', {})
-    if not bag:
+    cart = request.session.get('cart', {})
+    if not cart:
         messages.error(request, "Your cart is empty at the moment")
         return redirect(reverse('prods_cat'))
 
-    current_bag = cart_contents(request)
-    total = current_bag['grand_total']
+    current_cart = cart_contents(request)
+    total = current_cart['grand_total']
     stripe_total = round(total * 100)
     stripe.api_key = stripe_secret_key
     intent = stripe.PaymentIntent.create(
@@ -88,8 +93,8 @@ def PayUp(request):
     order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request, 'Contact us and give the reference \
+            Stripe public key is missing.')
 
     template = 'payup/checkout.html'
     context = {
@@ -99,5 +104,3 @@ def PayUp(request):
     }
 
     return render(request, template, context)
-
-    
