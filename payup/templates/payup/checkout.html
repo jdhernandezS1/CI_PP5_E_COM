@@ -15,7 +15,9 @@
 <div class="mb-2 m-0 p-0 w-100 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
     <div class="row col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 mx-auto mb-5">
         <div class="col p-0 mx-auto">
-            <h2 class="mt-5 logo-font mb-4 text-center text-capitalize"><ion-icon name="bag-check"></ion-icon> checkout </h2>
+            <h2 class="mt-5 logo-font mb-4 text-center text-capitalize">
+                <ion-icon name="bag-check"></ion-icon> checkout
+            </h2>
             <hr class="w-100 bg-info">
             <hr class="w-75 bg-info">
             <hr class="w-50 bg-info">
@@ -25,16 +27,21 @@
 
     <div class="row col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 mx-auto">
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto d-flex align-content-start flex-wrap">
-            <form method="post" class="w-100 col-sm form-group  text-center rounded p-1 d-print-block">
+            <form action="{% url 'pay' %}" method="post"
+                class="w-100 col-sm form-group  text-center rounded p-1 d-print-block" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-0 mx-auto mb-5">
-                    <h4 class="fieldset-label text-black px-2 w-auto"><ion-icon name="person"></ion-icon> Information</h4>
+                    <h4 class="fieldset-label text-black px-2 w-auto">
+                        <ion-icon name="person"></ion-icon> Information
+                    </h4>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-0 mx-auto mb-5">
-                    <h4 class="fieldset-label text-black px-2 w-auto"><ion-icon name="home"></ion-icon> Delivery Information </h4>
+                    <h4 class="fieldset-label text-black px-2 w-auto">
+                        <ion-icon name="home"></ion-icon> Delivery Information
+                    </h4>
                     {{ order_form.canton | as_crispy_field }}
                     {{ order_form.city | as_crispy_field }}
                     {{ order_form.street_address1 | as_crispy_field }}
@@ -43,7 +50,9 @@
                 </fieldset>
 
                 <fieldset class="rounded px-0 mx-auto">
-                    <h4 class="fieldset-label text-black px-2 w-auto"><ion-icon name="shield-checkmark"></ion-icon> Card Detaills</h4>
+                    <h4 class="fieldset-label text-black px-2 w-auto">
+                        <ion-icon name="shield-checkmark"></ion-icon> Card Detaills
+                    </h4>
                     <!-- Stripe card -->
                     <div class="mb-3 mx-auto" id="card-element"></div>
                     <!-- errors -->
@@ -51,7 +60,7 @@
                     <!-- client secret to the view so we can get the payment intent id -->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
-                <div class="w-100 text-center container mx-auto row">     
+                <div class="w-100 text-center container mx-auto row">
                     <div class="mx-auto">
                         <a href="{% url 'cart' %}" class="btn bg-warning rounded btn-lg text-black border-0">
                             <span class="icon">
@@ -59,9 +68,10 @@
                             </span>
                             <span class="font-weight-bold">Come back</span>
                         </a>
-                    </div>               
+                    </div>
                     <div class="mx-auto">
-                        <button id="submit-button" class="bg-success btn btn-outline-success rounded btn-lg text-black border-0">
+                        <button id="submit-button"
+                            class="bg-success btn btn-outline-success rounded btn-lg text-black border-0">
                             <span class="font-weight-bold">Finish Payment</span>
                             <span class="icon">
                                 <ion-icon name="lock-closed-outline"></ion-icon>
@@ -69,7 +79,7 @@
                         </button>
                         <p class="small text-danger my-0">
                             <span class="icon">
-                                <i class="fas fa-exclamation-circle"></i>
+                                <ion-icon name="alert-circle-outline"></ion-icon>
                             </span>
                             <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
                         </p>
@@ -109,7 +119,7 @@
                 <p class="text-capitalize d-flex flex-row-reverse">total shipping {{delivery | safe}}</p>
                 <p class="text-capitalize d-flex flex-row-reverse">total: {{grand_total}}</p>
             </div>
-          
+
             {% else %}
             <div class="text-black">
                 <p class="lead mb-5">Your bag is empty.</p>
@@ -128,9 +138,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'payup/js/stripe_elements.js' %}"></script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'payup/js/stripe_elements.js' %}"></script>
 {% endblock %}
-
