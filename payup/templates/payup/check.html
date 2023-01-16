@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<!-- <link rel="stylesheet" href="{% static 'payup/css/check.css' %}"> -->
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container mx-auto">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4 text-center">Thank You to buy with us</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row mx-auto">
+        <div class="p-2 border mx-auto">
+            <div class="row">
+                <div class="col">
+                    <h4>
+                        <ion-icon name="list"></ion-icon>
+                    </h4>
+                    <h4 class="font-weight-bold">Order Information:</h4>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-left">
+                    <p class="mb-0 text-left text-black text-muted">Order ID:</p>
+                </div>
+                <div class="text-right">
+                    <p class="mb-0">{{ order.order_number }}</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-left">
+                    <p class="mb-0 text-left text-black text-muted">Order placed on:</p>
+                </div>
+                <div class="text-right">
+                    <p class="mb-0">{{ order.date }}</p>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="text-left">
+                    <small class="font-weight-bold ">
+                        <ion-icon name="bag-check"></ion-icon> Order Details:
+                    </small>
+                </div>
+            </div>
+
+            {% for item in order.prodsorder.all %}
+            <div class="container m-3">
+                <div class="text-left">
+                    <p class="small mb-0 text-black text-muted">
+                        {{ item.product.title }}
+                    </p>
+                </div>
+                <div class="col-12 col-md-8 text-md-right">
+                    <p class="small mb-0">{{ item.product.price }}</p>
+                    <p class="text-right">X {{ item.quantity }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="container">
+                <div class="text-left">
+                    <ion-icon name="location-sharp"></ion-icon> <span
+                        class="mb-0 text-black font-weight-bold">{{ order.full_name }}</span>
+                </div>
+            </div>
+
+            <div class="container m-2">
+                <div class="text-left">
+                    <p class="mb-0">{{ order.street_address1 }}</p>
+                </div>
+            </div>
+
+            {% if order.street_address2 %}
+            <div class="container m-2">
+                <div class="text-left">
+                    <p class="mb-0">{{ order.street_address2 }}</p>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if order.Canton %}
+            <div class="container m-2">
+                <div class="text-left">
+                    <p class="mb-0">{{ order.Canton }}</p>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="container m-2">
+                <div class="text-left">
+                    <p class="mb-0">{{ order.town_or_city }}</p>
+                </div>
+            </div>
+
+            {% if order.postcode %}
+            <div class="container m-2">
+                <div class="text-left">
+                    <p class="mb-0">{{ order.postcode }}</p>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="container m-2">
+                <div class="text-left">
+                    <p class="mb-0">{{ order.city }}</p>
+                </div>
+            </div>
+
+            <div class="container m-2">
+                <div class="text-left">
+                    <p class="mb-0">{{ order.phone_number }}</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-left">
+                    <p class="mb-0 text-black font-weight-bold">Order Total {{ order.order_total }}</p>
+                </div>
+            </div>
+
+            <div class="container ">
+                <div class="text-left">
+                    <p class="mb-0 text-black font-weight-bold">Delivery {{ order.delivery_cost }}</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-left">
+                    <p class="mb-0 text-black font-weight-bold">Grand Total {{ order.grand_total }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="w-75 text-right">
+            <a href="{% url 'prods_cat' %}" class="btn btn-warning rounded-0 my-2">
+                <span class="text-uppercase">Now check out the latest deals!</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
