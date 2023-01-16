@@ -55,9 +55,9 @@ def PayUp(request):
                         quantity=quantity,
                     )
                     products_order.save()
-                    messages.success(request, (
-                        "Thank you For buy with us!")
-                    )
+                    # messages.success(request, (
+                    #     "Thank you For buy with us!")
+                    # )
                     # del request.session['cart']
                     # Solve error
                 except Prod.DoesNotExist:
@@ -70,8 +70,8 @@ def PayUp(request):
 
             request.session['save_info'] = 'save-info' in request.POST
             args = [order.order_number]
-            # return redirect(reverse('checkout_success', args))
-            return redirect(reverse('cart'))
+            return redirect('check', order.order_number)
+            # return redirect(reverse('cart'))
         else:
             messages.error(request, 'An error has occurred. \
                 Please check the information and try again.')
@@ -101,6 +101,27 @@ def PayUp(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def PayUpCheck(request, order_number):
+    """
+    Check view
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    message = f'Thank you for your order\
+        <ion-icon class="fs-2" name="heart"></ion-icon>'
+    messages.success(request, message)
+
+    if 'cart' in request.session:
+        del request.session['cart']
+
+    template = 'payup/check.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
