@@ -12,4 +12,8 @@ urlpatterns = [
         '',
         views.PayUp,
         name="pay"),
+    path(
+        'CheckDetails/<order_number>',
+        views.PayUpCheck,
+        name="check"),
 ]
