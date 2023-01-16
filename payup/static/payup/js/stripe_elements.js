@@ -31,7 +31,7 @@ card.mount('#card-element');
 
 /*
  * Handle realtime validation errors on the card element
-*/
+ */
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
@@ -51,10 +51,14 @@ card.addEventListener('change', function (event) {
 // Handle payment-form submit
 var form = document.getElementById('payment-form');
 
-form.addEventListener('submit', function(ev) {
+form.addEventListener('submit', function (ev) {
     ev.preventDefault();
-    card.update({ 'disabled': true});
+    card.update({
+        'disabled': true
+    });
     $('#submit-button').attr('disabled', true);
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -62,7 +66,7 @@ form.addEventListener('submit', function(ev) {
                 name: form.full_name
             }
         }
-    }).then(function(result) {
+    }).then(function (result) {
         if (result.error) {
             var errorDiv = document.getElementById('card-errors');
             var html = `
@@ -71,7 +75,11 @@ form.addEventListener('submit', function(ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
-            card.update({ 'disabled': false});
+            $('#payment-form').fadeToggle(100);
+            $('#loading-overlay').fadeToggle(100);
+            card.update({
+                'disabled': false
+            });
             $('#submit-button').attr('disabled', false);
         } else {
             if (result.paymentIntent.status === 'succeeded') {
