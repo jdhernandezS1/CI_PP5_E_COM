@@ -12,7 +12,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 import stripe
-
+import json
 # Internal
 from django.conf import settings
 from cart.contexts import cart_contents
@@ -47,6 +47,7 @@ def PayUp(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
+        print("post")
         cart = request.session.get('cart', {})
 
         form_data = {
@@ -62,6 +63,7 @@ def PayUp(request):
 
         order_form = OrderForm(form_data)
         print(order_form)
+        print("valid")
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
