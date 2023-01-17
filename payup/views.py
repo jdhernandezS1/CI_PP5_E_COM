@@ -63,7 +63,11 @@ def PayUp(request):
         order_form = OrderForm(form_data)
         print(order_form)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_cart = json.dumps(cart)
+            order.save()
             for prod_id, quantity in cart.items():
                 try:
                     product = Prod.objects.get(id=prod_id)
