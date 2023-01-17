@@ -1,13 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'payup/css/check.css' %}">
 {% endblock %}
+
 
 {% block content %}
 
@@ -50,7 +47,7 @@
                 </fieldset>
 
                 <fieldset class="rounded px-0 mx-auto">
-                    <h4 class="fieldset-label text-black px-2 w-auto">
+                    <h4 class=" text-black px-2 w-auto">
                         <ion-icon name="shield-checkmark"></ion-icon> Card Detaills
                     </h4>
                     <!-- Stripe card -->
@@ -134,7 +131,7 @@
         </div>
     </div>
 </div>
-<div id="loading-overlay">
+<div id="loading-overlay" >
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
