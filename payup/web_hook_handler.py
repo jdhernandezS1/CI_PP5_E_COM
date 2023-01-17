@@ -94,23 +94,12 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(cart).items():
                     product = Prod.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        ordprod = OrdProd(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        ordprod.save()
-                    else:
-                        condition = item_data['items_by_size'].items()
-                        for size, quantity in condition:
-                            ordprod = OrdProd(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            ordprod.save()
+                    ordprod = OrdProd(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    ordprod.save()
             except Exception as e:
                 if order:
                     order.delete()
