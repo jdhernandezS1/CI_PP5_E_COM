@@ -17,16 +17,15 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="shortcut icon" type="" href="{% static 'favicon/favicon.ico' %}" />
-  {% endblock %}
-
-  {% block extra_css %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sunshiney&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'payup/css/payment.css' %}">
+  {% endblock %}
+
+  {% block extra_css %}
   {% endblock %}
 
   {% block core_js %}
