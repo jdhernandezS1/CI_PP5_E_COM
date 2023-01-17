@@ -1,6 +1,6 @@
-<div class="container position-static row text-center w-100 ">
+<div class="row position-sticky text-center w-100">
     {% for message in messages %}
-    <div class="alert {{ message.tags }} alert-dismissible fade show p-2 m-0 d-flex justify-content-end" id="msg" role="alert">
+    <div class="alert alert-success alert {{ message.tags }} alert-dismissible fade show p-2 mx-auto d-flex justify-content-end" id="msg" role="alert">
       {{ message | safe }}
       <button type="button" class="btn btn-close bg-transparent"
         aria-label="Close">
