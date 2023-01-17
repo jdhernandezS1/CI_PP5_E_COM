@@ -23,7 +23,7 @@ from products.models import Prod
 
 
 @require_POST
-def cache_checkout_data(request):
+def Cache_Checkout_Data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
