@@ -44,6 +44,9 @@ urlpatterns = [
         'pay/',
         include('payup.urls')),
     path(
+        'manager/',
+        include('manager.urls')),
+    path(
         'summernote/',
         include('django_summernote.urls')),
 
