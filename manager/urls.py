@@ -8,9 +8,9 @@ from . import views
 # ~~~~~~~~~~
 
 urlpatterns = [
-    # path(
-    #     '',
-    #     views.,
-    #     name=''
-    #     ),
+    path(
+        '',
+        views.ProductManager,
+        name='products_manager'
+    ),
 ]
