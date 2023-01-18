@@ -21,7 +21,7 @@
           aria-labelledby="user-options">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
-          <a href="" class="dropdown-item p-2 rounded">Product Management</a>
+          <a href="{% url 'products_manager' %}" class="dropdown-item p-2 rounded">Product Management</a>
           {% endif %}
           <a href="" class="dropdown-item p-2 rounded">My Profile</a>
           <a href="{% url 'account_logout' %}" class="dropdown-item p-2 rounded">Logout</a>
