@@ -6,9 +6,9 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div class="container h-100 text-black text-center py-5 pl-3 text-sm-left w-100">
+<div class="container h-100 text-black text-center py-5 pl-0 text-sm-left w-100">
   <h1>{% trans "Sign In" %}</h1>
-
+  <hr>
   {% get_providers as socialaccount_providers %}
 
   {% if socialaccount_providers %}
@@ -35,12 +35,14 @@
 
   <form class="login" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
-    {{ form.as_p }}
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-    <button class="primaryAction btn btn-primary btn-lg active" type="submit">{% trans "Sign In" %}</button>
+    <div class="container position-static form-group col mx-auto text-left">
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+      <button class="primaryAction btn btn-primary btn-lg active" type="submit">{% trans "Sign In" %}</button>
+    </div>
   </form>
 </div>
 {% endblock %}
