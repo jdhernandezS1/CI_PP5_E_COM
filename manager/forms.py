@@ -29,6 +29,31 @@ class ProdForm(forms.ModelForm):
             'scount',
             'description'
             )
+    def __init__(self, *args, **kwargs):
+        """
+        Placeholders classes labels
+        """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'category': 'Category',
+            'title': 'Title',
+            'title_slug':'Title system',
+            'quantity': 'Quantity',
+            'price': 'Price',
+            'featured_image': 'Product Image',
+            'scountbool': 'Scount',
+            'scount': 'Amount of Scount',
+            'description': 'Product Description',
+            }
+        self.fields['category'].widget.attrs['autofocus'] = True
+        for field in self.fields:
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]}*'
+            else:
+                placeholder = f'{placeholders[field]}'
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'manager-style-input'
+            self.fields[field].label = False
 
 # Cat
 #     author
