@@ -29,6 +29,7 @@ class ProdForm(forms.ModelForm):
             'scount',
             'description'
             )
+
     def __init__(self, *args, **kwargs):
         """
         Placeholders classes labels
@@ -37,7 +38,7 @@ class ProdForm(forms.ModelForm):
         placeholders = {
             'category': 'Category',
             'title': 'Title',
-            'title_slug':'Title system',
+            'title_slug': 'System Title',
             'quantity': 'Quantity',
             'price': 'Price',
             'featured_image': 'Product Image',
@@ -53,7 +54,10 @@ class ProdForm(forms.ModelForm):
                 placeholder = f'{placeholders[field]}'
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'manager-style-input'
-            self.fields[field].label = False
+            if field is 'scountbool':
+                self.fields[field].label = "Article in Scount"
+            else:
+                self.fields[field].label = False
 
 # Cat
 #     author
