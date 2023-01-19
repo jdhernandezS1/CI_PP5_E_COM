@@ -52,4 +52,4 @@ class DelItem(generic.ListView):
         product = get_object_or_404(model, id=productid)
         product.delete()
         messages.success(request, 'The Product Was Deleted as well')
-        return redirect('products_manager', title_slug)
+        return redirect('products_manager')
