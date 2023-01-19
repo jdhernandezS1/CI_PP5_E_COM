@@ -14,8 +14,13 @@ urlpatterns = [
         name='products_manager'
     ),
     path(
-        '<slug:title_slug>/',
+        'del<int:productid>/',
         views.DelItem,
         name='del_item'
+        ),
+    path(
+        'Add_Product/',
+        views.AddItem,
+        name='add_item'
         ),
 ]
