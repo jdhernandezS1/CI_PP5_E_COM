@@ -9,6 +9,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.core.exceptions import ValidationError
+from django.utils.text import slugify
 # Internal
 from products.models import Cat, Prod
 from .forms import ProdForm
@@ -44,15 +45,17 @@ def DelItem(request, productid):
     """
     A clas To Delete An Item
     """
-    if request.user.is_superuser:
-        model = Prod
-        # productid = request.session.get('productid')
-        product = get_object_or_404(model, id=productid)
-        product.delete()
-        messages.success(request, 'The Product Was Deleted as well')
-        redirect('products_manager')
-    else:
-        redirect("home")
+    if request.method == 'GET':
+
+        if request.user.is_superuser:
+            model = Prod
+            # productid = request.session.get('productid')
+            product = get_object_or_404(model, id=productid)
+            product.delete()
+            messages.success(request, 'The Product Was Deleted as well')
+            return redirect('products_manager')
+        else:
+            return redirect("home")
 
 
 def AddItem(request):
@@ -60,7 +63,25 @@ def AddItem(request):
     A clas To Add an Item
     """
     if request.method == 'POST':
-        messages.success(request, 'The Product Was Added as well')
+        form_data = {
+            'category': request.POST['category'],
+            'title': request.POST['title'],
+            'quantity': request.POST['quantity'],
+            'price': request.POST['price'],
+            'featured_image': request.POST['featured_image'],
+            'scount': request.POST['scount'],
+            'description': request.POST['description'],
+        }
+        form_data["title_slug"] = slugify(request.POST['title'])
+        prod_form = ProdForm(form_data)
+        print(prod_form)
+        if prod_form.is_valid():
+            product = prod_form.save(commit=False)
+            product.save()
+            return redirect('products_manager')
+        else:
+            messages.error(request, 'An error has occurred. \
+                Please check the information and try again.')
 
     if request.user.is_superuser:
         model = Prod
