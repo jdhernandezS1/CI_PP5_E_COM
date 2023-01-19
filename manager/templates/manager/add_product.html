@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'manager/css/manager.css' %}">
+<link rel="stylesheet" href="{% static 'manager/css/manager.css' %}">
 {% endblock %}
 
 
@@ -15,18 +15,31 @@
 {% endblock %}
 
 {% block content %}
-<form action="{% url 'add_item' %}" method="post" class="form-group text-left rounded"
-    id="payment-form">
+<form action="{% url 'add_item' %}" method="post" class="form-group text-left rounded" id="additem-form">
     {% csrf_token %}
-    <div class="container">
-        <div class="form-group container m-3">{{product_form.category | as_crispy_field}}</div>
+        <div class="form-group container">
+            <p class="text-left">Category</p>{{product_form.category | as_crispy_field}}
+        </div>
         <div class="container w-100">{{product_form.title | as_crispy_field}}</div>
-        <div class="container">{{product_form.quantity | as_crispy_field}}</div>
-        <div class="container">{{product_form.price | as_crispy_field}}</div>
+        <div class="container">
+            <p class="text-left">Quantity</p>{{product_form.quantity | as_crispy_field}}
+        </div>
+        <div class="container">
+            <p class="text-left">Price</p>{{product_form.price | as_crispy_field}}
+        </div>
         <div class="form-check container">{{product_form.scountbool | as_crispy_field}}</div>
-        <div class="container">{{product_form.scount | as_crispy_field}}</div>
+        <div class="container">
+            <p class="text-left">If the product is in scount put it if not let empty</p>
+            {{product_form.scount | as_crispy_field}}
+            <small>The Scount is in % (Ex 10%)</small>
+        </div>
         <div class="container">{{product_form.description | as_crispy_field}}</div>
         <div class="container">{{product_form.featured_image | as_crispy_field}}</div>
-    </div>
+    <button id="submit-button" class="bg-success btn btn-outline-success rounded btn-lg text-black border-0">
+        <span class="font-weight-bold">Add item </span>
+        <span class="icon">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+        </span>
+    </button>
 </form>
 {% endblock %}
