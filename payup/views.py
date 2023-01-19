@@ -47,7 +47,6 @@ def PayUp(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
-        print("post")
         cart = request.session.get('cart', {})
 
         form_data = {
@@ -63,7 +62,6 @@ def PayUp(request):
 
         order_form = OrderForm(form_data)
         print(order_form)
-        print("valid")
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -79,11 +77,6 @@ def PayUp(request):
                         quantity=quantity,
                     )
                     products_order.save()
-                    # messages.success(request, (
-                    #     "Thank you For buy with us!")
-                    # )
-                    # del request.session['cart']
-                    # Solve error
                 except Prod.DoesNotExist:
                     messages.error(request, (
                         "A product in your cart does not exists"
@@ -95,7 +88,6 @@ def PayUp(request):
             request.session['save_info'] = 'save-info' in request.POST
             args = [order.order_number]
             return redirect('check', order.order_number)
-            # return redirect(reverse('cart'))
         else:
             messages.error(request, 'An error has occurred. \
                 Please check the information and try again.')
