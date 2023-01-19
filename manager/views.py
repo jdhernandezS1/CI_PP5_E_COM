@@ -11,6 +11,7 @@ from django.contrib import messages
 from django.core.exceptions import ValidationError
 # Internal
 from products.models import Cat, Prod
+from .forms import ProdForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -35,21 +36,43 @@ def ProductManager(request):
             template,
             context
             )
-    else: 
+    else:
         return redirect("home")
 
 
-class DelItem(generic.ListView):
+def DelItem(request, productid):
     """
-    A clas To Delete Item
+    A clas To Delete An Item
     """
-    model = Prod
-
-    def post(self, request, title_slug, productid, **kwargs):
-        """
-        method To Delete Item
-        """
+    if request.user.is_superuser:
+        model = Prod
+        # productid = request.session.get('productid')
         product = get_object_or_404(model, id=productid)
         product.delete()
         messages.success(request, 'The Product Was Deleted as well')
-        return redirect('products_manager')
+        redirect('products_manager')
+    else:
+        redirect("home")
+
+
+def AddItem(request):
+    """
+    A clas To Add an Item
+    """
+    if request.method == 'POST':
+        messages.success(request, 'The Product Was Added as well')
+
+    if request.user.is_superuser:
+        model = Prod
+        product_form = ProdForm()
+        template = "manager/add_product.html"
+        context = {
+            'product_form': product_form,
+            }
+        return render(
+            request,
+            template,
+            context
+            )
+    else:
+        redirect("home")
