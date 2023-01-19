@@ -13,4 +13,9 @@ urlpatterns = [
         views.ProductManager,
         name='products_manager'
     ),
+    path(
+        '<slug:title_slug>/',
+        views.DelItem,
+        name='del_item'
+        ),
 ]
