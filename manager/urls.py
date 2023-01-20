@@ -28,5 +28,5 @@ urlpatterns = [
         views.EditItem,
         name='edit_item'
         ),
-        
+
 ]
