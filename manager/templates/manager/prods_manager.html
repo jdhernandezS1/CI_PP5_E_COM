@@ -51,15 +51,15 @@
                             {% endif %}
                         </div>
 
-                        <div class="card-footer border-0 text-center bg-white rounded ">
+                        <div class="card-footer border-0 text-center bg-white rounded p-0">
                             <p class="mx-auto">{{ product.title }}</p>
 
                             <div class="row container mx-auto text-center align-middle">
-                                <a class="text-black btn" href="{% url 'edit_item' product.id%}">
+                                <a class="text-black btn btn-primary mx-auto my-1" href="{% url 'edit_item' product.id%}">
                                     <ion-icon name="create-outline"></ion-icon>
                                     <small class="font-weight-light">Edit Product</small>
                                 </a>
-                                <a class="text-black btn" href="{% url 'del_item' product.id%}">
+                                <a class="text-black btn btn-danger mx-auto my-1" href="{% url 'del_item' product.id%}">
                                     <ion-icon name="trash"></ion-icon>
                                     <small class="font-weight-light">Delete Product</small>
                                 </a>

@@ -17,7 +17,11 @@
 {% endblock %}
 
 {% block content %}
-<form action="{% url 'edit_item' productid %}" method="post" class="form-group text-left rounded" id="additem-form"  enctype="multipart/form-data"  >
+<div class="text-center">
+    <h1>Edit: <small>{{product.title}}</small></h1>
+</div>
+<form action="{% url 'edit_item' productid %}" method="post" class="form-group text-left rounded" id="additem-form"
+    enctype="multipart/form-data">
     {% csrf_token %}
     <div class="form-group container">
         <p class="text-left">Category</p>{{product_form.category | as_crispy_field}}

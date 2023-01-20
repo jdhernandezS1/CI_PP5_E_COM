@@ -144,6 +144,7 @@ def EditItem(request, productid):
         context = {
             'productid': productid,
             'product_form': product_form,
+            "product": ref,
             }
         return render(
             request,
