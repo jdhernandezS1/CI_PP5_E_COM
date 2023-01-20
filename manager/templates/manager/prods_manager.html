@@ -55,7 +55,7 @@
                             <p class="mx-auto">{{ product.title }}</p>
 
                             <div class="row container mx-auto text-center align-middle">
-                                <a class="text-black btn" href="{% url 'add_item' %}">
+                                <a class="text-black btn" href="{% url 'edit_item' product.id%}">
                                     <ion-icon name="create-outline"></ion-icon>
                                     <small class="font-weight-light">Edit Product</small>
                                 </a>
