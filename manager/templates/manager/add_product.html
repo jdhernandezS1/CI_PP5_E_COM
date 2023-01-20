@@ -2,7 +2,7 @@
 {% load static %}
 
 {% load cloudinary %}      
-{% cloudinary photo.image format="jpg" width=993 height=993 crop="fill" %}
+{% cloudinary photo.image width=993 height=993 crop="fill" %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'manager/css/manager.css' %}">

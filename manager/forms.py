@@ -4,9 +4,10 @@ Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from django import forms
+from cloudinary.forms import CloudinaryFileField
 # Internal
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from products.models import Cat, Prod
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class ProdForm(forms.ModelForm):
@@ -28,6 +29,13 @@ class ProdForm(forms.ModelForm):
             'scountbool',
             'scount',
             'description'
+            )
+    featured_image = CloudinaryFileField(
+            options={
+                "folder": "products/",
+                'width': 531,
+                'height': 531,
+                }
             )
 
     def __init__(self, *args, **kwargs):
@@ -54,7 +62,7 @@ class ProdForm(forms.ModelForm):
                 placeholder = f'{placeholders[field]}'
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'manager-style-input'
-            if field is 'scountbool':
+            if field == 'scountbool':
                 self.fields[field].label = "Article in Scount"
             else:
                 self.fields[field].label = False
