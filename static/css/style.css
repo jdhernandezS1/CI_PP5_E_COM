@@ -19,15 +19,14 @@ body {
     background-color: #3c7fffcf;
 }
 
-.text-one:link{
-    text-decoration: none;
-}
 .text-two {
     color: #3c7fffcf;
 }
+.text-two:link{
+    text-decoration: none;
+}
 
 .text-one  {
-    
     color: #c13d00ea;
 }
 .text-one:link{
