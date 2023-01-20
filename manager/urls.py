@@ -23,4 +23,10 @@ urlpatterns = [
         views.AddItem,
         name='add_item'
         ),
+    path(
+        'edit<int:productid>/',
+        views.EditItem,
+        name='edit_item'
+        ),
+        
 ]
