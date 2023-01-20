@@ -63,29 +63,33 @@ def DelItem(request, productid):
 
 def AddItem(request):
     """
-    A clas To Add an Item
+    Add Item View
     """
     if request.method == 'POST':
-        form_data = {
-            'category': request.POST['category'],
-            'title': request.POST['title'],
-            'quantity': request.POST['quantity'],
-            'price': request.POST['price'],
-            'scount': request.POST['scount'],
-            'description': request.POST['description'],
-        }
-        # producto = get_object_or_404(Prod, title_slug='')
-        # print(producto.featured_image)
-        title = slugify(request.POST['title'])
-        form_data['title_slug'] = slugify(request.POST['title'])
-        prod_form = ProdForm(form_data, request.FILES)
-        if prod_form.is_valid():
-            product = prod_form.save(commit=False)
-            product.save()
-            return redirect('products_manager')
+        if request.user.is_superuser:
+
+            form_data = {
+                'category': request.POST['category'],
+                'title': request.POST['title'],
+                'quantity': request.POST['quantity'],
+                'price': request.POST['price'],
+                'scount': request.POST['scount'],
+                'description': request.POST['description'],
+            }
+            # producto = get_object_or_404(Prod, title_slug='')
+            # print(producto.featured_image)
+            title = slugify(request.POST['title'])
+            form_data['title_slug'] = slugify(request.POST['title'])
+            prod_form = ProdForm(form_data, request.FILES)
+            if prod_form.is_valid():
+                product = prod_form.save(commit=False)
+                product.save()
+                return redirect('products_manager')
+            else:
+                messages.error(request, 'An error has occurred. \
+                    Please check the information and try again.')
         else:
-            messages.error(request, 'An error has occurred. \
-                Please check the information and try again.')
+            redirect("home")
 
     if request.user.is_superuser:
         model = Prod
@@ -102,3 +106,49 @@ def AddItem(request):
     else:
         redirect("home")
 
+
+def EditItem(request, productid):
+    """
+    A clas To edit Item
+    """
+    if request.method == 'POST':
+        if request.user.is_superuser:
+            form_data = {
+                'category': request.POST['category'],
+                'title': request.POST['title'],
+                'quantity': request.POST['quantity'],
+                'price': request.POST['price'],
+                'scount': request.POST['scount'],
+                'description': request.POST['description'],
+            }
+            title = slugify(request.POST['title'])
+            form_data['title_slug'] = slugify(request.POST['title'])
+            producto = get_object_or_404(Prod, id=productid)
+            ref = get_object_or_404(Prod, id=productid)
+            prod_form = ProdForm(form_data, request.FILES, instance=ref)
+            if prod_form.is_valid():
+                product = prod_form.save(commit=False)
+                product.save()
+                return redirect('products_manager')
+            else:
+                messages.error(request, 'An error has occurred. \
+                    Please check the information and try again.')
+        else:
+            redirect("home")
+    # Get Response
+    if request.user.is_superuser:
+        model = Prod
+        ref = get_object_or_404(Prod, id=productid)
+        product_form = ProdForm(instance=ref)
+        template = "manager/edit_product.html"
+        context = {
+            'productid': productid,
+            'product_form': product_form,
+            }
+        return render(
+            request,
+            template,
+            context
+            )
+    else:
+        redirect("home")
