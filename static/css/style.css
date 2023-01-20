@@ -19,6 +19,21 @@ body {
     background-color: #3c7fffcf;
 }
 
+.text-one:link{
+    text-decoration: none;
+}
+.text-two {
+    color: #3c7fffcf;
+}
+
+.text-one  {
+    
+    color: #c13d00ea;
+}
+.text-one:link{
+    text-decoration: none;
+}
+
 .font-dancing {
     font-family: 'Dancing Script', cursive;
 }

@@ -1,13 +1,13 @@
-<div class="mx-auto row text-info">
+<div class="mx-auto row text-black">
     <div id="" class="m-auto">
-        <button id="" class="list-inline-item navbar-toggler py-2 mx-2 bg-white mx-auto border-0" type="button"
+        <button id="" class="list-inline-item navbar-toggler py-2 mx-2 bg-white mx-auto border-0 text-one" type="button"
             data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="text-info"><ion-icon name="grid-outline"></ion-icon></span>
+            <span class=""><ion-icon name="grid-outline"></ion-icon></span>
         </button>
     </div>
-    <div class="list-inline-item dropdown p-0 m-1 ">
-        <a class="text-info nav-link d-block d-lg-none text-center p-0 m-0 " href="#" id="user-options"
+    <div class="list-inline-item dropdown p-0 m-1 text-black">
+        <a class="nav-link d-block d-lg-none text-center p-0 m-0 text-decoration-none" href="#" id="user-options"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <ion-icon name="person"></ion-icon>
             {% if request.user.is_authenticated %}
@@ -16,7 +16,7 @@
             <p class="my-0 pr-1">Account</p>
             {% endif %}
         </a>
-        <div class="dropdown-menu border-0 rounded-0" aria-labelledby="user-options">
+        <div class="dropdown-menu border-0 rounded-0 text-black" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
             <a href="{% url 'products_manager' %}" class="dropdown-item">Product Management</a>
@@ -29,10 +29,10 @@
             {% endif %}
         </div>
     </div>
-    <div class="list-inline-item text-black p-0 m-1">
-        <a class="text-black nav-link d-block d-lg-none p-0 m-0" href="#" id="mobile-search" data-toggle="dropdown"
+    <div class="list-inline-item text-one p-0 m-1">
+        <a class="nav-link d-block d-lg-none p-0 m-0 text-decoration-none text-one" href="#" id="mobile-search" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <div class="text-center text-info">
+            <div class="text-center ">
                 <div>
                     <ion-icon name="search-outline"></ion-icon>
                 </div>
@@ -57,9 +57,9 @@
         </div>
     </div>
     <div class="list-inline-item p-0 m-1">
-        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none p-0 m-0"
+        <a class="{% if grand_total %}font-weight-bold{% else %} {% endif %} nav-link d-block d-lg-none p-0 m-0 text-one text-decoration-none"
             href="{% url 'cart' %}">
-            <div class="text-center text-info">
+            <div class="text-center">
                 <div class="pr-1">
                     <ion-icon name="cart"></ion-icon>
                 </div>
