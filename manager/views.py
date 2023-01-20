@@ -6,10 +6,13 @@ Imports
 from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.shortcuts import reverse, get_list_or_404, redirect
 from django.views import generic, View
+from django import forms
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 from django.utils.text import slugify
+from cloudinary.forms import cl_init_js_callbacks
+import cloudinary
 # Internal
 from products.models import Cat, Prod
 from .forms import ProdForm
@@ -68,13 +71,14 @@ def AddItem(request):
             'title': request.POST['title'],
             'quantity': request.POST['quantity'],
             'price': request.POST['price'],
-            'featured_image': request.POST['featured_image'],
             'scount': request.POST['scount'],
             'description': request.POST['description'],
         }
-        form_data["title_slug"] = slugify(request.POST['title'])
-        prod_form = ProdForm(form_data)
-        print(prod_form)
+        # producto = get_object_or_404(Prod, title_slug='')
+        # print(producto.featured_image)
+        title = slugify(request.POST['title'])
+        form_data['title_slug'] = slugify(request.POST['title'])
+        prod_form = ProdForm(form_data, request.FILES)
         if prod_form.is_valid():
             product = prod_form.save(commit=False)
             product.save()
@@ -97,3 +101,4 @@ def AddItem(request):
             )
     else:
         redirect("home")
+

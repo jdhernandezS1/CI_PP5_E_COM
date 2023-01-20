@@ -92,8 +92,8 @@ class Prod(models.Model):
 
     featured_image = CloudinaryField(
         'image',
-        default='placeholder'
-        )
+        default='placeholder',
+            )
 
     scountbool = models.BooleanField()
 
