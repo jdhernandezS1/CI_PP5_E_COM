@@ -9,7 +9,13 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
 }
+/* FOOTER */
 
+/* Email chimp */
+#mc_embed_signup{
+    background:#fff;
+    clear:left;
+}
 /* general Classes */
 .bg-one {
     background-color: #c13d00ea;
