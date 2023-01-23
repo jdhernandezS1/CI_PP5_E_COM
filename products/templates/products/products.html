@@ -33,10 +33,12 @@
                                 {% if "placeholder" in product.featured_image.url %}
                                 <img class="card-img-top rounded"
                                     src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg"
-                                    alt="{{product.title}}">
+                                    alt="{{product.title}}"
+                                    aria-label="{{product.title}}">
                                 {% else %}
                                 <img class="card-img-top rounded" src=" {{ product.featured_image.url }}"
-                                    alt="{{product.title}}">
+                                    alt="{{product.title}}"
+                                    aria-label="{{product.title}}">
                                 {% endif %}
                             </div>
                             <p>{{ product.title }}</p> 

@@ -35,6 +35,7 @@ class ProdForm(forms.ModelForm):
     featured_image = CloudinaryFileField(
             options={
                 "folder": "products/",
+                # "public_id": self.title_slug,
                 'width': 531,
                 'height': 531,
                 }

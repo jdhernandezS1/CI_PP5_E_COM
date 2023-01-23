@@ -21,13 +21,15 @@
     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6   mx-auto d-block">
         {% if "placeholder" in product.featured_image.url %}
         <img class="card-img-top rounded-top img-fluid"
-            src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="{{prod.title}}">
+            src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="{{prod.title}}"
+            aria-label="{{product.title}}">
         {% else %}
-        <img class="card-img-top rounded-top img-fluid" src=" {{ prod.featured_image.url }}" alt="{{prod.title}}">
+        <img class="card-img-top rounded-top img-fluid" src=" {{ prod.featured_image.url }}" alt="{{prod.title}}"
+            aria-label="{{product.title}}">
         {% endif %}
     </div>
     <div class="container mx-auto col-sm-12 col-md-6 col-lg-6 col-xl-6  text-left">
-        <p class="">{{prod.title|safe}}</p>
+        <strong class="">{{prod.title|safe}}</strong>
         <p class="">
             <ion-icon name="card-outline"></ion-icon> Price: CHF {{prod.price|safe}}
         </p>
