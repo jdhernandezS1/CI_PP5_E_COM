@@ -133,8 +133,8 @@ class Comment(models.Model):
         max_length=20
         )
     author = models.CharField(
-        max_length=30
-    )
+        max_length=20
+        )
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(

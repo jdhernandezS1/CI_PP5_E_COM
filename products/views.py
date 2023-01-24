@@ -89,10 +89,38 @@ class ProdDetail(View):
         context = {
             "comments": comments,
             "prod": prod,
-            "comment_form": CommentForm()
+            "comment_form": CommentForm(),
+            "prodid": prod.title_slug,
             }
         return render(
             request,
             "products/prod_detail.html",
             context,
         )
+
+    def post(self, request, slug, *args, **kwargs):
+        """
+        Post function to comment
+        """
+        prod = get_object_or_404(Prod, title_slug=slug)
+        comments = prod.comments
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.author = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.producup = prod
+            comment.save()
+        else:
+            comment_form = CommentForm()
+            raise ValidationError(
+                    "The Content is not valid"
+                )
+        context = {
+                "comments": comments,
+                "comment_form": comment_form,
+                "prodslug": prod.title_slug,
+                "prodid": prod,
+            }
+        messages.success(request, 'Your comment was sent')
+        return redirect('prods_cat')

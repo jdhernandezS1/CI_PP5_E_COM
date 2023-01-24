@@ -17,8 +17,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="text-center mt-3">
-    <h1>{{prod.title|safe}}</h1>
+<div class="text-center my-5">
+    <h2>{{prod.title|safe}}</h2>
     <hr class="w-75 bg-black">
     <hr class="w-50 bg-black">
 </div>
@@ -72,22 +72,47 @@
     </form>
 
 </div>
-<div class="container">
-    <h3>Opinions</h3>
-    <form action="">
+<hr class="bg-one">
+<div class="container mt-5">
+    <form method="post">
         {% csrf_token %}
-        <div class="container w-100 p-0 m-0">
-            <div class="m-5 w-100">
-                {{comment_form.name | as_crispy_field}}            
+        <div class="container w-100 p-0 m-0 form-group">
+            <div class="mt-5 w-100 mx-auto">
+                <small>Feel Free to give us your opinion Here:</small>
+                {{comment_form.name | as_crispy_field}}
             </div>
-            <div class="m-5">
+            <div class="mt-5 mx-auto">
                 {{comment_form.email | as_crispy_field}}
             </div>
-            <div class="m-5">
+            <div class="mx-auto mt-5">
                 {{comment_form.body | as_crispy_field}}
             </div>
+            <div class="container">
+                <button id="submit-button"
+                    class="bg-success btn btn-outline-success rounded btn-lg text-black border-0 mx-auto"
+                    value="Upload">
+                    <span class="font-weight-bold">Comment </span>
+                </button>
+            </div>
         </div>
-   
     </form>
+
+</div>
+<!-- Comments Section -->
+<div class="container my-5">
+        <h3>Opinions: </h3>
+
+    {% for comment in comments %}
+    <div class="comments">
+
+        <span class="font-weight-bold text-capitalize">{{ comment.name }}</span>
+
+        {{ comment.created_on|date}} wrote:
+
+        <p class="bg-dark">
+            {{ comment.body | linebreaks }}
+        </p>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
