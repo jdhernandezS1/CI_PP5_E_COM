@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'home/home.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -14,20 +14,21 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100" id="Home">
-    <div class="row h-100">
-        <div class="col-6 col-md-6 my-auto">
+<div class="container h-100 p-0">
+    <div class="row h-100 w-100 ">
+        <div class="col-6 col-md-6 my-auto ">
             <h1 class="display-4 logo-font text-black">
-                The new collections are here
+                Look around our new collection
             </h1>
-            <div class="my-5">
-                <h4>
-                    <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                </h4>
-                <picture>
-                    <img src="https://res.cloudinary.com/djvwk7zf2/image/upload/v1674564996/home_wd6xsz.jpg" alt="Home_Wallpaper">
-                </picture>
-            </div>
+            <h4>
+                <a href="{% url 'prods_cat' %}" class="shop-now-button btn btn-lg rounded text-uppercase py-3">Shop
+                    Now</a>
+            </h4>
+
+        </div>
+        <div class="my-5 rounded" id="home">
+ 
+
         </div>
     </div>
 </div>
