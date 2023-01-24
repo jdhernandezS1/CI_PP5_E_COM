@@ -14,7 +14,7 @@ from products.models import Cat, Prod
 
 class ProdForm(forms.ModelForm):
     """
-    A class for form to create a meal
+    A class for form to create a Product
     """
     class Meta:
         """
@@ -35,12 +35,10 @@ class ProdForm(forms.ModelForm):
     featured_image = CloudinaryFileField(
             options={
                 "folder": "products/",
-                # "public_id": self.title_slug,
                 'width': 531,
                 'height': 531,
                 }
             )
-    description = SummernoteTextFormField()
 
     def __init__(self, *args, **kwargs):
         """
@@ -71,8 +69,19 @@ class ProdForm(forms.ModelForm):
             else:
                 self.fields[field].label = False
 
-# Cat
-#     author
-#     title
-#     slug
-#     featured_image
+
+class CategoryForm(forms.ModelForm):
+    """
+    A class for form to create a category
+    """
+    class Meta:
+        """
+        To order items
+        """
+        model = Cat
+        fields = (
+            'author',
+            'title',
+            'slug',
+            'featured_image'
+        )
