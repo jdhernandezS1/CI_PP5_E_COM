@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/home.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -10,9 +14,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
+<div class="container h-100" id="Home">
     <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
+        <div class="col-6 col-md-6 my-auto">
             <h1 class="display-4 logo-font text-black">
                 The new collections are here
             </h1>
@@ -20,6 +24,9 @@
                 <h4>
                     <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                 </h4>
+                <picture>
+                    <img src="https://res.cloudinary.com/djvwk7zf2/image/upload/v1674564996/home_wd6xsz.jpg" alt="Home_Wallpaper">
+                </picture>
             </div>
         </div>
     </div>
