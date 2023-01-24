@@ -12,6 +12,7 @@ from django.contrib import messages
 from django.core.exceptions import ValidationError
 # Internal
 from .models import Cat, Prod
+from .forms import CommentForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -84,9 +85,11 @@ class ProdDetail(View):
         """
         queryset = Prod.objects
         prod = get_object_or_404(queryset, title_slug=slug)
+        comments = prod.comments.order_by('created_on')
         context = {
-                "prod": prod
-                # "comment_form": CommentForm()
+            "comments": comments,
+            "prod": prod,
+            "comment_form": CommentForm()
             }
         return render(
             request,

@@ -118,3 +118,34 @@ class Prod(models.Model):
         Return Title
         """
         return str(self.title)
+
+
+class Comment(models.Model):
+    """
+    A class for Comment Model
+    """
+    producup = models.ForeignKey(
+        Prod,
+        on_delete=models.CASCADE,
+        related_name='comments'
+        )
+    name = models.CharField(
+        max_length=20
+        )
+    author = models.CharField(
+        max_length=30
+    )
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(
+        auto_now_add=True
+        )
+
+    class Meta:
+        """
+        Items Order
+        """
+        ordering = ['created_on']
+
+    def __str__(self):
+        return f"Comment{self.body} by {self.name}"

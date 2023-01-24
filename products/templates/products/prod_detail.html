@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -67,5 +72,22 @@
     </form>
 
 </div>
+<div class="container">
+    <h3>Opinions</h3>
+    <form action="">
+        {% csrf_token %}
+        <div class="container w-100 p-0 m-0">
+            <div class="m-5 w-100">
+                {{comment_form.name | as_crispy_field}}            
+            </div>
+            <div class="m-5">
+                {{comment_form.email | as_crispy_field}}
+            </div>
+            <div class="m-5">
+                {{comment_form.body | as_crispy_field}}
+            </div>
+        </div>
+   
+    </form>
 </div>
 {% endblock %}
