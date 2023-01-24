@@ -73,6 +73,7 @@
 
 </div>
 <hr class="bg-one">
+{% if request.user.is_authenticated %}
 <div class="container mt-5">
     <form method="post">
         {% csrf_token %}
@@ -96,8 +97,8 @@
             </div>
         </div>
     </form>
-
 </div>
+{% endif%}
 <!-- Comments Section -->
 <div class="container my-5">
         <h3>Opinions: </h3>
