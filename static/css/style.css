@@ -10,7 +10,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 /* FOOTER */
-
+/*  Bootstrap */
+*, ::after, ::before {
+    box-sizing: initial;
+  }
 /* Email chimp */
 #mc_embed_signup{
     clear:left;
