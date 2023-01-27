@@ -1,0 +1,59 @@
+.errorMessage {
+    color: #fff;
+    font-size: 5em;
+    font-weight: bold;
+    text-shadow:
+        0 1px 0 #c13d006b,
+        0 2px 0 rgba(193, 61, 0, 0.575),
+        0 3px 0 #c13d00ea,
+        0 4px 0 #c13d00d3,
+        0 5px 0 #c13d00ea;
+    text-align: center;
+    padding: 2% 0;
+    animation: colorAnimation 5s linear infinite;
+
+}
+
+.errorDiv {
+    color: #fff;
+    font-size: 8em;
+    font-weight: bold;
+    text-shadow:
+        0 1px 0 #c13d006b,
+        0 2px 0 rgba(193, 61, 0, 0.575),
+        0 3px 0 #c13d00ea,
+        0 4px 0 #c13d00d3,
+        0 5px 0 #c13d00ea;
+    text-align: center;
+    padding: 2% 0;
+    animation: colorAnimation 5s linear infinite;
+}
+
+.errorTitle {
+    font-size: 3em;
+    text-align: center;
+    color: #c13d00d3;
+    text-shadow:
+        0 1px 0 #c13d006b,
+        0 2px 0 rgba(193, 61, 0, 0.575),
+        0 3px 0 #c13d00ea,
+        0 4px 0 #c13d00d3,
+        0 5px 0 #c13d00ea;
+    padding: 5% 0;
+
+}
+
+/* Animations */
+@keyframes colorAnimation {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: #c13d00ea;
+    }
+
+    100% {
+        color: white;
+    }
+}
