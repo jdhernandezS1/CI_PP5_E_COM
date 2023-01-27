@@ -1,31 +1,29 @@
+"""
+Imports
+"""
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.shortcuts import render
 from django.views import generic, View
-
-from products.models import Cat
-
-
-class ServerDeniesAcces(View):
-    """
-    Page not found Error 403
-    """
-    def get(self, request, *args, **kwargs):
-        template = 'errors/403.html'
-        return render(request, template)
+# Internal
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-class PageNotFound(View):
-    """
-    Page not found Error 404
-    """
-    def get(self, request, *args, **kwargs):
-        template = 'errors/404.html'
-        return render(request, template)
+def ServerDeniesAcces(request):
+    template = 'errors/403.html'
+    return render(request, template, status=403)
 
 
-class InternalServerError(View):
-    """
-    Page not found Error 500
-    """
-    def get(self, request, *args, **kwargs):
-        template = 'errors/500.html'
-        return render(request, template)
+def PageNotFound(request):
+    template = 'errors/404.html'
+    return render(request, template, status=404)
+
+
+def InternalServerError(request):
+    template = 'errors/500.html'
+    return render(request, template, status=500)
+
+
+# def InternalServerError(request):
+#     template = 'errors/500.html'
+#     return render(request, template, status=500)
