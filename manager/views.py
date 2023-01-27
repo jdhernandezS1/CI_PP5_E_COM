@@ -13,6 +13,7 @@ from django.core.exceptions import ValidationError
 from django.utils.text import slugify
 from cloudinary.forms import cl_init_js_callbacks
 import cloudinary
+from django.core.exceptions import ValidationError
 # Internal
 from products.models import Cat, Prod
 from .forms import ProdForm
@@ -41,6 +42,10 @@ def ProductManager(request):
             context
             )
     else:
+        raise ValidationError(
+            "The content is not valid or you do not\
+                    have the permiss to do this"
+            )
         return redirect("home")
 
 
@@ -58,6 +63,10 @@ def DelItem(request, productid):
             messages.success(request, 'The Product Was Deleted as well')
             return redirect('products_manager')
         else:
+            raise ValidationError(
+                "The content is not valid or you do not\
+                     have the permiss to do this"
+                )
             return redirect("home")
 
 
@@ -89,6 +98,10 @@ def AddItem(request):
                 messages.error(request, 'An error has occurred. \
                     Please check the information and try again.')
         else:
+            raise ValidationError(
+                "The content is not valid or you do not\
+                     have the permiss to do this"
+                )
             redirect("home")
 
     if request.user.is_superuser:
@@ -104,6 +117,10 @@ def AddItem(request):
             context
             )
     else:
+        raise ValidationError(
+            "The content is not valid or you do not\
+                have the permiss to do this"
+            )
         redirect("home")
 
 
@@ -134,6 +151,10 @@ def EditItem(request, productid):
                 messages.error(request, 'An error has occurred. \
                     Please check the information and try again.')
         else:
+            raise ValidationError(
+                "The content is not valid or you do not\
+                     have the permiss to do this"
+                )
             redirect("home")
     # Get Response
     if request.user.is_superuser:
@@ -152,4 +173,8 @@ def EditItem(request, productid):
             context
             )
     else:
+        raise ValidationError(
+            "The content is not valid or you do not\
+                 have the permiss to do this"
+            )
         redirect("home")
