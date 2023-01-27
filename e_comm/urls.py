@@ -35,6 +35,9 @@ urlpatterns = [
         '',
         include('home.urls')),
     path(
+        '',
+        include('errors.urls')),
+    path(
         'products/',
         include('products.urls')),
     path(

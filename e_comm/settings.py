@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # Local Applications
     'home',
+    'errors',
     'products',
     'cart',
     'payup',
