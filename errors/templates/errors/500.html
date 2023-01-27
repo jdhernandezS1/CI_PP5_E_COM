@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'errors/css/errors_style.css' %}">
+{% endblock %}
 
 <hr>
 <!-- 404 content -->
 <div class="errorMessage">ERROR</div>
-<div class="errordiv">403 </div>
-<h1 class="errortitle">Acces Denied</h1>
+<div class="errorDiv">403 </div>
+<h1 class="errorTitle">Acces Denied</h1>
 <div id="space"></div>
 
 {% endblock content %}
