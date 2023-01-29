@@ -3,12 +3,14 @@
         <button id="" class="list-inline-item navbar-toggler py-2 mx-2 bg-white mx-auto border-0 text-one" type="button"
             data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="text-one"><ion-icon name="grid-outline"></ion-icon></span>
+            <span class="text-one">
+                <ion-icon name="grid-outline"></ion-icon>
+            </span>
         </button>
     </div>
     <div class="list-inline-item dropdown p-0 m-1 text-black">
-        <a class="nav-link d-block d-lg-none text-center p-0 m-0 text-decoration-none text-one" href="#" id="user-options"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link d-block d-lg-none text-center p-0 m-0 text-decoration-none text-one" href="#"
+            id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <ion-icon name="person"></ion-icon>
             {% if request.user.is_authenticated %}
             <p class="my-0 pr-1">{{user}}</p>
@@ -30,8 +32,8 @@
         </div>
     </div>
     <div class="list-inline-item text-one p-0 m-1">
-        <a class="nav-link d-block d-lg-none p-0 m-0 text-decoration-none text-one" href="#" id="mobile-search" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link d-block d-lg-none p-0 m-0 text-decoration-none text-one" href="#" id="mobile-search"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center ">
                 <div>
                     <ion-icon name="search-outline"></ion-icon>
