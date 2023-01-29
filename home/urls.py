@@ -9,4 +9,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
+    path('about_us/', views.AboutUs, name='about_us'),
+
 ]
