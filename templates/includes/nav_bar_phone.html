@@ -1,5 +1,5 @@
-<div class="mx-auto row text-black">
-    <div id="" class="m-auto">
+<div class="mx-auto row text-black mx-auto">
+    <div id="app_icon" class="p-0 mx-0 my-auto">
         <button id="" class="list-inline-item navbar-toggler py-2 mx-2 bg-white mx-auto border-0 text-one" type="button"
             data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -65,9 +65,9 @@
                 </div>
                 <p class="my-0">
                     {% if grand_total %}
-                    CHF {{ grand_total|floatformat:2 }}
+                    {{ grand_total|floatformat:2 }}
                     {% else %}
-                    CHF 0.00
+                    0.00
                     {% endif %}
                 </p>
             </div>
