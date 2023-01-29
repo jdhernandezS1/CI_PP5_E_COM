@@ -1,7 +1,7 @@
   <div id="nav_pc" class="row w-100">
     <div class="list-inline-item dropdown ml-auto ">
-      <a class="nav-link text-center row text-decoration-none text-one" href="#" id="user-options" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link text-center row text-decoration-none text-one" href="#" id="user-options"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <!-- <div class="text-center row p-0"> -->
         <div class="w-100 text-one">
           {% if request.user.is_authenticated %}
@@ -17,7 +17,7 @@
           Account
           {% endif %}
         </p>
-        <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-one"
+        <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-one w-50"
           aria-labelledby="user-options">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
@@ -34,8 +34,7 @@
       </a>
     </div>
     <div class="list-inline-item">
-      <a class="{% if grand_total %} font-weight-bold{% else %} {% endif %} text-one nav-link"
-        href="{% url 'cart' %}">
+      <a class="{% if grand_total %} font-weight-bold{% else %} {% endif %} text-one nav-link" href="{% url 'cart' %}">
         <div class="text-center row px-3 text-one">
           <div class="w-100">
             <ion-icon name="cart" class=""></ion-icon>
@@ -56,14 +55,16 @@
 
     <div class="pl-2 mx-auto text-one">
       <a href="{% url 'home' %}" class="nav-link main-logo-link" id="logo-pc">
-        <h2 class="rounded text-danger bg-white my-0 text-capitalize font-weight-bold font-dancing p-1">Capricci </h2>
+        <h2 class="rounded text-danger bg-white my-0 text-capitalize font-weight-bold font-dancing p-1">
+          Capricci <ion-icon name="ribbon-outline" class=""></ion-icon>
+        </h2>
       </a>
     </div>
     <div class="w-50 p-3">
       <form method="GET" action="{% url 's_prods' %}" class="">
         <div class="input-group w-100 ">
-          <input class="form-control bg-light  border border-black font-weight-bold rounded-left" type="text"
-            name="q" placeholder="Search our site">
+          <input class="form-control bg-light  border border-black font-weight-bold rounded-left" type="text" name="q"
+            placeholder="Search our site">
           <div class="input-group-append text-one">
             <button class="form-control btn btn-light border border-black rounded-right text-one" type="submit">
               <span class="icon font-weight-bold">
