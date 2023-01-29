@@ -14,5 +14,3 @@ urlpatterns = [
     path('404', views.PageNotFound, name='404'),
     path('500', views.InternalServerError, name='500'),
 ]
-
-handler500 = views.InternalServerError

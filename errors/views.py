@@ -9,17 +9,17 @@ from django.views import generic, View
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-def ServerDeniesAcces(request):
+def ServerDeniesAcces(request, exception):
     template = 'errors/403.html'
     return render(request, template, status=403)
 
 
-def PageNotFound(request):
+def PageNotFound(request, exception):
     template = 'errors/404.html'
     return render(request, template, status=404)
 
 
-def InternalServerError(request):
+def InternalServerError(request, exception):
     template = 'errors/500.html'
     return render(request, template, status=500)
 
