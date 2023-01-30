@@ -22,7 +22,7 @@
             background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1674564996/home_wd6xsz.jpg");
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
 
 
         }
@@ -32,9 +32,9 @@
     @media (max-width: 991px) {
         #home {
             width: 100%;
-            height: 500px;
+            height: 1300px;
             background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1675081124/logophone_jd2vk7.png");
-            background-size: inherit;
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
 
