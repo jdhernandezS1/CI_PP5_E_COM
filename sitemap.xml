@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://capricci.herokuapp.com/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/cart/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/?categ=pascua</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/?order=price</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/?order=scount</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/?categ=new</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/about_us/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/prods/board-wood-midum-size/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/prods/pen-toppers/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/prods/easter-glasses/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/prods/multipurpose-cloth-pouches/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/prods/lanterne-piccole/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://capricci.herokuapp.com/products/prods/colorfull-basket/</loc>
+  <lastmod>2023-01-30T15:12:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
