@@ -9,15 +9,7 @@
         #home {
             width: 100%;
             height: 700px;
-            background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1675081124/logophone_jd2vk7.png");
-
-        }
-    }
-    @media (max-width: 991px) {
-        #home {
-            width: 100%;
-            height: 500px;
-            background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1675081124/logophone_jd2vk7.png");
+            background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1674564996/home_wd6xsz.jpg");
 
         }
     }
@@ -27,7 +19,17 @@
         #home {
             width: 100%;
             height: 700px;
-            background: url("https: //res.cloudinary.com/djvwk7zf2/image/upload/v1674564996/home_wd6xsz.jpg");
+            background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1674564996/home_wd6xsz.jpg");
+
+        }
+
+    }
+
+    @media (max-width: 991px) {
+        #home {
+            width: 100%;
+            height: 500px;
+            background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1675081124/logophone_jd2vk7.png");
 
         }
     }
