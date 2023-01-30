@@ -1,26 +1,33 @@
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {}
-
-@media (max-width: 991px) {
     #home {
-        width: 100%;
-        height: 500px;
-        background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1675081124/logophone_jd2vk7.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-}
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    #home {
-        width: 100%;
-        height: 700px;
-        background: url("https: //res.cloudinary.com/djvwk7zf2/image/upload/v1674564996/home_wd6xsz.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    /* Slightly larger container on xl screens */
+    @media (min-width: 1200px) {
+        #home {
+            width: 100%;
+            height: 700px;
+            background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1675081124/logophone_jd2vk7.png");
+
+        }
     }
-}
+    @media (max-width: 991px) {
+        #home {
+            width: 100%;
+            height: 500px;
+            background: url("https://res.cloudinary.com/djvwk7zf2/image/upload/v1675081124/logophone_jd2vk7.png");
+
+        }
+    }
+
+    /* fixed top navbar only on medium and up */
+    @media (min-width: 992px) {
+        #home {
+            width: 100%;
+            height: 700px;
+            background: url("https: //res.cloudinary.com/djvwk7zf2/image/upload/v1674564996/home_wd6xsz.jpg");
+
+        }
+    }
