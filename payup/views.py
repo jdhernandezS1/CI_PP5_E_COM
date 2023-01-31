@@ -77,7 +77,7 @@ def PayUp(request):
                 'Check Information',
                 request.session['cart'],
                 settings.DEFAULT_FROM_EMAIL,
-                [to],
+                to,
                 fail_silently=False,
                 )
             # Confirm by email
