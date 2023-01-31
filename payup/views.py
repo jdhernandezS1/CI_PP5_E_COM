@@ -70,27 +70,15 @@ def PayUp(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
-            # send_mail(
-            #     'Check Information',
-            #     request.session['cart'],
-            #     settings.DEFAULT_FROM_EMAIL,
-            #     [request.POST['email']],
-            #     fail_silently=False,
-            #     )
-            # Confirm by email
-            connection = mail.get_connection()
-            connection.open()
-            
-            email1 = mail.EmailMessage(
+            # email confirmation
+            send_mail(
                 'Check Information',
                 request.session['cart'],
                 settings.DEFAULT_FROM_EMAIL,
                 [request.POST['email']],
                 fail_silently=False,
                 )
-            connection.send_messages([email2])
-            connection.close()
-            # 
+            # Confirm by email
             for prod_id, quantity in cart.items():
                 try:
                     product = Prod.objects.get(id=prod_id)
