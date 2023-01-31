@@ -71,11 +71,13 @@ def PayUp(request):
             order.original_cart = json.dumps(cart)
             order.save()
             # email confirmation
+            to = request.POST['email']
+            to = to.splitlines()
             send_mail(
                 'Check Information',
                 request.session['cart'],
                 settings.DEFAULT_FROM_EMAIL,
-                [request.POST['email']],
+                [to],
                 fail_silently=False,
                 )
             # Confirm by email
