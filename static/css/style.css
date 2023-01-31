@@ -9,15 +9,20 @@ body {
     color: black;
     font-family: 'Roboto', sans-serif;
 }
+
 /* FOOTER */
 /*  Bootstrap */
-*, ::after, ::before {
+*,
+::after,
+::before {
     box-sizing: initial;
-  }
-/* Email chimp */
-#mc_embed_signup{
-    clear:left;
 }
+
+/* Email chimp */
+#mc_embed_signup {
+    clear: left;
+}
+
 /* general Classes */
 .bg-one {
     background-color: #ffb4dabd;
@@ -30,14 +35,16 @@ body {
 .text-two {
     color: #3c7fffcf;
 }
-.text-two:link{
+
+.text-two:link {
     text-decoration: none;
 }
 
-.text-one  {
+.text-one {
     color: #6c00dfc2;
 }
-.text-one:link{
+
+.text-one:link {
     text-decoration: none;
 }
 
@@ -53,9 +60,11 @@ body {
 #nav_phone {
     width: 100%;
 }
+
 #nav_pc {
     width: 100%;
 }
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -166,6 +175,7 @@ input {
         display: none;
         visibility: hidden;
     }
+
     #nav_pc {
         width: 100%;
     }
@@ -178,7 +188,8 @@ input {
         display: none;
 
     }
-    #nav_list{
+
+    #nav_list {
         flex-direction: row;
     }
 }

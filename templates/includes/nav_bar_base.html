@@ -1,23 +1,23 @@
   <div id="nav_pc" class="row w-100">
     <div class="list-inline-item dropdown ml-auto ">
-      <a class="nav-link text-center row text-decoration-none text-one" href="#" id="user-options"
+      <a class="nav-link text-center row text-decoration-none text-black ml-auto" href="#" id="user-options"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <!-- <div class="text-center row p-0"> -->
-        <div class="w-100 text-one">
+        <div class="w-100 text-black">
           {% if request.user.is_authenticated %}
           <ion-icon name="person" class=""></ion-icon>
           {% else %}
           <ion-icon name="person-add" class=""></ion-icon>
           {% endif %}
         </div>
-        <p class="my-0 p-0 w-100 text-capitalize text-one">
+        <p class="my-0 p-0 w-100 text-capitalize text-black">
           {% if request.user.is_authenticated %}
           {{user}}
           {% else %}
           Account
           {% endif %}
         </p>
-        <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-one "
+        <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-black "
           aria-labelledby="user-options">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
@@ -33,8 +33,8 @@
       </a>
     </div>
     <div class="list-inline-item">
-      <a class="{% if grand_total %} font-weight-bold{% else %} {% endif %} text-one nav-link" href="{% url 'cart' %}">
-        <div class="text-center row px-3 text-one">
+      <a class="{% if grand_total %} font-weight-bold{% else %} {% endif %} text-black nav-link" href="{% url 'cart' %}">
+        <div class="text-center row px-3 text-black">
           <div class="w-100">
             <ion-icon name="cart" class=""></ion-icon>
           </div>
