@@ -17,17 +17,16 @@
           Account
           {% endif %}
         </p>
-        <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-one w-50"
+        <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-one "
           aria-labelledby="user-options">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
-          <a href="{% url 'products_manager' %}" class="dropdown-item p-2 rounded">Product Management</a>
+          <a href="{% url 'products_manager' %}" class="dropdown-item py-2 rounded w-75 text-center" >Product Management</a>
           {% endif %}
-          <a href="" class="dropdown-item p-2 rounded">My Profile</a>
-          <a href="{% url 'account_logout' %}" class="dropdown-item p-2 rounded">Logout</a>
+          <a href="{% url 'account_logout' %}" class="dropdown-item py-2 rounded w-75 text-center">Logout</a>
           {% else %}
-          <a href="{% url 'account_signup' %}" class="dropdown-item p-2 rounded">Register</a>
-          <a href="{% url 'account_login' %}" class="dropdown-item p-2 rounded">Login</a>
+          <a href="{% url 'account_signup' %}" class="dropdown-item py-2 rounded w-75 text-center">Register</a>
+          <a href="{% url 'account_login' %}" class="dropdown-item py-2 rounded w-75 text-center">Login</a>
           {% endif %}
         </div>
         <!-- </div> -->
