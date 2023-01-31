@@ -13,6 +13,8 @@ from django.contrib import messages
 from django.core.exceptions import ValidationError
 import stripe
 import json
+from django.core.mail import send_mail
+from django.core import mail
 # Internal
 from django.conf import settings
 from cart.contexts import cart_contents
@@ -61,13 +63,34 @@ def PayUp(request):
         }
 
         order_form = OrderForm(form_data)
-        print(order_form)
+        # print(order_form)
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
+            # send_mail(
+            #     'Check Information',
+            #     request.session['cart'],
+            #     settings.DEFAULT_FROM_EMAIL,
+            #     [request.POST['email']],
+            #     fail_silently=False,
+            #     )
+            # Confirm by email
+            connection = mail.get_connection()
+            connection.open()
+            
+            email1 = mail.EmailMessage(
+                'Check Information',
+                request.session['cart'],
+                settings.DEFAULT_FROM_EMAIL,
+                [request.POST['email']],
+                fail_silently=False,
+                )
+            connection.send_messages([email2])
+            connection.close()
+            # 
             for prod_id, quantity in cart.items():
                 try:
                     product = Prod.objects.get(id=prod_id)
@@ -80,7 +103,7 @@ def PayUp(request):
                 except Prod.DoesNotExist:
                     messages.error(request, (
                         "A product in your cart does not exists"
-                        "Call us for help you!")
+                        "Contact us for help you!")
                     )
                     order.delete()
                     return redirect(reverse('cart'))
@@ -118,7 +141,6 @@ def PayUp(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
-
     return render(request, template, context)
 
 
@@ -131,7 +153,7 @@ def PayUpCheck(request, order_number):
     message = f'Thank you for your order\
         <ion-icon class="fs-2" name="heart"></ion-icon>'
     messages.success(request, message)
-
+    
     if 'cart' in request.session:
         del request.session['cart']
 
