@@ -89,12 +89,14 @@ def PayUp(request):
 
             # email confirmation
             to = request.POST['email']
+            current_cart = cart_contents(request)
+            total = current_cart['grand_total']
             print(to)
             subject = 'Check Information'
             message = f'Hi {request.POST["full_name"]}, thank you to buy \
                 with us \
                 Order Number {order.order_number}\
-                Items {grand_total}'
+                Total {total}'
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [to, ]
             send_mail(subject, message, email_from, recipient_list)
