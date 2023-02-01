@@ -130,3 +130,55 @@ As a site Owner, I want:
 
 <hr>
 
+## Design
+
+### Colours
+
+Using the W3schools color picker, the color tones were carefully selected to reflect the concept and create a straightforward and user-friendly design.
+three hues used to create a fluid user experience design
+
+<details><summary>Pink Color</summary>
+<img src="media/readme/details/pink.png">
+</details>
+<details><summary>Blue Color</summary>
+<img src="media/readme/details/blue.png">
+</details>
+<details><summary>Red Color</summary>
+<img src="media/readme/details/red.png">
+</details>
+<details><summary>Violet Color</summary>
+<img src="media/readme/details/violet.png">
+</details>
+<details><summary>Color Picker</summary>
+<img src="media/readme/details/picker.png">
+</details>
+
+<hr>
+
+### Fonts
+
+ROBOTO and Dancing Font from GOOGLE. The most used on the majority of data flow.
+<hr>
+
+### Structure
+
+#### Website pages
+
+
+Following the principles of UXD (user experience design), the website structure was designed to be fluid and simple to operate. 
+The website was composed of a page with:
+
+  - The website consists of the following sections:
+  - The Home page and some interactive pages.
+  - The Products List.
+  - The Product Details.
+  - The Product Details with option to comment for Login Users.
+  - Log In Page for register user.
+  - Log out Page for login user.
+  - Register Page for non login user.
+  - Manager Page to Admin User to delete items.
+  - Edit item page for Admin user.
+  - Add item Page for Admin User.
+  - Footer with social media and newsletter.
+  - 403, 404, 500 error page.
+<hr>
