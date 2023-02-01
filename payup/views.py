@@ -70,17 +70,6 @@ def PayUp(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
-            # email confirmation
-            to = request.POST['email']
-            to = to.splitlines()
-            send_mail(
-                'Check Information',
-                request.session['cart'],
-                settings.DEFAULT_FROM_EMAIL,
-                to,
-                fail_silently=False,
-                )
-            # Confirm by email
             for prod_id, quantity in cart.items():
                 try:
                     product = Prod.objects.get(id=prod_id)
@@ -97,6 +86,19 @@ def PayUp(request):
                     )
                     order.delete()
                     return redirect(reverse('cart'))
+
+            # email confirmation
+            to = request.POST['email']
+            print(to)
+            subject = 'Check Information'
+            message = f'Hi {request.POST["full_name"]}, thank you to buy \
+                with us \
+                Order Number {order.order_number}\
+                Items {grand_total}'
+            email_from = settings.EMAIL_HOST_USER
+            recipient_list = [to, ]
+            send_mail(subject, message, email_from, recipient_list)
+            # Confirm by email
 
             request.session['save_info'] = 'save-info' in request.POST
             args = [order.order_number]
