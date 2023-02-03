@@ -151,7 +151,7 @@ def PayUpCheck(request, order_number):
     message = f'Thank you for your order\
         <ion-icon class="fs-2" name="heart"></ion-icon>'
     messages.success(request, message)
-    
+
     if 'cart' in request.session:
         del request.session['cart']
 
