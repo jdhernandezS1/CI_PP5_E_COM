@@ -20,6 +20,11 @@ class Order(models.Model):
         null=False,
         editable=False
         )
+    owner = models.CharField(
+        max_length=30,
+        null=False,
+        blank=False
+        )
     full_name = models.CharField(
         max_length=50,
         null=False,

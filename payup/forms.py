@@ -14,6 +14,7 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = (
+            'owner',
             'full_name',
             'email',
             'phone_number',
@@ -30,6 +31,7 @@ class OrderForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
+            'owner': 'Owner',
             'full_name': 'Full Name',
             'email': 'Email',
             'phone_number': 'Phone number',

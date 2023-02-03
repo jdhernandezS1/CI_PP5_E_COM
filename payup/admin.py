@@ -31,6 +31,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     fields = (
         'order_number',
+        'owner',
         'full_name',
         'email',
         'phone_number',

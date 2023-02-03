@@ -50,8 +50,12 @@ def PayUp(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
-
+        if request.user.username:
+            user_field = request.user.username
+        else:
+            useruser_field = request.POST['full_name']
         form_data = {
+            'owner': user_field,
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
