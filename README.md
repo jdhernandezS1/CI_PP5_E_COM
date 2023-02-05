@@ -250,10 +250,79 @@ The following models represent the database model structure of the website:
 ### Wireframes
 
 <details><summary>Laptop & Desktop</summary>
-<img src="">
+  <details><summary>Home</summary>
+  <img src="media/readme/wireframes/pc/Home_pc.png">
+  </details>
+  
+  <details><summary>Products</summary>
+  <img src="media/readme/wireframes/pc/Products_pc.png">
+  </details>
+  
+  <details><summary>Product Details</summary>
+  <img src="media/readme/wireframes/pc/Product_details_pc.png">
+  </details>
+
+  <details><summary>Cart</summary>
+  <img src="media/readme/wireframes/pc/Cart_pc.png">
+  </details>
+
+  <details><summary>Check</summary>
+  <img src="media/readme/wireframes/pc/Check_details_pc.png">
+  </details>
+
+  <details><summary>Payment</summary>
+  <img src="media/readme/wireframes/pc/Payment_pc.png">
+  </details>
+  
+  <details><summary>Manager Products</summary>
+  <img src="media/readme/wireframes/pc/Manager_pc.png">
+  </details>
+  
+  <details><summary>Manager Add/Edit</summary>
+  <img src="media/readme/wireframes/pc/Manager_Edit_add_pc.png">
+  </details>
+
+  <details><summary>About Us</summary>
+  <img src="media/readme/wireframes/pc/About_us_pc.png">
+  </details>
 </details>
-<details><summary> Mobile & Smartphone </summary>
-<img src="">
+<details><summary> Tablet & Smartphone </summary>
+
+  <details><summary>Home</summary>
+  <img src="media/readme/wireframes/phone/Home_phone.png">
+  </details>
+  
+  <details><summary>Products</summary>
+  <img src="media/readme/wireframes/phone/Products_phone.png">
+  </details>
+  
+  <details><summary>Product Details</summary>
+  <img src="media/readme/wireframes/phone/Product_details_phone.png">
+  </details>
+
+  <details><summary>Cart</summary>
+  <img src="media/readme/wireframes/phone/Cart_phone.png">
+  </details>
+
+  <details><summary>Check</summary>
+  <img src="media/readme/wireframes/phone/Check_details_phone.png">
+  </details>
+
+  <details><summary>Payment</summary>
+  <img src="media/readme/wireframes/phone/Payment_Phone.png">
+  </details>
+  
+  <details><summary>Manager Products</summary>
+  <img src="media/readme/wireframes/phone/Manager_phone.png">
+  </details>
+  
+  <details><summary>Manager Add/Edit</summary>
+  <img src="media/readme/wireframes/phone/Manager_edit_add_phone.png">
+  </details>
+
+  <details><summary>About Us</summary>
+  <img src="media/readme/wireframes/phone/About_us_phone.png">
+  </details>
 </details>
 
 ##### Back to [top](#table-of-contents)
