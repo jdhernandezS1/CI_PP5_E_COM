@@ -527,21 +527,36 @@ The following models represent the database model structure of the website:
 <hr>
 
 ### Products
+- List View
+  - Clients can interact with the page clicking in the items to see more details.
+  - The Client can see All the stock or filtered By keyword or seasons
+  - The Client Can see The price, scount and tittle of the items.
+  - User stories covered: 5, 10
 
-- Clients can interact with the page.
-- The Client can view All the stock or filtered By keyword or seasons
-- User stories covered: 5, 10
+  <details><summary>Products View</summary>
 
-<details><summary>Products View</summary>
+  <details><summary>Big Screen View</summary>
+  <img src="media/readme/views/products/pc_view.png">
+  </details>
 
-<details><summary>Big Screen View</summary>
-<img src="media/readme/views/products/pc_view.png">
-</details>
+  <details><summary>Small Screen View</summary>
+  <img src="media/readme/views/products/phone_view.png">
+  </details>
 
-<details><summary>Small Screen View</summary>
-<img src="media/readme/views/products/phone_view.png">
-</details>
+  </details>
+  
+<hr>
 
-</details>
-
+- Detailed view
+  - Clients can get items by clicking the Quantity and adding to the cart.
+  - The Client can get the description of the item selected, its includes Title, Price, discount, Description, quantity of desired items.
+  <details><summary>Item Details</summary>
+  <img src="media/readme/user_stories/products/description.png">
+  </details>
+  - The Client can see the Users Opinions about the specific item.
+  - The Login users Can comment in the section.
+    <details><summary>Comment</summary>
+  <img src="media/readme/user_stories/products/comment.png">
+  </details>
+  - User stories covered: 4, 5, 10
 <hr>
