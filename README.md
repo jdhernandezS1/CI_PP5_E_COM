@@ -462,7 +462,7 @@ The following models represent the database model structure of the website:
   2. when the users are log-in, log-out & sign-up will be notified by alert message.
   3. User stories covered: 16
 
-  <details><summary>Sign Up</summary>
+  <details><summary>Sign UP/ Register</summary>
     
     <details><summary>Small Screen</summary>
     <img src="media/readme/user_stories/user/sign_up.png">
@@ -472,7 +472,7 @@ The following models represent the database model structure of the website:
     <img src="media/readme/user_stories/user/sign_up_pc.png">
     </details>
 
-</details>
+  </details>
 
   <hr>
 
@@ -482,7 +482,7 @@ The following models represent the database model structure of the website:
   3. When user is logged will be able to Comment the products.
   4. User stories covered: 16.
 
-    <details><summary>Sign in</summary>
+  <details><summary>Sign in</summary>
     
     <details><summary>Small Screen</summary>
     <img src="media/readme/user_stories/user/sign_in.png">
@@ -492,7 +492,7 @@ The following models represent the database model structure of the website:
     <img src="media/readme/user_stories/user/sign_in_pc.png">
     </details>
 
-</details>
+  </details>
 
 
   <hr>
@@ -511,6 +511,6 @@ The following models represent the database model structure of the website:
     <img src="media/readme/user_stories/user/sign_out_pc.png">
     </details>
 
-</details>
+  </details>
 
 <hr>
