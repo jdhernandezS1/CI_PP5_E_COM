@@ -1,6 +1,3 @@
-#id_name {
-    width: 85%;
-}
-#id_email{
-    width: 85%;
+.form-control{
+    width: auto;
 }
