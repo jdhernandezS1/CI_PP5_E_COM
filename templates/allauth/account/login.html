@@ -2,11 +2,16 @@
 
 {% load i18n %}
 {% load account socialaccount %}
+{% load static%}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/allauth.css' %}">
+{% endblock %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div class="container h-100 text-black text-center py-5 pl-0 text-sm-left w-100">
+<div class="container h-100 text-black text-center py-5 px-0 mx-auto w-100">
   <h1>{% trans "Sign In" %}</h1>
   <hr>
   {% get_providers as socialaccount_providers %}
@@ -35,8 +40,10 @@
 
   <form class="login" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
-    <div class="container position-static form-group col mx-auto text-left">
-      {{ form.as_p }}
+    <div class="container px-0 form-group mx-auto text-left">
+      <div class="p-0 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+        {{ form.as_p }}
+      </div>
       {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
       {% endif %}
