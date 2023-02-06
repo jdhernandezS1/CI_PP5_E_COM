@@ -112,19 +112,20 @@ Like user I want to:
 13. Get Checkout details by Email.
 14. Bring the Payment details by Stripe Service. 
 15. Get Recipe view with the Details.
-16. Confirm own Email by a email confirmation.
+16. Have a User Functionaity: Login, Logout, Register.
+17. Confirm own Email by a email confirmation.
 <hr>
 
 ### Site Owner
 
 As a site Owner, I want to:
 
-17. Add a product.
-18. Delete product. 
-19. Edit/Update product. 
-20. Add a category. 
-21. Delete category. 
-22. Edit/update category. 
+18. Add a product.
+19. Delete product. 
+20. Edit/Update product. 
+21. Add a category. 
+22. Delete category. 
+23. Edit/update category. 
 
 ##### Back to [top](#table-of-contents)
 
@@ -447,6 +448,69 @@ The following models represent the database model structure of the website:
 <details><summary>Phone</summary>
 <img src="media/readme/views/footer/phone_footer.png">
 </details>
+</details>
+
+<hr>
+
+
+### Users Functionality 
+
+<hr>
+  - Sign up / Register
+
+  1. Everyone can create an account.
+  2. when the users are log-in, log-out & sign-up will be notified by alert message.
+  3. User stories covered: 16
+
+  <details><summary>Sign Up</summary>
+    
+    <details><summary>Small Screen</summary>
+    <img src="media/readme/user_stories/user/sign_up.png">
+    </details>
+    
+    <details><summary>Mid-Big Screen</summary>
+    <img src="media/readme/user_stories/user/sign_up.png">
+    </details>
+
+</details>
+
+  <hr>
+
+- Login / SignIn
+  1. Only Sign Up users could log-in to their account.
+  2. User and Password Fields are mandatory.
+  3. When user is logged will be able to Comment the products.
+  4. User stories covered: 16.
+
+    <details><summary>Sign in</summary>
+    
+    <details><summary>Small Screen</summary>
+    <img src="media/readme/user_stories/user/sign_in.png">
+    </details>
+    
+    <details><summary>Mid-Big Screen</summary>
+    <img src="media/readme/user_stories/user/sign_in_pc.png">
+    </details>
+
+</details>
+
+
+  <hr>
+
+- Sign Out
+  1. Confirmation screen for Logged in user to logout from their account 
+  2. User stories covered: 16.
+
+  <details><summary>Sign Out</summary>
+    
+    <details><summary>Small Screen</summary>
+    <img src="media/readme/user_stories/user/sign_out.png">
+    </details>
+    
+    <details><summary>Mid-Big Screen</summary>
+    <img src="media/readme/user_stories/user/sign_out_pc.png">
+    </details>
+
 </details>
 
 <hr>
