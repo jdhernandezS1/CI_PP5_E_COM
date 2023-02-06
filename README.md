@@ -469,7 +469,7 @@ The following models represent the database model structure of the website:
     </details>
     
     <details><summary>Mid-Big Screen</summary>
-    <img src="media/readme/user_stories/user/sign_up.png">
+    <img src="media/readme/user_stories/user/sign_up_pc.png">
     </details>
 
 </details>
