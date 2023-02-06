@@ -455,8 +455,8 @@ The following models represent the database model structure of the website:
 
 ### Users Functionality 
   when the users are log-in, log-out & sign-up will be notified by alert message.
-<hr>
-  - Sign up / Register
+
+- Sign up / Register
 
   1. Everyone can create an account.
   2. User stories covered: 16
@@ -470,7 +470,6 @@ The following models represent the database model structure of the website:
     <details><summary>Mid-Big Screen</summary>
     <img src="media/readme/user_stories/user/sign_up_pc.png">
     </details>
-
   </details>
 
   <hr>
