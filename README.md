@@ -394,16 +394,27 @@ The following models represent the database model structure of the website:
 ### Navigation Bar
 
 - This Feature can be accessed at the all pages
-- The nav bar includes links to Home, Search in the stock and cart.
+- The nav bar includes links to Home, Search in the stock and cart view.
 
+  - Search Function Can search Items by a key words.
+  - The Cart is visible any time and the total amount inside of it.
   - Logged-in users will see their name right in the nav bar with option to click to log out
   - Not logged-in users have the option to register or log in.
   - Admin Users Have the option to Stock Manager.
+- In Medium and big Screens Down of the Nav Bar you have the sections all products and filter by seasons
+
+  <details><summary> View </summary>
+  <img src="media/readme/views/Navigation_bar/Pc_products.png">
+  </details>
+
+- In Small Screens you have the products and filter by seasons In menu a button.
+
+  <details><summary>View</summary>
+  <img src=media/readme/views/Navigation_bar/phone_products.png">
+  </details>
 
 - The nav bar have responsive design to change in small medium and large size screens.
 - The navbar have down a filter Products can be filtered By seasons.
-
-- User stories covered: 1
 
 <details><summary>Home Page</summary>
   <details><summary>Midium and small Screen</summary>
@@ -414,13 +425,15 @@ The following models represent the database model structure of the website:
   </details>
 </details>
 
+- User stories covered: 1, 6, 7, 8, 9, 10
+
 <hr>
 
 ### Home page
 
 - Home page is main view.
-- Main page contains the actualy offers.
-- User stories covered: 1
+- Main page contains the actualy offers or new collections.
+- User stories covered: 1, 5
 <details><summary>Home Page</summary>
   <details><summary>Phone View</summary>
   <img src="media/readme/views/home/phone_home.png">
@@ -510,5 +523,25 @@ The following models represent the database model structure of the website:
     </details>
 
   </details>
+
+<hr>
+
+### Products
+
+- Clients can interact with the page.
+- The Client can view All the stock or filtered By keyword or seasons
+- User stories covered: 5, 10
+
+<details><summary>Products View</summary>
+
+<details><summary>Big Screen View</summary>
+<img src="media/readme/views/products/pc_view.png">
+</details>
+
+<details><summary>Small Screen View</summary>
+<img src="media/readme/views/products/phone_view.png">
+</details>
+
+</details>
 
 <hr>
