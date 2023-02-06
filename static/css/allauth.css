@@ -1,5 +1,10 @@
+#id_password2, #id_username, #id_password1{
 
-#id_password, #id_login {
+  position: initial;
+  width: 80%;
+}
+
+#id_email, #id_password, #id_login {
 
     position: initial;
     width: 80%;

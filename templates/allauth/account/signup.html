@@ -1,20 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/allauth.css' %}">
+{% endblock %}
+
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
 {% if request.user.is_authenticated %}
-<div class="container h-100 m-5 ">
+<div class="container px-0 h-100 m-5 ">
 
   <h1>You are already signin</h1>
 
 </div>
 <hr class="m-5">
 {% else %}
-<div class="container h-100 text-black text-center py-5 pl-3 text-sm-left w-100">
+<div class="container px-0 h-100 text-black text-left py-5 text-sm-left w-100">
   <h1 class="text-black">{% trans "Sign Up" %}</h1>
   <p class="text-black">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
       in</a>.{% endblocktrans %}
