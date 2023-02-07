@@ -1,6 +1,6 @@
   <div id="nav_pc" class="row w-100">
     <div class="list-inline-item dropdown ml-auto ">
-      <a class="nav-link text-center row text-decoration-none text-black ml-auto" href="#" id="user-options"
+      <button class="btn bg-white dropdown-toggle row text-decoration-none text-black ml-auto" href="#" id="user-options"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <!-- <div class="text-center row p-0"> -->
         <div class="w-100 text-black">
@@ -17,23 +17,29 @@
           Account
           {% endif %}
         </p>
+      </button>
+
         <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-black "
           aria-labelledby="user-options">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
-          <a href="{% url 'products_manager' %}" class="dropdown-item py-2 rounded w-75 text-center" >Product Management</a>
+          <a href="{% url 'products_manager' %}" class="dropdown-item py-2 rounded w-75 text-center">
+            Product Management</a>
           {% endif %}
-          <a href="{% url 'account_logout' %}" class="dropdown-item py-2 rounded w-75 text-center">Logout</a>
+          <a href="{% url 'account_logout' %}" class="dropdown-item py-2 rounded w-75 text-center">
+            Logout</a>
           {% else %}
-          <a href="{% url 'account_signup' %}" class="dropdown-item py-2 rounded w-75 text-center">Register</a>
-          <a href="{% url 'account_login' %}" class="dropdown-item py-2 rounded w-75 text-center">Login</a>
+          <a href="{% url 'account_signup' %}" class="dropdown-item py-2 rounded w-75 text-center">
+            Register</a>
+          <a href="{% url 'account_login' %}" class="dropdown-item py-2 rounded w-75 text-center">
+            Login</a>
           {% endif %}
         </div>
         <!-- </div> -->
-      </a>
     </div>
     <div class="list-inline-item">
-      <a class="{% if grand_total %} font-weight-bold{% else %} {% endif %} text-black nav-link" href="{% url 'cart' %}">
+      <a class="{% if grand_total %} font-weight-bold{% else %} {% endif %} text-black nav-link"
+        href="{% url 'cart' %}">
         <div class="text-center row px-3 text-black">
           <div class="w-100">
             <ion-icon name="cart" class=""></ion-icon>
@@ -55,7 +61,7 @@
     <div class="pl-2 mx-auto text-one">
       <a href="{% url 'home' %}" class="nav-link main-logo-link" id="logo-pc">
         <h2 class="rounded text-danger bg-white my-0 text-capitalize font-weight-bold font-dancing p-1">
-          <ion-icon name="ribbon-outline" class=""></ion-icon>Capricci 
+          <ion-icon name="ribbon-outline" class=""></ion-icon>Capricci
         </h2>
       </a>
     </div>
