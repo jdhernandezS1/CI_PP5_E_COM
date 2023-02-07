@@ -126,6 +126,7 @@ As a site Owner, I want to:
 21. Add a category. 
 22. Delete category. 
 23. Edit/update category. 
+24. Error Pages.
 
 ##### Back to [top](#table-of-contents)
 
@@ -138,17 +139,14 @@ As a site Owner, I want to:
 Using the W3schools color picker, the color tones were carefully selected to reflect the concept and create a straightforward and user-friendly design.
 three hues used to create a fluid user experience design
 
-<details><summary>Pink Color</summary>
-<img src="media/readme/details/pink.png">
+<details><summary>Orange Color</summary>
+<img src="media/readme/details/orange.png">
 </details>
 <details><summary>Blue Color</summary>
 <img src="media/readme/details/blue.png">
 </details>
 <details><summary>Red Color</summary>
 <img src="media/readme/details/red.png">
-</details>
-<details><summary>Violet Color</summary>
-<img src="media/readme/details/violet.png">
 </details>
 <details><summary>Color Picker</summary>
 <img src="media/readme/details/picker.png">
@@ -607,9 +605,49 @@ The following models represent the database model structure of the website:
 
 - Client will be notified by email with ammount and order number.
   <details><summary>Check Details</summary>
-  <img src="media/readme/user_stories/checkout/check/check_details.png">
+  <img src="media/readme/user_stories/checkout/check/email_check.png">
   </details>
   - User stories covered: 13.
 
 
+<hr>
+
+### Stock Manager 
+  - The Admin users are Able To Add, edit and delete a product of the stock .
+    <details><summary>Product Form</summary>
+    <img src="media/readme/user_stories/manager/product_form.png">
+    </details>
+  - The Admin users have a confortable view and easy to understand
+    <details><summary>Manager View</summary>
+    <img src="media/readme/user_stories/manager/product_manager.png">
+    </details>
+  - User Stories covered: 18, 19, 20.
+
+
+<hr>
+
+### Error pages
+
+- If the user has no premises to access, the 403-page will show
+- If a user goes to no exist link, the error page will display 404
+- If the user fills a form wrong,  will display error-500 page
+- User stories covered: 24
+
+<details><summary>Error page</summary>
+  <details><summary>403</summary>
+  <img src="media/readme/user_stories/errors/403_error.png">
+  </details>
+
+  <details><summary>404</summary>
+  <img src="media/readme/user_stories/errors/404_error.png">
+  </details>
+
+  <details><summary>500</summary>
+  <img src="media/readme/user_stories/errors/500_error.png">
+  </details>
+
+
+</details>
+
+##### Back to [top](#table-of-contents)
 <hr>
