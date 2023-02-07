@@ -472,7 +472,8 @@ The following models represent the database model structure of the website:
 - Sign up / Register
 
   1. Everyone can create an account.
-  2. User stories covered: 16
+  2. Confirm Register By email.
+  3. User stories covered: 16, 17.
 
   <details><summary>Sign UP/ Register</summary>
     
@@ -483,6 +484,10 @@ The following models represent the database model structure of the website:
     <details><summary>Mid-Big Screen</summary>
     <img src="media/readme/user_stories/user/sign_up_pc.png">
     </details>
+  </details>
+
+  <details><summary>Email Confirmation</summary>
+  <img src="media/readme/user_stories/user/confirm_email.png">
   </details>
 
   <hr>
@@ -544,7 +549,7 @@ The following models represent the database model structure of the website:
   </details>
 
   </details>
-  
+
 <hr>
 
 - Detailed view
@@ -554,9 +559,57 @@ The following models represent the database model structure of the website:
   <img src="media/readme/user_stories/products/description.png">
   </details>
   - The Client can see the Users Opinions about the specific item.
+
   - The Login users Can comment in the section.
+  
     <details><summary>Comment</summary>
   <img src="media/readme/user_stories/products/comment.png">
   </details>
-  - User stories covered: 4, 5, 10
+  - User stories covered: 4, 5, 10, 11
+<hr>
+
+### Buy Process
+
+#### Cart
+- Clients can add The items to the cart by quantity needed.
+- Clients can get the Cart view with the details of the order.
+- Clients can go to the Checkout process.
+- User stories covered: 3, 4.
+
+#### CheckOut
+
+- Clients can buy items by security process with stripe service.
+
+<details><summary>Stripe</summary>
+
+<details><summary>Some Payments</summary>
+  <img src="media/readme/user_stories/checkout/stripe/payments.png">
+  </details>
+  <details><summary>Payment Details</summary>
+  <img src="media/readme/user_stories/checkout/stripe/details.png">
+  </details>
+</details>
+- User stories covered: 14.
+
+- Clients Can get a Checkout View with Form to fill with Delivery details. 
+  
+  <details><summary>Checkout Form</summary>
+  <img src="media/readme/user_stories/checkout/check/checkout_form.png">
+  </details>
+
+
+- Clients can finish the checkout with a check view with the order details.
+  <details><summary>Check Details</summary>
+  <img src="media/readme/user_stories/checkout/check/check_details.png">
+  </details>
+  - User stories covered: 15.
+
+
+- Client will be notified by email with ammount and order number.
+  <details><summary>Check Details</summary>
+  <img src="media/readme/user_stories/checkout/check/check_details.png">
+  </details>
+  - User stories covered: 13.
+
+
 <hr>
