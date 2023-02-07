@@ -32,8 +32,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 SERVER = 'capricci.herokuapp.com'
 ALLOWED_HOSTS = [SERVER, '127.0.0.1', 'localhost']
 
@@ -247,7 +247,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# DEFAULT_FROM_EMAIL = 'store.capricci.ch@gmail.com'
-# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
