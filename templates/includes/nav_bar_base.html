@@ -1,6 +1,6 @@
   <div id="nav_pc" class="row w-100">
     <div class="list-inline-item dropdown ml-auto ">
-      <a class="nav-link text-center row text-decoration-none text-black ml-auto" href="#" id="user-options"
+      <a class="nav-link text-center row text-decoration-none text-black ml-auto" href="#" id="user-options2"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <!-- <div class="text-center row p-0"> -->
         <div class="w-100 text-black">
@@ -19,7 +19,7 @@
         </p>
       </a>
         <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-black "
-          aria-labelledby="user-options">
+          aria-labelledby="user-options2">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
           <a href="{% url 'products_manager' %}" class="dropdown-item py-2 rounded w-75 text-center" >Product Management</a>
