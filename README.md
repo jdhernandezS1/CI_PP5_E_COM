@@ -753,7 +753,7 @@ The W3C Jigsaw CSS Validator Service validate the CSS of the website, it passed 
 
 ### JavaScript Validation
 
-JSHint Service was used to validate the Javascript files without errors.
+JSHint Service was used to validate the Javascript files.
 <details><summary> JSHint</summary>
   <details><summary> Stripe</summary>
   The Undefined Variables Here are because the jshint does not recognize
@@ -776,6 +776,94 @@ To validate python was used two services Pylint, Flake8.
 - Flake8 6.0.0 is a popular lint wrapper for python. Under the hood, it runs 
 
 three other tools and combines their results: pep8 for checking style. pyflakes for checking syntax. mccabe for checking complexity.
+
+- #### Home
+
+  <details><summary> APPS</summary>
+  <img src="media/readme/validation/python/home/home_apps.png">
+  </details>
+  <details><summary> VIEWS</summary>
+  <img src="media/readme/validation/python/home/home_views.png">
+  </details>
+
+- #### Errors
+
+  <details><summary>APP</summary>
+  <img src="media/readme/validation/python/errors/errors_apps.png">
+  </details>
+  <details><summary> URLS</summary>
+  <img src="media/readme/validation/python/errors/errors_urls.png">
+  </details>
+  <details><summary>VIEWS</summary>
+  <img src="media/readme/validation/python/errors/errors_views.png">
+  </details>
+
+- #### Cart
+
+<details><summary> APPS</summary>
+<img src="media/readme/validation/python/cart/cart_apps.png">
+</details>
+<details><summary> CONTEXT</summary>
+<img src="media/readme/validation/python/cart/cart_context.png">
+</details>
+<details><summary> URLS</summary>
+<img src="media/readme/validation/python/cart/cart_urls.png">
+</details>
+<details><summary> VIEWS</summary>
+<img src="media/readme/validation/python/cart/cart_views.png">
+</details>
+
+- #### Manager
+
+<details><summary> APPS</summary>
+<img src="media/readme/validation/python/manager/manager_apps.png">
+</details>
+<details><summary> FORMS</summary>
+<img src="media/readme/validation/python/manager/manager_forms.png">
+</details>
+<details><summary> URLS</summary>
+<img src="media/readme/validation/python/manager/manager_forms.png">
+</details>
+<details><summary> VIEWS</summary>
+<img src="media/readme/validation/python/manager/manager_forms.png">
+</details>
+
+- #### Home
+
+<details><summary> ADMIN</summary>
+<img src="media/readme/validation/python/payment/payment_admin.png">
+</details>
+<details><summary> APP</summary>
+<img src="media/readme/validation/python/payment/payment_apps.png">
+</details>
+<details><summary> FORMS</summary>
+<img src="media/readme/validation/python/payment/payment_forms.png">
+</details>
+<details><summary> VIEWS</summary>
+<img src="media/readme/validation/python/manager/manager_forms.png">
+</details>
+<details><summary> MODELS</summary>
+<img src="media/readme/validation/python/payment/payment_models.png">
+</details>
+<details><summary> SIGNALS</summary>
+<img src="media/readme/validation/python/payment/payment_signals.png">
+</details>
+<details><summary> URLS</summary>
+<img src="media/readme/validation/python/payment/payment_urls.png">
+</details>
+<details><summary> VIEWS</summary>
+<img src="media/readme/validation/python/payment/payment_views.png">
+</details>
+<details><summary> WEB HOOK HANDLER</summary>
+<img src="media/readme/validation/python/payment/payment_webhk_hndler.png">
+<img src="media/readme/validation/python/payment/payment_webhk.png">
+</details>
+
+
+- #### Home
+  <details><summary> Notifications</summary>
+  <img src="media/readme/validation/js/alerts.png">
+  </details>
 
 
 <hr>
