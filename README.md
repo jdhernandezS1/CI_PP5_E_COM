@@ -614,15 +614,15 @@ The following models represent the database model structure of the website:
 
 ### Stock Manager 
   - The Admin users are Able To Add, edit and delete a product of the stock .
-    <details><summary>Product Form</summary>
-    <img src="media/readme/user_stories/manager/product_form.png">
-    </details>
   - The Admin users have a confortable view and easy to understand
     <details><summary>Manager View</summary>
     <img src="media/readme/user_stories/manager/product_manager.png">
     </details>
+    
+    <details><summary>Product Form</summary>
+    <img src="media/readme/user_stories/manager/product_form.png">
+    </details>
   - User Stories covered: 18, 19, 20.
-
 
 <hr>
 
@@ -650,4 +650,132 @@ The following models represent the database model structure of the website:
 </details>
 
 ##### Back to [top](#table-of-contents)
+<hr>
+
+
+## Validation
+
+### HTML Valitadion
+The W3C Markup Validation Service was used to validate the HTML of the website.
+
+#### Base Structure
+
+- <details><summary>Home</summary>
+  <img src="media/readme/validation/html/home_validation.png">
+  </details>
+
+- <details><summary>About us</summary>
+  <img src="media/readme/validation/html/aboutus_validation.png">
+  </details>
+
+- <details><summary>Base Template</summary>
+  The errors here are the django templates function the validator
+  does not recognize them
+  <img src="media/readme/validation/html/base_template.png">
+  </details>
+
+#### Products 
+-  <details><summary>Products</summary>
+   <img src="media/readme/validation/html/products_validation.png">
+   </details>
+
+-  <details><summary>Products Details</summary>
+   <img src="media/readme/validation/html/product_details_validation.png">
+   </details>
+
+#### User Functionality
+
+-  <details><summary>Log in</summary>
+   <img src="media/readme/validation/html/login_validation.png">
+   </details>
+
+-  <details><summary>Log out</summary>
+   <img src="media/readme/validation/html/logout_validation.png">
+   </details>
+
+-  <details><summary>Sign Up</summary>
+   <img src="media/readme/validation/html/signup_validation.png">
+   </details>
+#### Payment Process
+
+- <details><summary>cart</summary>
+  <img src="media/readme/validation/html/cart_validation.png">
+  </details>
+
+- <details><summary>check details</summary>
+  <img src="media/readme/validation/html/check_details_validation.png">
+  </details>
+
+- <details><summary>Payment</summary>
+  <img src="media/readme/validation/html/payment_validation.png">
+  </details>
+
+#### Manager
+
+- <details><summary>Main View</summary>
+  The errors here are the django templates function the validator
+  does not recognize them
+  <img src="media/readme/validation/html/manager_main_view.png">
+  </details>
+- <details><summary>Add Product</summary>
+  The errors here are the django templates function the validator
+  does not recognize them
+  <img src="media/readme/validation/html/manager_add_product.png">
+  </details>
+- <details><summary>Edit Product</summary>
+  The errors here are the django templates function the validator
+  does not recognize them
+  <img src="media/readme/validation/html/manager_edit_product.png">
+  </details>
+
+#### Error Pages
+-  <details><summary>403</summary>
+   <img src="media/readme/validation/html/error403.png">
+   </details>
+-  <details><summary>404</summary>
+   <img src="media/readme/validation/html/error403.png">
+   </details>
+-  <details><summary>500</summary>
+   <img src="media/readme/validation/html/error403.png">
+   </details>
+<hr>
+
+### CSS Validation
+
+The W3C Jigsaw CSS Validator Service validate the CSS of the website, it passed without errors.
+
+<details><summary>W3C jigsaw </summary>
+<img src="media/readme/validation/css/css.png">
+</details>
+
+<hr>
+
+
+### JavaScript Validation
+
+JSHint Service was used to validate the Javascript files without errors.
+<details><summary> JSHint</summary>
+  <details><summary> Stripe</summary>
+  The Undefined Variables Here are because the jshint does not recognize
+  the Jquery functions
+  <img src="media/readme/validation/js/stripe.png">
+  </details>
+  <details><summary> Notifications</summary>
+  <img src="media/readme/validation/js/alerts.png">
+  </details>
+</details>
+
+<hr>
+
+### Python Validation
+
+To validate python was used two services Pylint, Flake8.
+
+- Pylint 2.15.8 is a static code analyser for Python 2 or 3. The latest version supports Python 3.7.2 and above.
+
+- Flake8 6.0.0 is a popular lint wrapper for python. Under the hood, it runs 
+
+three other tools and combines their results: pep8 for checking style. pyflakes for checking syntax. mccabe for checking complexity.
+
+
 <hr>
