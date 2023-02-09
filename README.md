@@ -1,5 +1,4 @@
 # Capricci Store
-<br>
 
 **Developer: Julio David Hernandez**
 
@@ -39,24 +38,89 @@
 <hr>
 
 ### About
+<hr>
 
 Handmade goods shop family concept to aid the local community's economy.
 
 With two different kinds of accounts
 - A regular user account 
 - An administrator user account
+
+### Bussines model
+<hr>
+We sell our services to customers directly using the Business To Consumer (B2C) model.
+
+We provide the option of personalized products in addition to our inventory of in-demand items. This reduces the possibility of demand fluctuations and helps us keep our business consistent.
+
+#### -  Target Audience
+
+- Those looking to give handmade items as gifts.
+- Enthusiasts who want to promote local business.
+- People who are searching gift ideas for the holidays for various goods.
+- People who need to make a gift and do not have idea.
+- People who want to gift a custom present.
+- People looking for a season gift.
+
+#### -  Competitors & alternatives
+
+The potential competitors and alternatives are:
+
+- The local Sellers (Being a little entrepreneur in the region are not many locals).
+- The inferior quality of the factory-produced things.
+
+#### - Costs & needs
+Our costs and solutions are presented here.
+
+- We made an investment in a small store building.
+- The time needed to learn the methods.
+- The Production of Stock (Depends on how big is).
+- The price varies based on the economy as resources are always more expensive depending on the state of the world economy (Having around of, 3000CHF spent monthly).
+
+#### - Vision & aims
+
+Briefly describe our products' vision and long- and short-term goals.
+
+- We want to always provide high-quality products, increase our inventory, and add new products like personalized surprices.
+- Popularity in the area is our short-term goal, and expanding our store to new areas is our long-term objective.
+
+
+#### Market Analysis:
+
+Due to a growing awareness of the value of supporting local businesses and the quality of artisanal goods, the market for these goods is expanding. Like artisanal beer, wine, and other industries, this one has been expanding over time. Now that people are becoming aware of the benefits and the process for themselves , and is not the limit for example the hotels are requiring handcraft manufacturers to pruduce. 
+ 
+Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market stood at a value of USD 704.7 billion in 2022. The handicrafts market is projected to witness a CAGR of 11.8% over the forecast period of 2023-2028. It is expected to reach USD 1376.12 billion by 2028."
+
+<img src="https://www.expertmarketresearch.com/files/images/global-handicrafts-market.png">
+
+ The market for handicrafts is anticipated to increase by USD 514.92 billion between 2021 and 2025, with a CAGR of almost 13%.
+
+
+### Marketing
 <hr>
 
+- Social media is a key component of our marketing strategy because it is the platform that receives the most traffic overall and is simple to access through influencer marketing or similar social media offerings.
+
+- Facebook and Instagram are platforms where we can share our items.
+- Share the video clips that go along with the explanation process.
+
+[Facebook](https://www.facebook.com/people/Capricci/100089305256045)
+[Instagram](https://www.instagram.com/capricci_nicole_joleine)
+
+- Through the usage of Mail Chimp services, we obtained a mailing list that allowed us to easily create a client database and apply future plans, such as sending offers to our clients.
+
+[MailChimp](https://mailchimp.com/es/)
+
 ### User Goals
+<hr>
 
 - Use the site's navigation tools as needed 
 - Purchase products from the stock 
 - Pay attention to comments on individual items' descriptions
 - The function for registered users to comment on specific items.
 
-<hr>
 
 ### Site Owner Goals
+<hr>
 
 - Supply an online store for Local Users.
 - An internet store where customers may purchase original gifts.
@@ -66,14 +130,6 @@ With two different kinds of accounts
 <hr>
 
 ## User Experience
-<hr>
-
-### Target Audience
-
-- Those looking to give handmade items as gifts.
-- Enthusiasts who want to promote local business.
-- People who are searching gift ideas for the holidays for various goods.
-
 <hr>
 
 ### User Requirements and Expectations
@@ -1300,7 +1356,7 @@ Images Sources:
 
 ## __License__
 
-- CI_PP5_E_COM is an open source project by [CI_PP4_DjangoPY](https://github.com/jdhernandezS1/CI_PP4_DjangoPY) that is licensed under [OPS](https://opensource.org/).
+- CI_PP5_E_COM is an open source project by [CI_PP5_E_COM](https://github.com/jdhernandezS1/CI_PP5_E_COM) that is licensed under [OPS](https://opensource.org/).
 - CI_PP5_E_COM reserves the right to change the license of future releases.
 
 <hr>
