@@ -10,11 +10,12 @@
 
 ## Table of Contents
   - [About](#about)
-  - [Bussines Model](#Bussines)
+  - [Bussines Model](#bussines-model)
   - [Marketing](#marketing)
   - [User Goals](#user-goals)
   - [Site Owner Goals](#site-owner-goals)
   - [User Experience](#user-experience)
+  - [User Stories](#user-stories)
   - [Design](#design)
     - [Colours](#colours)
     - [Fonts](#fonts)
@@ -23,7 +24,6 @@
       - [Database](#database)
     - [Wireframes](#wireframes)
   - [Technologies Used](#technologies-used)
-  - [User Stories](#user-stories)
   - [Features](#features)
   - [Validation](#validation)
   - [Testing](#testing)
@@ -34,6 +34,7 @@
   - [Bugs](#bugs)
   - [Configuration](#configuration)
   - [Credits](#credits)
+  - [License](#license)
   - [Acknowledgements](#acknowledgements)
 <hr>
 
@@ -45,6 +46,7 @@ Handmade goods shop family concept to aid the local community's economy.
 With two different kinds of accounts
 - A regular user account 
 - An administrator user account
+##### Back to [top](#table-of-contents)
 
 ### Bussines model
 <hr>
@@ -109,6 +111,7 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 - Through the usage of Mail Chimp services, we obtained a mailing list that allowed us to easily create a client database and apply future plans, such as sending offers to our clients.
 
 [MailChimp](https://mailchimp.com/es/)
+##### Back to [top](#table-of-contents)
 
 ### User Goals
 <hr>
@@ -118,6 +121,7 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 - Pay attention to comments on individual items' descriptions
 - The function for registered users to comment on specific items.
 
+##### Back to [top](#table-of-contents)
 
 ### Site Owner Goals
 <hr>
@@ -128,6 +132,7 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 - Provide full responsive application with comfortable navigation.
 - Security payment method to make feel safe the user.
 <hr>
+##### Back to [top](#table-of-contents)
 
 ## User Experience
 <hr>
@@ -143,7 +148,6 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 - Applications and Links working as hoped-for.
 - Easy method to contact with the managers.
 
-##### Back to [top](#table-of-contents)
 
 
 ## User Stories
@@ -187,6 +191,7 @@ As a site Owner, I want to:
 ##### Back to [top](#table-of-contents)
 
 <hr>
+
 
 ## Design
 
