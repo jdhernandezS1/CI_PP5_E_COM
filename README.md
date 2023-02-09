@@ -867,3 +867,450 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 
 
 <hr>
+
+### Chrome Dev Tools Lighthouse
+
+Lighthouse was used to test the performance, accessibility, best practice and SEO of the site.
+Overall the results are very good for the 4 values.
+
+<hr>
+
+#### Desktop
+
+<hr>
+
+#### Mobile
+
+<hr>
+
+### Wave
+
+The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
+
+##### Back to [top](#table-of-contents)
+
+<hr>
+
+## Testing
+
+The testing approach is as follows:
+1. Manual testing of user stories
+2. Automated testing
+<hr>
+
+### Manual testing of user stories
+
+1. Have a responsive Navigation Bar and home page.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+2. Have a responsive Footer And networks.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+3. Have a responsive view to Check cart content.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+4. Purchase products by quantity.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+5. Get the New Collection.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+6. Check cart amount.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+7. have a Search function.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+8. Get own cart at any time.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+9. Get own total at any time.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+10. Get the offers and season products.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+11. Have a View with the individual item details.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+12. Get the Checkout details.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+13. Get Checkout details by Email.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+14. Bring the Payment details by Stripe Service.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+15. Get Recipe view with the Details.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+16. Have a User Functionaity: Login, Logout, Register.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+17. Confirm own Email by a email confirmation.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+18. Add a product.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+19. Delete product.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+20. Edit/Update product.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+21. Add a category. 
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+22. Delete category. 
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+23. Edit/update category. 
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+DO | RESULT | Works as expected or not |
+
+<details><summary>Responsive</summary>
+<img src="">
+</details>
+
+<hr>
+
+### Automated testing
+
+Automated testing was done using the Django's unit tests from a Python standard library module: unittest. The reports were produced using the coverage tool.
+
+<hr>
+
+### Performing tests on various devices
+
+The website was tested using Google Chrome Developer Tools Toggle Device Toolbar to simulate viewports of different devices.
+
+The website was tested on the following devices:
+- Lenovo legion (Big Screen)
+- Samsung Galaxy Tab A (Medium screen)
+- Hawei p40 (Small screen)
+
+<hr>
+
+### Browser compatibility
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Opera |
+| --------- | --------- | --------- | --------- | --------- |
+| IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
+
+##### Back to [top](#table-of-contents)
+
+<hr>
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ------- | ------- |
+|   bug   | how fixed it |
+|    bug    | how fixed it |
+|         | |
+
+##### Back to [top](#table-of-contents)
+<hr>
+
+## Configuration
+<hr>
+
+### Deploy Application 
+
+<hr>
+
+#### Create a Database
+
+- Database Create an elephant SQL
+- Go to Elephant SQL and crew a new instance.
+- select a server
+- Create Database
+    <details>
+    <summary>step1</summary>
+    <img src="media/readme/deployment/sql1.png">
+    </details>
+    <details>
+    <summary>step2</summary>
+    Fill the form and submit
+    <img src="media/readme/deployment/sql2.png">
+    </details>
+    <details>
+    <summary>step3</summary>
+    <img src="media/readme/deployment/sql3.png">
+    </details>
+    <details>
+    <summary>step4</summary>
+    Push Create and finish it.
+    <img src="media/readme/deployment/sql4.png">
+    </details>
+- Get Database Environment Url
+  <details><summary>Database URL</summary>
+  <img src="media/readme/deployment/sql5.png">
+  </details>
+<hr>
+
+#### Cloudinary
+
+Create a cloudinary Acount and get the environment Url
+  <details><summary>Get Cloudinary environment variable</summary>
+  <img src="media/readme/deployment/cloudinary.png">
+  </details>
+
+<hr>
+
+#### Config Django App
+
+- Add installed App cloudinary.
+- config static files with cloudinary.
+  <details><summary>Create in the Env.py file.</summary> <img src="media/readme/deployment/djangostatic.png"> </details>
+- Create a procfile and add " web: gunicorn name_of_main_app.wsgi".
+- collect statics in Django project.
+- Generate requirements by freeze command.
+
+<hr>
+
+#### Heroku Deployment
+
+
+1. Create an account in heroku.com
+2. Create a new app, give it a distinctive name, and select your server location.
+  - <details><summary>Create App</summary> <img src="media/readme/deployment/hnewp.png"> </details>
+  - <details><summary>Select server</summary> 
+    Give a name to the app and select a server location.
+    <img src="media/readme/deployment/hserv.png"> </details>
+3. Go to Heroku aplication deployment.
+4. Select Deployment method and conect with GitHub.
+  - <details><summary>Git hub</summary> <img src="media/readme/deployment/hdep.png"> </details>
+5. Go settings, select  buildpacks. For the project, chose 'python'.
+  - <details><summary>Buildpacks</summary> <img src="media/readme/deployment/hbuildpack.png"> </details>
+6.  Go to Config and Env vars set with the environment variables gotten in the previus steps inside the env.py
+  - <details><summary>Config vars</summary> Add them in this Structure<img src="media/readme/deployment/hcvars.png"> </details>
+
+7. Choose the branch at the end of deployment section.
+8. Await the app's construction. When everything is deployed, you will see the message "App was successfully deployed" and a "View" button that will lead you to your deployed link.
+  - <details><summary>Deploy branch</summary> <img src="media/readme/deployment/hdeploy.png"> </details>
+
+<hr>
+
+### Forking the GitHub Repository
+
+1. Go to the GitHub repository https://github.com/jdhernandezS1/CI_PP5_E_COM
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+
+<hr>
+
+### Clone the GitHub Repository
+
+To clone the repository:
+- In the Github repository
+1. Locate the button __Code__ in the right uper corner. 
+2. Chose between HTTPS, SSH, Github CLI or download zip.
+3. Open Git Terminal (Bash).
+4. Go to the directory where you want to cloned the file.
+6. Use command Git clone and paste the URL.
+```bash
+git clone https://github.com/jdhernandezS1/CI_PP5_E_COM.git
+```   
+Online Repositorie view [link_to_page](https://github.com/jdhernandezS1/CI_PP5_E_COM)
+
+##### Back to [top](#table-of-contents)
+
+<hr>
+
+## Credits
+
+- Code institute 
+- icons source : https://ionic.io/ionicons
+- w3schools  
+- freepng.es
+- herokuapp
+- GitHub
+
+<hr>
+
+### Images
+
+Images Sources:
+- fabicons
+- freepng
+- ionicons
+
+
+##### Back to [top](#table-of-contents)
+<hr>
+
+## __License__
+
+- CI_PP5_E_COM is an open source project by [CI_PP4_DjangoPY](https://github.com/jdhernandezS1/CI_PP4_DjangoPY) that is licensed under [OPS](https://opensource.org/).
+- CI_PP5_E_COM reserves the right to change the license of future releases.
+
+<hr>
+
+## Acknowledgements
+
+Cordially thanks to: 
+
+- HashEm to bless me.
+- My Family to support me.
+- My mentor Mr Mohamed Shami.
+- Code Institute Academy.
+- Guys of Stack overflow.
