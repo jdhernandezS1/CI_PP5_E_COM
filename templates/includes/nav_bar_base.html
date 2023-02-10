@@ -4,7 +4,6 @@
       <div class="list-inline-item dropdown ">
         <a class="nav-link text-center row text-decoration-none text-black ml-auto" href="#" id="user-options2"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <!-- <div class="text-center row p-0"> -->
           <div class="w-100 text-black">
             {% if request.user.is_authenticated %}
             <ion-icon name="person" class=""></ion-icon>
@@ -66,9 +65,9 @@
     <div class="mx-auto p-3">
       <form method="GET" action="{% url 's_prods' %}">
         <div class="input-group w-100 ">
-          <label for="exampleInputEmail1"></label>
+          <label for="search-bar"></label>
           <input class="form-control bg-light  border border-black font-weight-bold rounded-left" type="text" name="q"
-            placeholder="Search our site">
+            placeholder="Search our site" id="search-bar">
           <div class="input-group-append text-one">
             <button class="form-control btn btn-light border border-black rounded-right text-one" type="submit">
               <span class="icon font-weight-bold">
