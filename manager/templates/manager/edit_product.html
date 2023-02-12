@@ -26,17 +26,14 @@
     <div class="container p-0 mx-auto">
 
         <div class="form-group container mx-auto w-75">
-            <p class="text-left">Category</p>
             {{product_form.category | as_crispy_field}}
         </div>
         <div class="form-group container mx-auto w-75">
             {{product_form.title | as_crispy_field}}</div>
         <div class="orm-group container mx-auto w-75">
-            <p class="text-left">Quantity</p>
             {{product_form.quantity | as_crispy_field}}
         </div>
         <div class="form-group container mx-auto w-75">
-            <p class="text-left">Price</p>
             {{product_form.price | as_crispy_field}}
         </div>
         <div class="form-check container mx-auto w-75">
@@ -47,7 +44,9 @@
             <small>The Scount is in % (Ex 10%)</small>
         </div>
         <div class="form-group container mx-auto w-75">{{product_form.description | as_crispy_field}}</div>
-        <div class="form-group container mx-auto p-0 w-75">{{product_form.featured_image }}</div>
+        <div class="form-group container mx-auto p-0 w-75">
+            <label for="id_featured_image" class="mx-auto">Product Picture</label>
+            {{product_form.featured_image }}</div>
         <div class="form-group container mx-auto w-75">
             <button id="submit-button"
                 class="bg-success btn btn-outline-success rounded btn-lg text-black border-0 mx-auto" value="Upload">

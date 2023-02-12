@@ -67,7 +67,7 @@ class ProdForm(forms.ModelForm):
             if field == 'scountbool':
                 self.fields[field].label = "Article in Scount"
             else:
-                self.fields[field].label = False
+                self.fields[field].label = None
 
 
 class CategoryForm(forms.ModelForm):
