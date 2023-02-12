@@ -44,11 +44,13 @@
         <div class="dropdown-menu border-0 w-100 p-0 rounded-0 my-0" aria-labelledby="mobile-search">
             <form class="form" method="GET" action="{% url 's_prods' %}">
                 <div class="input-group w-100">
+                    <label class="d-none" for="search-bar-phone">hiden</label>
                     <input class="form-control border border-black rounded-0" type="text" name="q"
-                        placeholder="Search our site">
+                        placeholder="Search our site" id="search-bar-phone">
                     <div class="input-group-append">
                         <button class="form-control form-control btn btn-black border border-black rounded-0"
                             type="submit">
+                            <label class="d-none">hiden</label>
                             <span class="icon ">
                                 <ion-icon name="search-outline"></ion-icon>
                             </span>
