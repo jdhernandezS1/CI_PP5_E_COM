@@ -65,12 +65,13 @@
     <div class="mx-auto p-3">
       <form method="GET" action="{% url 's_prods' %}">
         <div class="input-group w-100 ">
-          <label for="search-bar"></label>
+          <label for="search-bar" class="d-none">empty</label>
           <input class="form-control bg-light  border border-black font-weight-bold rounded-left" type="text" name="q"
             placeholder="Search our site" id="search-bar">
           <div class="input-group-append text-one">
             <button class="form-control btn btn-light border border-black rounded-right text-one" type="submit">
               <span class="icon font-weight-bold">
+                <p class="d-none">Hiden</p>
                 <ion-icon name="search-outline" class=""></ion-icon>
               </span>
             </button>
