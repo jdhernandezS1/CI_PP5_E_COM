@@ -1,3 +1,6 @@
 .form-control{
     width: auto;
 }
+#id_body {
+    width: auto;
+}

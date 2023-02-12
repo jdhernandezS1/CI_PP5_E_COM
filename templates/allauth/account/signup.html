@@ -20,7 +20,7 @@
 {% else %}
 <div class="container px-0 h-100 text-black text-left py-5 text-sm-left w-100">
   <h1 class="text-black">{% trans "Sign Up" %}</h1>
-  <p class="text-black">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
+  <p class="text-black">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="text-danger">sign
       in</a>.{% endblocktrans %}
   </p>
   <form class="signup rounded" id="signup_form" method="post" action="{% url 'account_signup' %}">
