@@ -948,6 +948,67 @@ Overall the results are very good for the 4 values.
 
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
 
+<details><summary>Home Wave</summary>
+<img src="media/readme/wave_accessibility/Edit_product_wave.png">
+</details>
+
+<details><summary>About Us Wave</summary>
+<img src="media/readme/wave_accessibility/about_us_wave.png">
+</details>
+
+<details><summary>Products wave</summary>
+  <details><summary>List</summary>
+  <img src="media/readme/wave_accessibility/Product_list_wave.png">
+  </details>
+
+  <details><summary>Details</summary>
+  <img src="media/readme/wave_accessibility/Product_description_wave.png">
+  </details>
+
+</details>
+
+<details><summary>Cart wave</summary>
+  <details><summary>List</summary>
+  <img src="media/readme/wave_accessibility/Cart_wave.png">
+</details>
+
+</details>
+
+<details><summary>Checkout process wave</summary>
+  <details><summary>Checkout Form</summary>
+  <img src="media/readme/wave_accessibility/Checkout_form_wave.png">
+  </details>
+
+  <details><summary>Check</summary>
+  <img src="media/readme/wave_accessibility/check_wave.png">
+  </details>
+
+</details>
+
+
+<details><summary>Manager Stock wave</summary>
+  <details><summary>Products List</summary>
+  <img src="media/readme/wave_accessibility/Product_list_manager_wave.png">
+  </details>
+
+  <details><summary>Products Edit</summary>
+  <img src="media/readme/wave_accessibility/Edit_product_wave.png">
+  </details>
+  
+  <details><summary>Products Add</summary>
+  <img src="media/readme/wave_accessibility/Add_product_wave.png">
+  </details>
+
+  <details><summary>Category Edit</summary>
+  <img src="readme/wave/home.png">
+  </details>
+
+  <details><summary>Category Add</summary>
+  <img src="readme/wave/home.png">
+  </details>
+
+</details>
+
 ##### Back to [top](#table-of-contents)
 
 <hr>
@@ -965,10 +1026,31 @@ The testing approach is as follows:
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Navigate in the page | The Content be responsive in our three test screens | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+
+<details><summary>Home</summary>
+  <details><summary>Phonne</summary>
+  <img src="media/readme/manual_test/nav_footer/home_phone_mt.png">
+  </details>
+  <details><summary>Tablet</summary>
+  <img src="media/readme/manual_test/nav_footer/home_tablet_mt.png">
+  </details>
+  <details><summary>Laptop</summary>
+  <img src="media/readme/manual_test/nav_footer/home_pc_mt.png">
+  </details>
+</details>
+
+<details><summary>Navigation Bar</summary>
+  <details><summary>Phone</summary>
+  <img src="media/readme/manual_test/nav_footer/NavBar_phone_mt.png">
+  </details>
+  <details><summary>Tablet</summary>
+  <img src="media/readme/manual_test/nav_footer/NavBar_tablet_mt.png">
+  </details>
+  <details><summary>Laptop</summary>
+  <img src="media/readme/manual_test/nav_footer/NavBar_pc_mt.png">
+  </details>
 </details>
 
 2. Have a responsive Footer And networks.
@@ -977,48 +1059,71 @@ Navigate to THE page | Responsive in different screens size | Works as expected 
 ------------ | ------------ | ------------ |
 Navigate to THE page | Responsive in different screens size | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Test</summary>
+  <details><summary>Phone</summary>
+  <img src="media/readme/manual_test/nav_footer/footer_phone_mt.png">
+  </details>
+  <details><summary>Tablet</summary>
+  <img src="media/readme/manual_test/nav_footer/footer_tablet_mt.png">
+  </details>
+  <details><summary>Laptop</summary>
+  <img src="media/readme/manual_test/nav_footer/footer_pc_mt.png">
+  </details>
 </details>
+
 
 3. Have a responsive view to Check cart content.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Get the Cart View | Responsive View in different screen size | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Cart</summary>
+  <details><summary>Phone</summary>
+  <img src="media/readme/manual_test/cart/cart_phone_mt.png">
+  </details>
+  <details><summary>Tablet</summary>
+  <img src="media/readme/manual_test/cart/cart_tablet_mt.png">
+  </details>
+  <details><summary>Laptop</summary>
+  <img src="media/readme/manual_test/cart/cart_pc_mt.png">
+  </details>
 </details>
 
 4. Purchase products by quantity.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Add Products By different quantity | Change the products in the cart | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Add Items To cart</summary>
+<img src="media/readme/manual_test/cart/add_cart.png">
+<img src="media/readme/manual_test/cart/cart_updated.png">
+
 </details>
 
 5. Get the New Collection.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Use the View | Get the new collections items view | Works as expected |
 
 <details><summary>Responsive</summary>
-<img src="">
+<img src="media/readme/manual_test/get_category/new_collection_section.png">
+<img src="media/readme/manual_test/get_category/new_collection_products.png">
 </details>
 
 6. Check cart amount.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Look The navigation bar shows the cart amount | Amount changes everytime that we add something | Works as expected |
 
 <details><summary>Responsive</summary>
-<img src="">
+<img src="media/readme/manual_test/cart/cart_amount_1_mt.png">
+<img src="media/readme/manual_test/cart/cart_amount_2_mt.png">
+<img src="media/readme/manual_test/cart/cart_amount_3_mt.png">
+
 </details>
 
 7. have a Search function.
@@ -1205,7 +1310,7 @@ The website was tested using Google Chrome Developer Tools Toggle Device Toolbar
 
 The website was tested on the following devices:
 - Lenovo legion (Big Screen)
-- Samsung Galaxy Tab A (Medium screen)
+- Samsung Galaxy Tab S4 (Medium screen)
 - Hawei p40 (Small screen)
 
 <hr>
