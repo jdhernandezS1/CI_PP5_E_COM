@@ -84,8 +84,8 @@
 <div class="container mt-5 p-0 mx-0">
     <form method="post">
         {% csrf_token %}
-        <div class="container w-75 p-0 mx-auto px-0 form-group">
-            <div class="mt-5 p-0 mx-0">
+        <div class="container w-75 p-0 mx-0 px-0 form-group">
+            <div class="mt-5 p-0 mx-auto">
                 <small>Feel Free to give us your opinion Here:</small>
                 {{comment_form.name | as_crispy_field}}
             </div>
