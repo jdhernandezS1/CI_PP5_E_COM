@@ -915,13 +915,35 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site.
 Overall the results are very good for the 4 values.
 
+- #### Home
+
+<details><summary>Laptop</summary>
+<img src="media/readme/lighthouse/home_pc_lighthouse.png">
+</details>
+
 <hr>
 
-#### Desktop
+- #### Manager
+
+List View
+<details><summary>Laptop</summary>
+<img src="media/readme/lighthouse/manager_pc_lighthouse.png">
+</details>
+Edit and Add Form 
+<details><summary>Laptop</summary>
+<img src="media/readme/lighthouse/manager_edit_pc_lighthouse.png">
+</details>
 
 <hr>
 
-#### Mobile
+#### Products
+
+<details><summary>Products list</summary>
+<img src="media/readme/lighthouse/prod_list_pc_lighthouse.png">
+</details>
+<details><summary>Product Details</summary>
+<img src="media/readme/lighthouse/prod_details_pc_lighthouse.png">
+</details>
 
 <hr>
 
