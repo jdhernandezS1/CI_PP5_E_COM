@@ -4,7 +4,7 @@
 
 [Live Website](https://capricci.herokuapp.com/)
 
-<img src="media/readme/responsive/responsive.jpg">
+<img src="media/readme/responsive/responsive.jpeg">
 
 <hr>
 
@@ -131,6 +131,7 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 - Provide full responsive application with comfortable navigation.
 - Security payment method to make feel safe the user.
 <hr>
+
 ##### Back to [top](#table-of-contents)
 
 ## User Experience
@@ -468,7 +469,7 @@ The following models represent the database model structure of the website:
 - In Small Screens you have the products and filter by seasons In menu a button.
 
   <details><summary>View</summary>
-  <img src=media/readme/views/Navigation_bar/phone_products.png">
+  <img src="media/readme/views/Navigation_bar/phone_products.png">
   </details>
 
 - The nav bar have responsive design to change in small medium and large size screens.
