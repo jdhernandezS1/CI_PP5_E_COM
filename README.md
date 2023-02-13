@@ -913,24 +913,21 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 ### Chrome Dev Tools Lighthouse
 
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site.
-Overall the results are very good for the 4 values.
 
-- #### Home
+#### Home
 
-<details><summary>Laptop</summary>
+<details><summary>Home View</summary>
 <img src="media/readme/lighthouse/home_pc_lighthouse.png">
 </details>
 
 <hr>
 
-- #### Manager
+#### Manager
 
-List View
-<details><summary>Laptop</summary>
+<details><summary>List view</summary>
 <img src="media/readme/lighthouse/manager_pc_lighthouse.png">
 </details>
-Edit and Add Form 
-<details><summary>Laptop</summary>
+<details><summary>Edit and Add Form </summary>
 <img src="media/readme/lighthouse/manager_edit_pc_lighthouse.png">
 </details>
 
@@ -946,6 +943,32 @@ Edit and Add Form
 </details>
 
 <hr>
+
+#### Cart
+
+<details><summary>Product Details</summary>
+<img src="media/readme/lighthouse/cart_pc_lighthouse.png">
+</details>
+<hr>
+
+#### Check
+
+<details><summary>CheckOut</summary>
+<img src="media/readme/lighthouse/checkout_pc_lighthouse.png">
+</details>
+<details><summary>Check Details</summary>
+<img src="media/readme/lighthouse/check_det_pc_lighthouse.png">
+</details>
+
+<hr>
+
+#### Contact Us
+
+<details><summary>Product Details</summary>
+<img src="media/readme/lighthouse/contacus_pc_lighthouse.png">
+</details>
+<hr>
+
 
 ### Wave
 
