@@ -475,15 +475,6 @@ The following models represent the database model structure of the website:
 - The nav bar have responsive design to change in small medium and large size screens.
 - The navbar have down a filter Products can be filtered By seasons.
 
-<details><summary>Home Page</summary>
-  <details><summary>Midium and small Screen</summary>
-  <img src="media/readme/views/Navigation_bar/pc_nav_bar.png">
-  </details>
-  <details><summary>Large Screen</summary>
-  <img src="media/readme/views/Navigation_bar/phone_nav_bar.png">
-  </details>
-</details>
-
 - User stories covered: 1, 6, 7, 8, 9, 10
 
 <hr>
@@ -621,7 +612,7 @@ The following models represent the database model structure of the website:
 
   - The Login users Can comment in the section.
   
-    <details><summary>Comment</summary>
+  <details><summary>Comment</summary>
   <img src="media/readme/user_stories/products/comment.png">
   </details>
   - User stories covered: 4, 5, 10, 11
@@ -840,24 +831,24 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 
 - #### Home
 
-  <details><summary> APPS</summary>
-  <img src="media/readme/validation/python/home/home_apps.png">
-  </details>
-  <details><summary> VIEWS</summary>
-  <img src="media/readme/validation/python/home/home_views.png">
-  </details>
+<details><summary> APPS</summary>
+<img src="media/readme/validation/python/home/home_apps.png">
+</details>
+<details><summary> VIEWS</summary>
+<img src="media/readme/validation/python/home/home_views.png">
+</details>
 
 - #### Errors
 
-  <details><summary>APP</summary>
-  <img src="media/readme/validation/python/errors/errors_apps.png">
-  </details>
-  <details><summary> URLS</summary>
-  <img src="media/readme/validation/python/errors/errors_urls.png">
-  </details>
-  <details><summary>VIEWS</summary>
-  <img src="media/readme/validation/python/errors/errors_views.png">
-  </details>
+<details><summary>APP</summary>
+<img src="media/readme/validation/python/errors/errors_apps.png">
+</details>
+<details><summary> URLS</summary>
+<img src="media/readme/validation/python/errors/errors_urls.png">
+</details>
+<details><summary>VIEWS</summary>
+<img src="media/readme/validation/python/errors/errors_views.png">
+</details>
 
 - #### Cart
 
@@ -889,7 +880,7 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 <img src="media/readme/validation/python/manager/manager_forms.png">
 </details>
 
-- #### Home
+- #### Payment
 
 <details><summary> ADMIN</summary>
 <img src="media/readme/validation/python/payment/payment_admin.png">
@@ -899,9 +890,6 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 </details>
 <details><summary> FORMS</summary>
 <img src="media/readme/validation/python/payment/payment_forms.png">
-</details>
-<details><summary> VIEWS</summary>
-<img src="media/readme/validation/python/manager/manager_forms.png">
 </details>
 <details><summary> MODELS</summary>
 <img src="media/readme/validation/python/payment/payment_models.png">
@@ -919,13 +907,6 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 <img src="media/readme/validation/python/payment/payment_webhk_hndler.png">
 <img src="media/readme/validation/python/payment/payment_webhk.png">
 </details>
-
-
-- #### Home
-  <details><summary> Notifications</summary>
-  <img src="media/readme/validation/js/alerts.png">
-  </details>
-
 
 <hr>
 
