@@ -1,4 +1,4 @@
-# Capricci Store
+# Capricio Store
 
 **Developer: Julio David Hernandez**
 
@@ -106,7 +106,6 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 - Share the video clips that go along with the explanation process.
 
 [Facebook](https://www.facebook.com/people/Capricci/100089305256045)
-[Instagram](https://www.instagram.com/capricci_nicole_joleine)
 
 - Through the usage of Mail Chimp services, we obtained a mailing list that allowed us to easily create a client database and apply future plans, such as sending offers to our clients.
 
@@ -1125,6 +1124,9 @@ Look The navigation bar shows the cart amount | Amount changes everytime that we
 <img src="media/readme/manual_test/cart/cart_amount_3_mt.png">
 
 </details>
+
+
+############################################################
 
 7. have a Search function.
 
