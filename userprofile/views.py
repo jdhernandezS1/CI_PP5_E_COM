@@ -21,25 +21,20 @@ class Profile(View):
     """
     def get(self, request, *args, **kwargs):
         """
-        Get Product Detail Function
+        Get Order Detail Function
         """
+        template = "userprofile/profile.html"
         act_user = request.user
         queryset = Order.objects
         if request.user.is_superuser:
             orders = get_list_or_404(queryset)
-
-        if get_list_or_404(queryset, owner=act_user):
-            orders = get_list_or_404(queryset, owner=act_user)
         else:
-            orders = get_object_or_404(queryset, owner=act_user)
-        # , owner=act_user
-        # Order.all()
+            orders = Order.objects.filter(owner=act_user)
         context = {
             "orders": orders,
             }
         return render(
             request,
-            "userprofile/profile.html",
+            template,
             context,
         )
-
