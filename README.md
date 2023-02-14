@@ -1196,123 +1196,149 @@ Navigate to THE page | Responsive in different screens size | Works as expected 
 <img src="media/readme/manual_test/get_offers_season_products/seasons_navbar.png">
 </details>
 
-############################################################
+
 
 11. Have a View with the individual item details.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Get the Products View | Responsive in different screens size | Works as expected |
+Go to a Product description View | Get the information of the product selected | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Product Details</summary>
+<img src="media/readme/user_stories/products/description.png">
 </details>
+
 
 12. Get the Checkout details.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Go to the cart and Continue with the Checkout | Get the information of the entire order | Works as expected |
+<details><summary>Checkout</summary>
+  
+  <details><summary>Cart</summary>
+  <img src="media/readme/manual_test/cart/cart_phone_mt.png">
+  </details>
+  <details><summary>Checkout Form</summary>
+  <img src="media/readme/user_stories/checkout/check/checkout_form.png">
+  </details>
 
-<details><summary>Responsive</summary>
-<img src="">
+
 </details>
+
 
 13. Get Checkout details by Email.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Finish a payment | Get the check by email | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Email</summary>
+<img src="media/readme/user_stories/checkout/check/email_check.png">
 </details>
 
 14. Bring the Payment details by Stripe Service.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Use The Stripe Section | Dont allow Fake Cards | Works as expected or not |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Stripe Card Service</summary>
+<img src="media/readme/user_stories/checkout/stripe/stripe_section.png">
+<img src="media/readme/user_stories/checkout/stripe/stripe_section_wrong_card.png">
 </details>
 
-15. Get Recipe view with the Details.
+
+15. Get Check view with the Details.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Make a payment | Get Check View | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Check View</summary>
+<img src="media/readme/user_stories/checkout/check/check_details.png">
 </details>
+
 
 16. Have a User Functionaity: Login, Logout, Register.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Try to Visit the User Functions Pages | Get the Views | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
-</details>
+<details><summary>User Functions</summary>
+<img src="media/readme/user_stories/user/sign_up_pc.png">
+<img src="media/readme/user_stories/user/sign_in_pc.png">
+<img src="media/readme/user_stories/user/sign_out.png">
+
+ </details>
+
 
 17. Confirm own Email by a email confirmation.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Try to Register in the page | Email Validation User | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Email Validation</summary>
+<img src="media/readme/user_stories/user/confirm_email.png">
 </details>
+
 
 18. Add a product.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Try to Create A product | New Product Data | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Add</summary>
+<img src="media/readme/user_stories/manager/add_product.png">
+<img src="media/readme/user_stories/manager/item_added.png">
 </details>
+
 
 19. Delete product.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Try to Delete An item | Product Data delete | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Delete</summary>
+<img src="media/readme/user_stories/manager/Delete_product.png">
+<img src="media/readme/user_stories/manager/product_deleted.png">
+
 </details>
 
 20. Edit/Update product.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Try to Edit an item | Product Data Edited | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Edit</summary>
+<img src="media/readme/user_stories/manager/Edit_product.png">
+<img src="media/readme/user_stories/manager/Product_edited.png">
 </details>
+
+############################################################
 
 21. Add a category. 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Try to Create A Category | New Product Category | Works as expected |
+
 
 <details><summary>Responsive</summary>
 <img src="">
 </details>
 
-22. Delete category. 
+22. Delete a category. 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Try to Delete A Category | Delete Category Data | Works as expected |
+
 
 <details><summary>Responsive</summary>
 <img src="">
@@ -1322,7 +1348,7 @@ DO | RESULT | Works as expected or not |
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-DO | RESULT | Works as expected or not |
+Try to Edit A Category | Edit Category Data | Works as expected |
 
 <details><summary>Responsive</summary>
 <img src="">
