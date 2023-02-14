@@ -5,13 +5,8 @@ from django.contrib import admin
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Internal
 from . import views
-# ~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 urlpatterns = [
-    path(
-        '',
-        views.CategoryManager,
-        name='category_manager'
-    ),
-
+    path('', views.Profile.as_view(), name='profile'),
 ]

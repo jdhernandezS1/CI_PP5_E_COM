@@ -50,8 +50,8 @@ urlpatterns = [
         'manager/',
         include('manager.urls')),
     path(
-        'catmanager/',
-        include('catmanager.urls')),
+        'userprofile/',
+        include('userprofile.urls')),
     path(
         'summernote/',
         include('django_summernote.urls')),

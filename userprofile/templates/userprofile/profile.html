@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="overlay"></div>
+<div class="container-fluid p-0 w-100">
+    <div class="row p-0 w-100">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Orders</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+</div>
+<div class="container p-0 my-5">
+    {% if orders %}
+    {% for order in orders %}
+    <small>{{order.order_number}}</small>
+    <p>{{order.owner}}</p>
+    <p>Delivery Details</p>
+    <p>State: {{order.canton}}</p>
+    <p>City: {{order.city}}</p>
+    <p>Post Code: {{order.postcode}}</p>
+    <p>Address: {{order.street_address1}}</p>
+    <p>Order Details</p>
+    {% for item in order.prodsorder.all %}
+    <div class="row mx-auto py-3">
+        <div class="row mx-auto">
+            <p class="small mb-0 text-black text-muted">{{ item.product.title }}</p>
+        </div>
+        <div class="row mx-auto">
+            <p class="small mb-0">{{ item.product.price }}</p>
+        </div>
+        <div class="row mx-auto">
+            <p class="small mb-0">X {{ item.quantity }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    <p>Total : {{order.grand_total}} CHF</p>
+
+    <hr>
+    {% endfor %}
+    {% else %}
+    <p>You do not have Orders already</p>
+    {% endif %}
+</div>
+{% endblock %}

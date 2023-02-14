@@ -68,5 +68,3 @@ class ProdForm(forms.ModelForm):
                 self.fields[field].label = "Article in Scount"
             else:
                 self.fields[field].label = None
-
-

@@ -64,9 +64,9 @@ INSTALLED_APPS = [
     'cart',
     'payup',
     'manager',
-    'catmanager',
+    'userprofile',
     # Forms
-    'crispy_forms'
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
