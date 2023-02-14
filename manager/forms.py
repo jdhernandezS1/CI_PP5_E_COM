@@ -70,18 +70,3 @@ class ProdForm(forms.ModelForm):
                 self.fields[field].label = None
 
 
-class CategoryForm(forms.ModelForm):
-    """
-    A class for form to create a category
-    """
-    class Meta:
-        """
-        To order items
-        """
-        model = Cat
-        fields = (
-            'author',
-            'title',
-            'slug',
-            'featured_image'
-        )
