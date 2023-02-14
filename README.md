@@ -1152,37 +1152,37 @@ Look The navigation bar shows the cart amount | Amount changes everytime that we
 
 </details>
 
-
-############################################################
-
 7. have a Search function.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Search By keyword | Get related results | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Search</summary>
+<img src="media/readme/manual_test/nav_footer/search.png">
+<img src="media/readme/manual_test/nav_footer/search_result.png">
 </details>
 
 8. Get own cart at any time.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Get navbar in different screen | Get the Cart present in the navbar in the screen | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>cart</summary>
+<img src="media/readme/manual_test/cart/cart_notify_pc.png">
+<img src="media/readme/manual_test/cart/cart_notify_phone.png">
 </details>
 
 9. Get own total at any time.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Navigate in the site | get the total in the navbar | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Cart Total</summary>
+<img src="media/readme/manual_test/cart/cart_amount_1_mt.png">
+<img src="media/readme/manual_test/cart/cart_amount_3_mt.png">
 </details>
 
 10. Get the offers and season products.
@@ -1191,15 +1191,18 @@ Navigate to THE page | Responsive in different screens size | Works as expected 
 ------------ | ------------ | ------------ |
 Navigate to THE page | Responsive in different screens size | Works as expected |
 
-<details><summary>Responsive</summary>
-<img src="">
+<details><summary>Pictures</summary>
+<img src="media/readme/manual_test/get_offers_season_products/offfer.png">
+<img src="media/readme/manual_test/get_offers_season_products/seasons_navbar.png">
 </details>
+
+############################################################
 
 11. Have a View with the individual item details.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Get the Products View | Responsive in different screens size | Works as expected |
 
 <details><summary>Responsive</summary>
 <img src="">
@@ -1419,6 +1422,12 @@ Create a cloudinary Acount and get the environment Url
 - Create a procfile and add " web: gunicorn name_of_main_app.wsgi".
 - collect statics in Django project.
 - Generate requirements by freeze command.
+
+<hr>
+
+#### Stripe
+
+Setting Stripe
 
 <hr>
 
