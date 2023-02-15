@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="overlay">
+
+</div>
+<div class="container-fluid p-0 w-100">
+    <div class="row p-0 w-100">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Contact Us</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+</div>
+<div class="container ">
+    <form action="/contacted/" method="post">
+        {% csrf_token %}
+        <div class="form-group p-auto">
+            {{ form.your_name }}    
+        </div>
+        <div class="form-group">
+            {{ form.your_email }}    
+        </div>
+        <div class="form-group">
+            {{ form.your_message }}    
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
