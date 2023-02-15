@@ -3,6 +3,6 @@
     width: 75%;
 }
 
-.form-group{
+#id_your_name, #id_your_email{
     width: auto;
 }
