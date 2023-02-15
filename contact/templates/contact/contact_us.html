@@ -28,7 +28,7 @@
     </div>
 </div>
 <form action="/contacted/" method="post">
-    <div class="container w-75% p-0">
+    <div class="container w-75% p-0 my-5">
         {% csrf_token %}
         {{ form.your_name | as_crispy_field}}
         <div class="my-5">
@@ -37,7 +37,7 @@
         <div class="my-5">
             {{ form.your_message | as_crispy_field:"bootstrap4"  }}
         </div>
-        <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+        <button type="submit" class="btn btn-primary text-black mx-auto">Submit</button>
     </div>
 </form>
 </div>
