@@ -33,3 +33,27 @@ class ContactUs(View):
             template,
             context,
         )
+
+    def POST(self, request, *args, **kwargs):
+        """
+        POST Function
+        """
+        template = "contact/contact_us.html"
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+            template = "contact/contact_thanks.html"
+            return render(
+                request,
+                template,
+            )
+        else:
+            form = ContactForm()
+        context = {
+            "form": form,
+            }
+        return render(
+            request,
+            template,
+            context,
+            )

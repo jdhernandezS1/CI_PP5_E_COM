@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'errors/css/errors_style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<hr>
+<!-- 404 content -->
+<div class="errorMessage">Thanks</div>
+<div class="errorDiv">To Contact Us </div>
+<div id="space"></div>
+
+{% endblock %}

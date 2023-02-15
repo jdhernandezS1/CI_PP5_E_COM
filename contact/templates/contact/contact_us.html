@@ -27,7 +27,7 @@
         </div>
     </div>
 </div>
-<form action="/contacted/" method="post">
+<form method="post">
     <div class="container w-75% p-0 my-5">
         {% csrf_token %}
         {{ form.your_name | as_crispy_field}}
