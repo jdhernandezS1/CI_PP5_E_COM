@@ -8,6 +8,7 @@ from django.shortcuts import reverse, get_list_or_404
 from django.views import generic, View
 from django.contrib import messages
 from django.core.exceptions import ValidationError
+from django.core.mail import send_mail
 # Internal
 from .forms import ContactForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -34,14 +35,22 @@ class ContactUs(View):
             context,
         )
 
-    def POST(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         """
         POST Function
         """
         template = "contact/contact_us.html"
         form = ContactForm(request.POST)
-
         if form.is_valid():
+            subject = "Thanks To contact Us"
+            message = form.cleaned_data['your_message']
+            recipients = form.cleaned_data['your_email']
+            cc_myself = 'store.capricci.ch@gmail.com'
+            sender = ['store.capricci.ch@gmail.com']
+            if cc_myself:
+                recipients.append(sender)
+
+            send_mail(subject, message, sender, recipients)
             template = "contact/contact_thanks.html"
             return render(
                 request,
