@@ -11,6 +11,7 @@ from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 # Internal
 from .forms import ContactForm
+from django.conf import settings
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -44,9 +45,9 @@ class ContactUs(View):
         if form.is_valid():
             subject = "Thanks To contact Us"
             message = form.cleaned_data['your_message']
-            recipients = form.cleaned_data['your_email']
+            recipients = [form.cleaned_data['your_email'],]
             cc_myself = 'store.capricci.ch@gmail.com'
-            sender = ['store.capricci.ch@gmail.com']
+            sender = settings.EMAIL_HOST_USER
             if cc_myself:
                 recipients.append(sender)
 
