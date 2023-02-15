@@ -13,6 +13,9 @@ from django_summernote.fields import SummernoteTextField
 
 
 class ContactForm(forms.Form):
+    """
+    Contact Form Class
+    """
     your_name = forms.CharField(label='Your name', max_length=100)
     your_email = forms.EmailField()
     your_message = forms.CharField(widget=forms.Textarea)
