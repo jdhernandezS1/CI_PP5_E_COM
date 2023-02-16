@@ -153,9 +153,7 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 ## User Stories
 <hr>
 
-### Users
-
-Like user I want to:
+- Like An user I want to:
 
 1. Have a responsive Navigation Bar and home page.
 2. Have a responsive Footer And networks.
@@ -174,11 +172,9 @@ Like user I want to:
 15. Get Recipe view with the Details.
 16. Have a User Functionaity: Login, Logout, Register.
 17. Confirm own Email by a email confirmation.
-<hr>
 
-### Site Owner
 
-As a site Owner, I want to:
+- As a site Owner, I want to:
 
 18. Add a product.
 19. Delete product. 
@@ -187,6 +183,9 @@ As a site Owner, I want to:
 22. Delete category. 
 23. Edit/update category. 
 24. Error Pages.
+
+25. As a Guest, i want to Contact The Staff By Form And Receive an email Confirmation.
+26. As a Guest and owner, i want to Get the Orders Description in a View.
 
 ##### Back to [top](#table-of-contents)
 
@@ -1352,6 +1351,49 @@ Try to Edit A Category | Edit Category Data | Works as expected |
 
 <details><summary>Responsive</summary>
 <img src="">
+</details>
+
+<hr>
+
+24. Error Pages. 
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Try to Get the manager view without login | Get the 500 Error page | Works as expected |
+Try to Visit a Not Register URL | Get the Error page | Works as expected |
+Try to Add an Item with Corrupted picture file | Get the Error page | Works as expected |
+
+<details><summary>Error Pages</summary>
+<img src="media/readme/user_stories/errors/403_error.png">
+<img src="media/readme/user_stories/errors/404_error.png">
+<img src="media/readme/user_stories/errors/500_error.png">
+</details>
+
+<hr>
+
+25. Contact The Staff By Form And Receive an email Confirmation.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Try to Submit The Contact form | Get the Thanks view | Works as expected |
+Try to Submit The Contact form | Get the Email Answer | Works as expected 
+
+<details><summary>Error Pages</summary>
+<img src="media/readme/user_stories/contact/thanks_view.png">
+<img src="media/readme/user_stories/contact/contact_us_email.png">
+</details>
+
+<hr>
+
+26. Get the Orders Description in a View.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Visit Orders Page after Login | Get a View Having or not preview orders | Works as expected |
+
+<details><summary>Orders</summary>
+<img src="media/readme/user_stories/profile/orders..png">
+<img src="media/readme/user_stories/profile/without_orders.png">
 </details>
 
 <hr>
