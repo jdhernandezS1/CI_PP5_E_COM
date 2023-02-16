@@ -27,7 +27,7 @@
     </div>
     {%if categories %}
     <div class="container p-0">
-        <ul class="list-group text-center text-black">
+        <ul class="list-group list-group-flush text-center text-black">
             {% for categorie in categories %}
             <li class="list-group-item">{{categorie}}
                 <a href="{% url 'edit_category' categorie.id %}">
