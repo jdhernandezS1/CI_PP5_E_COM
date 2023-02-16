@@ -183,7 +183,7 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 22. Delete category. 
 23. Edit/update category. 
 24. Error Pages.
-
+- 
 25. As a Guest, i want to Contact The Staff By Form And Receive an email Confirmation.
 26. As a Guest and owner, i want to Get the Orders Description in a View.
 
@@ -514,6 +514,18 @@ The following models represent the database model structure of the website:
 
 <hr>
 
+### Contact Us
+
+- Contact The Staff By a Form.
+- Get a thanks to contact us View. 
+- Recive a email confirmation.
+- User stories covered: 25
+
+<details><summary>Contact Us</summary>
+<img src="media/readme/user_stories/contact/contact_us_form.png">
+<img src="media/readme/user_stories/contact/thanks_view.png">
+<img src="media/readme/user_stories/contact/contact_us_email.png">
+</details>
 
 ### Users Functionality 
   when the users are log-in, log-out & sign-up will be notified by alert message.
@@ -660,6 +672,14 @@ The following models represent the database model structure of the website:
   </details>
   - User stories covered: 13.
 
+#### Orders Views
+
+- User Can Get the orders Details.
+
+  <details><summary>Orders Details</summary>
+  <img src="media/readme/user_stories/profile/orders_view.png">
+  </details>
+- User stories covered: 26.
 
 <hr>
 
@@ -778,6 +798,17 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
   does not recognize them
   <img src="media/readme/validation/html/manager_edit_product.png">
   </details>
+
+#### Contact Us Page
+-  <details><summary>Contact Us</summary>
+   <img src="media/readme/validation/html/contact_us_validation.png">
+   </details>
+
+#### Orders Page
+-  <details><summary>Orders</summary>
+   <img src="media/readme/validation/html/orders_view_validation.png">
+   </details>
+
 
 #### Error Pages
 -  <details><summary>403</summary>
@@ -907,6 +938,30 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 <img src="media/readme/validation/python/payment/payment_webhk.png">
 </details>
 
+- #### Contact Us
+
+<details><summary>Forms</summary>
+<img src="media/readme/validation/python/contact_us/errors_forms.png">
+</details>
+
+<details><summary>Urls</summary>
+<img src="media/readme/validation/python/contact_us/errors_urls.png">
+</details>
+
+<details><summary>Views</summary>
+<img src="media/readme/validation/python/contact_us/errors_views.png">
+</details>
+
+- #### Orders Details
+
+<details><summary>Urls</summary>
+<img src="media/readme/validation/python/profile/profile_urls.png">
+</details>
+
+<details><summary>Views</summary>
+<img src="media/readme/validation/python/profile/profile_views.png">
+</details>
+
 <hr>
 
 ### Chrome Dev Tools Lighthouse
@@ -961,13 +1016,29 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 <hr>
 
-#### Contact Us
+#### About Us
 
-<details><summary>Product Details</summary>
-<img src="media/readme/lighthouse/contacus_pc_lighthouse.png">
+<details><summary>About Us</summary>
+<img src="media/readme/lighthouse/about_us_pc_lighthouse.png">
 </details>
+
 <hr>
 
+#### Contact Us
+
+<details><summary>Contact Us</summary>
+<img src="media/readme/lighthouse/contact_us_pc_lighthouse.png">
+</details>
+
+<hr>
+
+#### Profile Orders
+
+<details><summary>Orders View</summary>
+<img src="media/readme/lighthouse/profile_order_pc_lighthouse.png">
+</details>
+
+<hr>
 
 ### Wave
 
@@ -1033,6 +1104,17 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
   </details>
 
 </details>
+
+
+<details><summary>Profile Orders</summary>
+<img src="media/readme/wave_accessibility/orders_profile_wave.png">
+</details>
+
+<details><summary>Contact Us</summary>
+<img src="media/readme/wave_accessibility/contact_us_form_wave.png">
+<img src="media/readme/wave_accessibility/thanks_contact_wave.png">
+</details>
+
 
 ##### Back to [top](#table-of-contents)
 
