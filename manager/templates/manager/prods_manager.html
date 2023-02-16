@@ -27,14 +27,14 @@
     </div>
     {%if categories %}
     <div class="container p-0">
-        <ul class="list-group text-center">
+        <ul class="list-group text-center text-black">
             {% for categorie in categories %}
             <li class="list-group-item">{{categorie}}
                 <a href="{% url 'edit_category' categorie.id %}">
-                    <span class="badge badge-primary badge-pill">Edit</span>
+                    <span class="badge badge-primary text-black badge-pill">Edit</span>
                 </a>
                 <a href="{% url 'del_category' categorie.id%}">
-                    <span class="badge badge-warning badge-pill">Delete</span>
+                    <span class="badge badge-warning text-black badge-pill">Delete</span>
                 </a>
             </li>
             {% endfor %}
