@@ -32,6 +32,7 @@ class EditCategory(View):
         category = get_object_or_404(Cat, id=id)
         form = CatForm(instance=category)
         context = {
+            "id": id,
             "title": "Edit Category",
             "form": form,
             }
