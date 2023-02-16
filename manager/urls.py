@@ -38,5 +38,9 @@ urlpatterns = [
         views.EditCategory.as_view(),
         name='edit_category'
         ),
-
+    path(
+        'del/<int:id>/',
+        views.DeleteCategory.as_view(),
+        name='del_category'
+        ),
 ]

@@ -21,7 +21,8 @@
 
     <div class="rounded p-0 bg-white mx-auto mt-5 px-3 text-center my-5">
         <a class="text-black text-decoration-none btn btn-primary mx-auto" href="{% url 'add_category' %}">
-            <h4>Add Category <ion-icon name="add-circle"></ion-icon></h4>
+            <h4>Add Category <ion-icon name="add-circle"></ion-icon>
+            </h4>
         </a>
     </div>
     {%if categories %}
@@ -32,9 +33,9 @@
                 <a href="{% url 'edit_category' categorie.id %}">
                     <span class="badge badge-primary badge-pill">Edit</span>
                 </a>
-                <a href="{% url 'add_category' %}">
+                <a href="{% url 'del_category' categorie.id%}">
                     <span class="badge badge-warning badge-pill">Delete</span>
-                </a>     
+                </a>
             </li>
             {% endfor %}
         </ul>

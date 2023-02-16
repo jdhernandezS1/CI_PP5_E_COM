@@ -20,6 +20,25 @@ from .forms import ProdForm, CatForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+class DeleteCategory(View):
+    """
+    A class for the Delete category
+    """
+    def get(self, request, id, *args, **kwargs):
+        if request.user.is_superuser:
+            model = Cat
+            category = get_object_or_404(model, id=id)
+            category.delete()
+            messages.success(request, 'The Category Was Deleted as well')
+            return redirect('products_manager')
+        else:
+            raise ValidationError(
+                "The content is not valid or you do not\
+                     have the permiss to do this"
+                )
+            return redirect("home")
+
+
 class EditCategory(View):
     """
     A class for the edit category
@@ -56,6 +75,7 @@ class EditCategory(View):
         if form.is_valid():
             category = form.save(commit=False)
             category.save()
+            messages.success(request, 'The Category Was Edited')
             return redirect("products_manager")
         else:
             messages.error(request, 'An error has occurred. \
@@ -97,6 +117,7 @@ class AddCategory(View):
         if form.is_valid():
             category = form.save(commit=False)
             category.save()
+            messages.success(request, 'The Category Was Added')
             return redirect("products_manager")
         else:
             messages.error(request, 'An error has occurred. \
