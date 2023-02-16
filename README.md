@@ -798,6 +798,12 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
   does not recognize them
   <img src="media/readme/validation/html/manager_edit_product.png">
   </details>
+-  <details><summary>Add Category</summary>
+   <img src="media/readme/validation/html/add_category_validation.png">
+   </details>
+-  <details><summary>Edit Category</summary>
+   <img src="media/readme/validation/html/edit_category_validation.png">
+   </details>
 
 #### Contact Us Page
 -  <details><summary>Contact Us</summary>
@@ -981,8 +987,14 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <details><summary>List view</summary>
 <img src="media/readme/lighthouse/manager_pc_lighthouse.png">
 </details>
-<details><summary>Edit and Add Form </summary>
+<details><summary>Edit and Add Product Form </summary>
 <img src="media/readme/lighthouse/manager_edit_pc_lighthouse.png">
+</details>
+<details><summary>Add Category </summary>
+<img src="media/readme/lighthouse/add_category_lighthouse.png">
+</details>
+<details><summary>Edit Category  </summary>
+<img src="media/readme/lighthouse/edit_category_lighthouse.png">
 </details>
 
 <hr>
@@ -1401,7 +1413,6 @@ Try to Edit an item | Product Data Edited | Works as expected |
 <img src="media/readme/user_stories/manager/Product_edited.png">
 </details>
 
-############################################################
 
 21. Add a category. 
 
@@ -1411,7 +1422,7 @@ Try to Create A Category | New Product Category | Works as expected |
 
 
 <details><summary>Responsive</summary>
-<img src="">
+<img src="media/readme/user_stories/manager/add_category.png">
 </details>
 
 22. Delete a category. 
@@ -1422,8 +1433,10 @@ Try to Delete A Category | Delete Category Data | Works as expected |
 
 
 <details><summary>Responsive</summary>
-<img src="">
+<img src="media/readme/user_stories/manager/delete_category1.png">
+<img src="media/readme/user_stories/manager/delete_category2.png">
 </details>
+
 
 23. Edit/update category. 
 
@@ -1432,7 +1445,8 @@ Try to Delete A Category | Delete Category Data | Works as expected |
 Try to Edit A Category | Edit Category Data | Works as expected |
 
 <details><summary>Responsive</summary>
-<img src="">
+<img src="media/readme/user_stories/manager/edit_category1.png">
+<img src="media/readme/user_stories/manager/edit_category2.png">
 </details>
 
 <hr>
