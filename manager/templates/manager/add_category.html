@@ -18,8 +18,8 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center">Add Category</h1>
-<div class="">
+<h1 class="text-center">{{title}}</h1>
+<div class="mx-auto">
 
     <form action="{% url 'add_category' %}" method="post" class="form-group text-left rounded" id="additem-form"
         enctype="multipart/form-data">
@@ -28,11 +28,14 @@
             {{form.author | as_crispy_field}}
             {{form.title | as_crispy_field}}
         </div>
+        <div class="mx-auto text-center my-5">
 
-        <button id="submit-button" class="text-center my-5 w-50 form-group bg-success btn btn-outline-success rounded btn-lg text-black border-0 mx-auto"
-            value="Upload">
-            <span class="font-weight-bold">Confirm </span>
-        </button>
+            <button id="submit-button"
+                class="mx-auto text-center my-5 w-50 form-group bg-success btn btn-outline-success rounded btn-lg text-black border-0 mx-auto"
+                value="Upload">
+                <span class="font-weight-bold">Confirm </span>
+            </button>
+        </div>
     </form>
 </div>
 {% endblock %}
