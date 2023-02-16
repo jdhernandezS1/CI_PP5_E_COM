@@ -20,9 +20,51 @@ from .forms import ProdForm, CatForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+class EditCategory(View):
+    """
+    A class for the edit category
+    """
+    def get(self, request, id, *args, **kwargs):
+        """
+        Get Function
+        """
+        template = "manager/edit_category.html"
+        category = get_object_or_404(Cat, id=id)
+        form = CatForm(instance=category)
+        context = {
+            "title": "Edit Category",
+            "form": form,
+            }
+        return render(
+            request,
+            template,
+            context,
+        )
+
+    def post(self, request, id, *args, **kwargs):
+        """
+        POST Function
+        """
+        form_data = {
+            'author': request.POST['author'],
+            'title': request.POST['title'],
+            }
+        form_data['slug'] = slugify(request.POST['title'])
+        category = get_object_or_404(Cat, id=id)
+        form = CatForm(form_data, instance=category)
+        if form.is_valid():
+            category = form.save(commit=False)
+            category.save()
+            return redirect("products_manager")
+        else:
+            messages.error(request, 'An error has occurred. \
+                    Please check the information and try again.')
+            redirect("home")
+
+
 class AddCategory(View):
     """
-    A class for the Contact Us Page
+    A class for the add category
     """
     def get(self, request, *args, **kwargs):
         """
@@ -31,6 +73,7 @@ class AddCategory(View):
         template = "manager/add_category.html"
         form = CatForm()
         context = {
+            "title": "Add Category",
             "form": form,
             }
         return render(
@@ -53,12 +96,11 @@ class AddCategory(View):
         if form.is_valid():
             category = form.save(commit=False)
             category.save()
-            redirect("products_manager")
+            return redirect("products_manager")
         else:
             messages.error(request, 'An error has occurred. \
                     Please check the information and try again.')
             redirect("home")
-
 
 
 def ProductManager(request):
@@ -126,8 +168,6 @@ def AddItem(request):
                 'scount': request.POST['scount'],
                 'description': request.POST['description'],
             }
-            # producto = get_object_or_404(Prod, title_slug='')
-            # print(producto.featured_image)
             title = slugify(request.POST['title'])
             form_data['title_slug'] = slugify(request.POST['title'])
             prod_form = ProdForm(form_data, request.FILES)
@@ -181,7 +221,6 @@ def EditItem(request, productid):
             }
             title = slugify(request.POST['title'])
             form_data['title_slug'] = slugify(request.POST['title'])
-            producto = get_object_or_404(Prod, id=productid)
             ref = get_object_or_404(Prod, id=productid)
             prod_form = ProdForm(form_data, request.FILES, instance=ref)
             if prod_form.is_valid():

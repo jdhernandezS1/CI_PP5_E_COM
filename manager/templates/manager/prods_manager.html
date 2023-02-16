@@ -19,12 +19,27 @@
         </div>
     </div>
 
-    <div class="col-sm-10 col-md-5 col-lg-3 col-xl-3 m-xl-3 rounded p-0  hvr-float-shadow bg-white mx-auto mt-5 px-3">
-        <a class="text-black text-decoration-none btn btn-primary" href="{% url 'add_category' %}">
-            <h2>Add Category <ion-icon name="add-circle"></ion-icon></h2>
+    <div class="rounded p-0 bg-white mx-auto mt-5 px-3 text-center my-5">
+        <a class="text-black text-decoration-none btn btn-primary mx-auto" href="{% url 'add_category' %}">
+            <h4>Add Category <ion-icon name="add-circle"></ion-icon></h4>
         </a>
     </div>
-
+    {%if categories %}
+    <div class="container p-0">
+        <ul class="list-group text-center">
+            {% for categorie in categories %}
+            <li class="list-group-item">{{categorie}}
+                <a href="{% url 'edit_category' categorie.id %}">
+                    <span class="badge badge-primary badge-pill">Edit</span>
+                </a>
+                <a href="{% url 'add_category' %}">
+                    <span class="badge badge-warning badge-pill">Delete</span>
+                </a>     
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {%endif%}
     <div class="row p-0 w-100">
         <div class="product-container col-12 mx-auto text-center w-100 p-0">
             <div class="row w-100 mx-auto">
