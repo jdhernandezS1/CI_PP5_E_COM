@@ -12,6 +12,22 @@ from products.models import Cat, Prod
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+class CatForm(forms.ModelForm):
+    """
+    A class for form to manage a Category
+    """
+    class Meta:
+        """
+        To order items
+        """
+        model = Cat
+        fields = (
+            'author',
+            'title',
+            'slug',
+            )
+
+
 class ProdForm(forms.ModelForm):
     """
     A class for form to create a Product

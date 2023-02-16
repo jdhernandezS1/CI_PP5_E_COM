@@ -28,5 +28,10 @@ urlpatterns = [
         views.EditItem,
         name='edit_item'
         ),
+    path(
+        'add_category/',
+        views.AddCategory.as_view(),
+        name='add_category'
+        ),
 
 ]

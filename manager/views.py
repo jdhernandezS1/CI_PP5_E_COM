@@ -16,8 +16,49 @@ import cloudinary
 from django.core.exceptions import ValidationError
 # Internal
 from products.models import Cat, Prod
-from .forms import ProdForm
+from .forms import ProdForm, CatForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+class AddCategory(View):
+    """
+    A class for the Contact Us Page
+    """
+    def get(self, request, *args, **kwargs):
+        """
+        Get Function
+        """
+        template = "manager/add_category.html"
+        form = CatForm()
+        context = {
+            "form": form,
+            }
+        return render(
+            request,
+            template,
+            context,
+        )
+
+    def post(self, request, *args, **kwargs):
+        """
+        POST Function
+        """
+        form_data = {
+            'author': request.POST['author'],
+            'title': request.POST['title'],
+            }
+        form_data['slug'] = slugify(request.POST['title'])
+        form = CatForm(form_data)
+
+        if form.is_valid():
+            category = form.save(commit=False)
+            category.save()
+            redirect("products_manager")
+        else:
+            messages.error(request, 'An error has occurred. \
+                    Please check the information and try again.')
+            redirect("home")
+
 
 
 def ProductManager(request):
