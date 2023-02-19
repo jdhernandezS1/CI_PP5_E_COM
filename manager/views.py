@@ -20,6 +20,35 @@ from .forms import ProdForm, CatForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+def CatManager(request):
+    """
+    Get Products Function
+    """
+    if request.user.is_superuser:
+        prod_list = Prod.objects.all()
+        categories = Cat.objects.all()
+        template = "manager/cat_manager.html"
+        if request.GET:
+            orders = 'title'
+            queryset = prod_list.order_by(orders)
+            prod_list = get_list_or_404(queryset)
+        context = {
+            "prod_list": prod_list,
+            "categories": categories
+            }
+        return render(
+            request,
+            template,
+            context
+            )
+    else:
+        raise ValidationError(
+            "The content is not valid or you do not\
+                    have the permiss to do this"
+            )
+        return redirect("home")
+
+
 class DeleteCategory(View):
     """
     A class for the Delete category

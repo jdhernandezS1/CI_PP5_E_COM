@@ -29,6 +29,11 @@ urlpatterns = [
         name='edit_item'
         ),
     path(
+        'categories/',
+        views.CatManager,
+        name='cats_manager'
+    ),
+    path(
         'add_category/',
         views.AddCategory.as_view(),
         name='add_category'
