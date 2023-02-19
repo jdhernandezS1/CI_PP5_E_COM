@@ -14,7 +14,7 @@
 <div class="container-fluid m-0 p-0">
     <div class="row w-100">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Stock</h2>
+            <h2 class="logo-font">Manage Categories</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -26,20 +26,29 @@
         </a>
     </div>
     {%if categories %}
-    <div class="container p-0">
-        <ul class="list-group list-group-flush text-center text-black">
-            {% for categorie in categories %}
-            <li class="list-group-item">{{categorie}}
-                <a href="{% url 'edit_category' categorie.id %}">
-                    <span class="badge badge-primary text-black badge-pill">Edit</span>
-                </a>
-                <a href="{% url 'del_category' categorie.id%}">
-                    <span class="badge badge-warning text-black badge-pill">Delete</span>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+    <div class="col-sm-11 col-md-11 col-lg-11 col-xl-11 m-xl-11 p-0 mx-auto">
+    <div class="row w-100 mx-auto">
+        {% for categorie in categories %}
+        <div
+            class="col-sm-11 col-md-3 col-lg-2 col-xl-3 m-xl-3
+                rounded p-0  hvr-float-shadow
+                bg-white mx-auto mt-5 text-center">
+            <div class="h-100 border-0 rounded text-center">
+                <p class="text-capitalize">{{categorie}}</p>
+                <div class="">
+
+                    <a href="{% url 'edit_category' categorie.id %}">
+                        <span class="badge badge-primary text-capitalize  text-black badge-pill">Edit</span>
+                    </a>
+                    <a href="{% url 'del_category' categorie.id%}">
+                        <span class="badge badge-warning text-capitalize text-black badge-pill">Delete</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {%endif%}
     </div>
-    {%endif%}
+</div>
 </div>
 {% endblock %}
