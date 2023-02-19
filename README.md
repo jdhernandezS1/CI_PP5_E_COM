@@ -1441,7 +1441,7 @@ Try to Edit an item | Product Data Edited | Works as expected |
 
 21. Add a category. 
 
-<details><summary>Responsive</summary>
+<details><summary>Add Form</summary>
 <img src="media/readme/user_stories/manager/add_category.png">
 </details>
 
@@ -1452,7 +1452,7 @@ Try to Create A Category | New Product Category | Works as expected |
 
 22. Delete a category. 
 
-<details><summary>Responsive</summary>
+<details><summary>Delete</summary>
 <img src="media/readme/user_stories/manager/delete_category1.png">
 <img src="media/readme/user_stories/manager/delete_category2.png">
 </details>
@@ -1464,7 +1464,7 @@ Try to Delete A Category | Delete Category Data | Works as expected |
 
 23. Edit/update category. 
 
-<details><summary>Responsive</summary>
+<details><summary>Edit</summary>
 <img src="media/readme/user_stories/manager/edit_category1.png">
 <img src="media/readme/user_stories/manager/edit_category2.png">
 </details>
@@ -1491,7 +1491,7 @@ Try to Add an Item with Corrupted picture file | Get the Error page | Works as e
 
 25. Contact The Staff By Form And Receive an email Confirmation.
 
-<details><summary>Error Pages</summary>
+<details><summary>Contact Us</summary>
 <img src="media/readme/user_stories/contact/thanks_view.png">
 <img src="media/readme/user_stories/contact/contact_us_email.png">
 </details>
@@ -1545,8 +1545,8 @@ The website was tested on the following devices:
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-|   bug   | how fixed it |
-|    bug    | how fixed it |
+|   Send Email Did not Work   | Set the Email Protocol |
+|    Stripe Go in a Ciclical while|Java Script Get Form By Id Correctly|
 |         | |
 
 ##### Back to [top](#table-of-contents)
