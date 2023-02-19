@@ -25,15 +25,12 @@ def CatManager(request):
     Get Products Function
     """
     if request.user.is_superuser:
-        prod_list = Prod.objects.all()
-        categories = Cat.objects.all()
+        categories = Cat.objects.all().order_by('title')
         template = "manager/cat_manager.html"
         if request.GET:
             orders = 'title'
             queryset = prod_list.order_by(orders)
-            prod_list = get_list_or_404(queryset)
         context = {
-            "prod_list": prod_list,
             "categories": categories
             }
         return render(
