@@ -684,14 +684,22 @@ The following models represent the database model structure of the website:
 <hr>
 
 ### Stock Manager 
-  - The Admin users are Able To Add, edit and delete a product of the stock .
+  - The Admin users are Able To Add, edit and delete a product and a category of the Database.
   - The Admin users have a confortable view and easy to understand
-    <details><summary>Manager View</summary>
+    <details><summary>Manager Categories View</summary>
+    <img src="media/readme/user_stories/manager/category_manager.png">
+    </details>
+    <details><summary>Manager Products View</summary>
     <img src="media/readme/user_stories/manager/product_manager.png">
     </details>
     
     <details><summary>Product Form</summary>
     <img src="media/readme/user_stories/manager/product_form.png">
+    </details>
+
+    <details><summary>Category Form</summary>
+    <img src="media/readme/user_stories/manager/category_form_phone.png">
+    <img src="media/readme/user_stories/manager/category_form_pc.png">
     </details>
   - User Stories covered: 18, 19, 20.
 
@@ -1044,7 +1052,7 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 <hr>
 
-#### Profile Orders
+#### Orders
 
 <details><summary>Orders View</summary>
 <img src="media/readme/lighthouse/profile_order_pc_lighthouse.png">
@@ -1095,6 +1103,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 
 <details><summary>Manager Stock wave</summary>
+
   <details><summary>Products List</summary>
   <img src="media/readme/wave_accessibility/Product_list_manager_wave.png">
   </details>
@@ -1106,13 +1115,17 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
   <details><summary>Products Add</summary>
   <img src="media/readme/wave_accessibility/Add_product_wave.png">
   </details>
-
-  <details><summary>Category Edit</summary>
-  <img src="readme/wave/home.png">
+  
+  <details><summary>Categories list</summary>
+  <img src="media/readme/wave_accessibility/category_list_manager_wave.png">
   </details>
 
   <details><summary>Category Add</summary>
-  <img src="readme/wave/home.png">
+  <img src="media/readme/wave_accessibility/add_category_wave.png">
+  </details>
+
+  <details><summary>Category Edit</summary>
+  <img src="media/readme/wave_accessibility/Edit_category_wave.png">
   </details>
 
 </details>
@@ -1143,11 +1156,6 @@ The testing approach is as follows:
 
 1. Have a responsive Navigation Bar and home page.
 
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate in the page | The Content be responsive in our three test screens | Works as expected |
-
-
 <details><summary>Home</summary>
   <details><summary>Phonne</summary>
   <img src="media/readme/manual_test/nav_footer/home_phone_mt.png">
@@ -1172,11 +1180,13 @@ Navigate in the page | The Content be responsive in our three test screens | Wor
   </details>
 </details>
 
-2. Have a responsive Footer And networks.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Navigate in the page | The Content be responsive in our three test screens | Works as expected |
+
+<hr>
+
+2. Have a responsive Footer And networks.
 
 <details><summary>Test</summary>
   <details><summary>Phone</summary>
@@ -1190,12 +1200,12 @@ Navigate to THE page | Responsive in different screens size | Works as expected 
   </details>
 </details>
 
-
-3. Have a responsive view to Check cart content.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Get the Cart View | Responsive View in different screen size | Works as expected |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+<hr>
+
+3. Have a responsive view to Check cart content.
 
 <details><summary>Cart</summary>
   <details><summary>Phone</summary>
@@ -1209,11 +1219,12 @@ Get the Cart View | Responsive View in different screen size | Works as expected
   </details>
 </details>
 
-4. Purchase products by quantity.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Add Products By different quantity | Change the products in the cart | Works as expected |
+Get the Cart View | Responsive View in different screen size | Works as expected |
+<hr>
+
+4. Purchase products by quantity.
 
 <details><summary>Add Items To cart</summary>
 <img src="media/readme/manual_test/cart/add_cart.png">
@@ -1221,22 +1232,25 @@ Add Products By different quantity | Change the products in the cart | Works as 
 
 </details>
 
-5. Get the New Collection.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Use the View | Get the new collections items view | Works as expected |
+Add Products By different quantity | Change the products in the cart | Works as expected |
+<hr>
+
+
+5. Get the New Collection.
 
 <details><summary>Responsive</summary>
 <img src="media/readme/manual_test/get_category/new_collection_section.png">
 <img src="media/readme/manual_test/get_category/new_collection_products.png">
 </details>
 
-6. Check cart amount.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Look The navigation bar shows the cart amount | Amount changes everytime that we add something | Works as expected |
+Use the View | Get the new collections items view | Works as expected |
+<hr>
+
+6. Check cart amount.
 
 <details><summary>Responsive</summary>
 <img src="media/readme/manual_test/cart/cart_amount_1_mt.png">
@@ -1245,68 +1259,72 @@ Look The navigation bar shows the cart amount | Amount changes everytime that we
 
 </details>
 
-7. have a Search function.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Search By keyword | Get related results | Works as expected |
+Look The navigation bar shows the cart amount | Amount changes everytime that we add something | Works as expected |
+<hr>
+
+7. have a Search function.
 
 <details><summary>Search</summary>
 <img src="media/readme/manual_test/nav_footer/search.png">
 <img src="media/readme/manual_test/nav_footer/search_result.png">
 </details>
 
-8. Get own cart at any time.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Get navbar in different screen | Get the Cart present in the navbar in the screen | Works as expected |
+Search By keyword | Get related results | Works as expected |
+<hr>
+
+8. Get own cart at any time.
 
 <details><summary>cart</summary>
 <img src="media/readme/manual_test/cart/cart_notify_pc.png">
 <img src="media/readme/manual_test/cart/cart_notify_phone.png">
 </details>
 
-9. Get own total at any time.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate in the site | get the total in the navbar | Works as expected |
+Get navbar in different screen | Get the Cart present in the navbar in the screen | Works as expected |
+<hr>
+
+9. Get own total at any time.
 
 <details><summary>Cart Total</summary>
 <img src="media/readme/manual_test/cart/cart_amount_1_mt.png">
 <img src="media/readme/manual_test/cart/cart_amount_3_mt.png">
 </details>
 
-10. Get the offers and season products.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to THE page | Responsive in different screens size | Works as expected |
+Navigate in the site | get the total in the navbar | Works as expected |
+<hr>
+
+10. Get the offers and season products.
 
 <details><summary>Pictures</summary>
 <img src="media/readme/manual_test/get_offers_season_products/offfer.png">
 <img src="media/readme/manual_test/get_offers_season_products/seasons_navbar.png">
 </details>
 
-
-
-11. Have a View with the individual item details.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Go to a Product description View | Get the information of the product selected | Works as expected |
+Navigate to THE page | Responsive in different screens size | Works as expected |
+<hr>
+
+11. Have a View with the individual item details.
 
 <details><summary>Product Details</summary>
 <img src="media/readme/user_stories/products/description.png">
 </details>
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Go to a Product description View | Get the information of the product selected | Works as expected |
+<hr>
 
 12. Get the Checkout details.
 
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Go to the cart and Continue with the Checkout | Get the information of the entire order | Works as expected |
 <details><summary>Checkout</summary>
   
   <details><summary>Cart</summary>
@@ -1319,82 +1337,84 @@ Go to the cart and Continue with the Checkout | Get the information of the entir
 
 </details>
 
-
-13. Get Checkout details by Email.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Finish a payment | Get the check by email | Works as expected |
+Go to the cart and Continue with the Checkout | Get the information of the entire order | Works as expected |
+<hr>
+
+13. Get Checkout details by Email.
 
 <details><summary>Email</summary>
 <img src="media/readme/user_stories/checkout/check/email_check.png">
 </details>
 
-14. Bring the Payment details by Stripe Service.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Use The Stripe Section | Dont allow Fake Cards | Works as expected or not |
+Finish a payment | Get the check by email | Works as expected |
+<hr>
+
+14. Bring the Payment details by Stripe Service.
 
 <details><summary>Stripe Card Service</summary>
 <img src="media/readme/user_stories/checkout/stripe/stripe_section.png">
 <img src="media/readme/user_stories/checkout/stripe/stripe_section_wrong_card.png">
 </details>
 
-
-15. Get Check view with the Details.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Make a payment | Get Check View | Works as expected |
+Use The Stripe Section | Dont allow Fake Cards | Works as expected or not |
+<hr>
+
+15. Get Check view with the Details.
 
 <details><summary>Check View</summary>
 <img src="media/readme/user_stories/checkout/check/check_details.png">
 </details>
 
-
-16. Have a User Functionaity: Login, Logout, Register.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Try to Visit the User Functions Pages | Get the Views | Works as expected |
+Make a payment | Get Check View | Works as expected |
+<hr>
+
+16. Have a User Functionaity: Login, Logout, Register.
 
 <details><summary>User Functions</summary>
 <img src="media/readme/user_stories/user/sign_up_pc.png">
 <img src="media/readme/user_stories/user/sign_in_pc.png">
 <img src="media/readme/user_stories/user/sign_out.png">
 
- </details>
-
-
-17. Confirm own Email by a email confirmation.
+</details>
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Try to Register in the page | Email Validation User | Works as expected |
+Try to Visit the User Functions Pages | Get the Views | Works as expected |
+<hr>
+
+
+17. Confirm own Email by a email confirmation.
 
 <details><summary>Email Validation</summary>
 <img src="media/readme/user_stories/user/confirm_email.png">
 </details>
 
-
-18. Add a product.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Try to Create A product | New Product Data | Works as expected |
+Try to Register in the page | Email Validation User | Works as expected |
+<hr>
+
+18. Add a product.
 
 <details><summary>Add</summary>
 <img src="media/readme/user_stories/manager/add_product.png">
 <img src="media/readme/user_stories/manager/item_added.png">
 </details>
 
-
-19. Delete product.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Try to Delete An item | Product Data delete | Works as expected |
+Try to Create A product | New Product Data | Works as expected |
+<hr>
+
+19. Delete product.
 
 <details><summary>Delete</summary>
 <img src="media/readme/user_stories/manager/Delete_product.png">
@@ -1402,62 +1422,59 @@ Try to Delete An item | Product Data delete | Works as expected |
 
 </details>
 
-20. Edit/Update product.
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Try to Edit an item | Product Data Edited | Works as expected |
+Try to Delete An item | Product Data delete | Works as expected |
+<hr>
+
+20. Edit/Update product.
 
 <details><summary>Edit</summary>
 <img src="media/readme/user_stories/manager/Edit_product.png">
 <img src="media/readme/user_stories/manager/Product_edited.png">
 </details>
 
-
-21. Add a category. 
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Try to Create A Category | New Product Category | Works as expected |
+Try to Edit an item | Product Data Edited | Works as expected |
+<hr>
 
+21. Add a category. 
 
 <details><summary>Responsive</summary>
 <img src="media/readme/user_stories/manager/add_category.png">
 </details>
 
-22. Delete a category. 
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Try to Delete A Category | Delete Category Data | Works as expected |
+Try to Create A Category | New Product Category | Works as expected |
+<hr>
 
+22. Delete a category. 
 
 <details><summary>Responsive</summary>
 <img src="media/readme/user_stories/manager/delete_category1.png">
 <img src="media/readme/user_stories/manager/delete_category2.png">
 </details>
 
-
-23. Edit/update category. 
-
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Try to Edit A Category | Edit Category Data | Works as expected |
+Try to Delete A Category | Delete Category Data | Works as expected |
+<hr>
+
+23. Edit/update category. 
 
 <details><summary>Responsive</summary>
 <img src="media/readme/user_stories/manager/edit_category1.png">
 <img src="media/readme/user_stories/manager/edit_category2.png">
 </details>
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Try to Edit A Category | Edit Category Data | Works as expected |
 <hr>
 
 24. Error Pages. 
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Try to Get the manager view without login | Get the 500 Error page | Works as expected |
-Try to Visit a Not Register URL | Get the Error page | Works as expected |
-Try to Add an Item with Corrupted picture file | Get the Error page | Works as expected |
 
 <details><summary>Error Pages</summary>
 <img src="media/readme/user_stories/errors/403_error.png">
@@ -1465,33 +1482,36 @@ Try to Add an Item with Corrupted picture file | Get the Error page | Works as e
 <img src="media/readme/user_stories/errors/500_error.png">
 </details>
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Try to Get the manager view without login | Get the 500 Error page | Works as expected |
+Try to Visit a Not Register URL | Get the Error page | Works as expected |
+Try to Add an Item with Corrupted picture file | Get the Error page | Works as expected |
 <hr>
 
 25. Contact The Staff By Form And Receive an email Confirmation.
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Try to Submit The Contact form | Get the Thanks view | Works as expected |
-Try to Submit The Contact form | Get the Email Answer | Works as expected 
 
 <details><summary>Error Pages</summary>
 <img src="media/readme/user_stories/contact/thanks_view.png">
 <img src="media/readme/user_stories/contact/contact_us_email.png">
 </details>
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Try to Submit The Contact form | Get the Thanks view | Works as expected |
+Try to Submit The Contact form | Get the Email Answer | Works as expected 
 <hr>
 
 26. Get the Orders Description in a View.
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Visit Orders Page after Login | Get a View Having or not preview orders | Works as expected |
 
 <details><summary>Orders</summary>
 <img src="media/readme/user_stories/profile/orders..png">
 <img src="media/readme/user_stories/profile/without_orders.png">
 </details>
 
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Visit Orders Page after Login | Get a View Having or not preview orders | Works as expected |
 <hr>
 
 ### Automated testing
