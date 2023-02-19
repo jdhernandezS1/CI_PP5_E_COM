@@ -1591,7 +1591,36 @@ Create a cloudinary Acount and get the environment Url
 
 #### Stripe
 
-Setting Stripe
+1. Create an account in stripe.com
+
+- <details><summary>Register in Stripe</summary> <img src="media/readme/deployment/stripe_register.png"> </details>
+
+2. Get the Developer API KEY.
+  - <details><summary>API KEY</summary> <img src="media/readme/deployment/stripe1.png"> </details>
+
+3. Install Stripe.
+  - <details><summary>Install Stripe</summary> <img src="media/readme/deployment/stripe_install.png"> </details>
+
+4. Set the Stripe Service.
+  - <details><summary>Settings.py API KEY</summary> <img src="media/readme/deployment/stripe_settings.png"> </details>
+  - <details><summary>Set View Function</summary> 
+    Make the payment and redirect to the success page. 
+
+    <img src="media/readme/deployment/stripe_python_view0.png">
+    <img src="media/readme/deployment/stripe_python_view1.png">
+    <img src="media/readme/deployment/stripe_python_view2.png">
+    </details>
+  - <details><summary>Java Script</summary> <img src="media/readme/deployment/stripe_javascript.png"> 
+    </details>
+
+5. Confirm Payment.
+  - <details><summary>Set up the Webhook </summary> <img src="media/readme/deployment/stripe_webhook.png"> 
+    </details>
+  - <details><summary>Test the endpoint</summary> <img src="media/readme/deployment/stripe_webhook_test.png"> 
+    </details>
+6. Check the Stipe Service Confirmation.
+  - <details><summary> Confirm the Stripe </summary> <img src="media/readme/user_stories/checkout/stripe/payments.png"> 
+    </details>
 
 <hr>
 
