@@ -11,6 +11,14 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
+{% if request.user.is_authenticated %}
+<div class="container px-0 h-100 m-5 ">
+
+  <h1>You are already signin</h1>
+
+</div>
+<hr class="m-5">
+{% else %}
 <div class="container h-100 text-black text-center py-5 px-0 mx-auto w-100">
   <h1>{% trans "Sign In" %}</h1>
   <hr>
@@ -52,4 +60,5 @@
     </div>
   </form>
 </div>
+{% endif %}
 {% endblock %}
