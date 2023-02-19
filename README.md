@@ -337,8 +337,24 @@ The following models represent the database model structure of the website:
   <img src="media/readme/wireframes/pc/Manager_pc.png">
   </details>
   
-  <details><summary>Manager Add/Edit</summary>
+  <details><summary>Manager Add/Edit Product</summary>
   <img src="media/readme/wireframes/pc/Manager_Edit_add_pc.png">
+  </details>
+  
+  <details><summary>Manager Categories</summary>
+  <img src="media/readme/wireframes/pc/pc_categories_manager.png">
+  </details>
+  
+  <details><summary>Manager Add/Edit Category</summary>
+  <img src="media/readme/wireframes/pc/pc_category_ea.png">
+  </details>
+  
+  <details><summary>Orders</summary>
+  <img src="media/readme/wireframes/pc/pc_orders.png">
+  </details>
+
+  <details><summary>Contact Us</summary>
+  <img src="media/readme/wireframes/pc/pc_contact_us.png">
   </details>
 
   <details><summary>About Us</summary>
@@ -377,6 +393,22 @@ The following models represent the database model structure of the website:
   
   <details><summary>Manager Add/Edit</summary>
   <img src="media/readme/wireframes/phone/Manager_edit_add_phone.png">
+  </details>
+
+  <details><summary>Manager Categories</summary>
+  <img src="media/readme/wireframes/phone/Phone_manager_categories.png">
+  </details>
+  
+  <details><summary>Manager Add/Edit Category</summary>
+  <img src="media/readme/wireframes/phone/Phone_categories_ae.png">
+  </details>
+  
+  <details><summary>Orders</summary>
+  <img src="media/readme/wireframes/phone/Phone_orders.png">
+  </details>
+
+  <details><summary>Contact Us</summary>
+  <img src="media/readme/wireframes/phone/Phone_contact_us.png">
   </details>
 
   <details><summary>About Us</summary>
