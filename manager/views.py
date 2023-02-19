@@ -251,6 +251,7 @@ def AddItem(request):
             if prod_form.is_valid():
                 product = prod_form.save(commit=False)
                 product.save()
+                messages.success(request, 'The Product Was Added as well')
                 return redirect('products_manager')
             else:
                 messages.error(request, 'An error has occurred. \
@@ -303,6 +304,7 @@ def EditItem(request, productid):
             if prod_form.is_valid():
                 product = prod_form.save(commit=False)
                 product.save()
+                messages.success(request, 'The Product Was Edited as well')
                 return redirect('products_manager')
             else:
                 messages.error(request, 'An error has occurred. \
