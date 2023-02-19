@@ -1,5 +1,4 @@
 from django.apps import AppConfig
-# from flask import Flask, jsonify
 
 
 class ProductsConfig(AppConfig):

@@ -10,20 +10,24 @@ from django.views import generic, View
 
 
 def ServerDeniesAcces(request, exception):
-    template = 'errors/403.html'
+    """
+    Server Access Denied Error
+    """
+    template = '403.html'
     return render(request, template, status=403)
 
 
 def PageNotFound(request, exception):
-    template = 'errors/404.html'
+    """
+    Page Not Found Error
+    """
+    template = '404.html'
     return render(request, template, status=404)
 
 
 def InternalServerError(request, exception):
-    template = 'errors/500.html'
+    """
+    Internal Server Error
+    """
+    template = '500.html'
     return render(request, template, status=500)
-
-
-# def InternalServerError(request):
-#     template = 'errors/500.html'
-#     return render(request, template, status=500)

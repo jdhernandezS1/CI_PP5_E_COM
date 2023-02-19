@@ -42,8 +42,6 @@ def ProdSearch(request):
         context
         )
 
-    # prod_list
-
 
 def ProdCat(request):
     """
@@ -66,7 +64,6 @@ def ProdCat(request):
                 "prod_list": prod_list,
                 "categories": categories,
                 "orders": orders
-                # "form": Form()
             }
     return render(
         request,

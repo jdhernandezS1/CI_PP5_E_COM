@@ -56,7 +56,7 @@ class DeleteCategory(View):
             category = get_object_or_404(model, id=id)
             category.delete()
             messages.success(request, 'The Category Was Deleted as well')
-            return redirect('products_manager')
+            return redirect('cats_manager')
         else:
             raise ValidationError(
                 "The content is not valid or you do not\
@@ -73,40 +73,56 @@ class EditCategory(View):
         """
         Get Function
         """
-        template = "manager/edit_category.html"
-        category = get_object_or_404(Cat, id=id)
-        form = CatForm(instance=category)
-        context = {
-            "id": id,
-            "title": "Edit Category",
-            "form": form,
-            }
-        return render(
-            request,
-            template,
-            context,
-        )
+        if request.user.is_superuser:
+
+            template = "manager/edit_category.html"
+            category = get_object_or_404(Cat, id=id)
+            form = CatForm(instance=category)
+            context = {
+                "id": id,
+                "title": "Edit Category",
+                "form": form,
+                }
+            return render(
+                request,
+                template,
+                context,
+            )
+        else:
+            raise ValidationError(
+                "The content is not valid or you do not\
+                     have the permiss to do this"
+                )
+            return redirect("home")
 
     def post(self, request, id, *args, **kwargs):
         """
         POST Function
         """
-        form_data = {
-            'author': request.POST['author'],
-            'title': request.POST['title'],
-            }
-        form_data['slug'] = slugify(request.POST['title'])
-        category = get_object_or_404(Cat, id=id)
-        form = CatForm(form_data, instance=category)
-        if form.is_valid():
-            category = form.save(commit=False)
-            category.save()
-            messages.success(request, 'The Category Was Edited')
-            return redirect("products_manager")
+        if request.user.is_superuser:
+
+            form_data = {
+                'author': request.POST['author'],
+                'title': request.POST['title'],
+                }
+            form_data['slug'] = slugify(request.POST['title'])
+            category = get_object_or_404(Cat, id=id)
+            form = CatForm(form_data, instance=category)
+            if form.is_valid():
+                category = form.save(commit=False)
+                category.save()
+                messages.success(request, 'The Category Was Edited')
+                return redirect("cats_manager")
+            else:
+                messages.error(request, 'An error has occurred. \
+                        Please check the information and try again.')
+                redirect("home")
         else:
-            messages.error(request, 'An error has occurred. \
-                    Please check the information and try again.')
-            redirect("home")
+            raise ValidationError(
+                "The content is not valid or you do not\
+                     have the permiss to do this"
+                )
+            return redirect("home")
 
 
 class AddCategory(View):
@@ -117,38 +133,52 @@ class AddCategory(View):
         """
         Get Function
         """
-        template = "manager/add_category.html"
-        form = CatForm()
-        context = {
-            "title": "Add Category",
-            "form": form,
-            }
-        return render(
-            request,
-            template,
-            context,
-        )
+        if request.user.is_superuser:
+            template = "manager/add_category.html"
+            form = CatForm()
+            context = {
+                "title": "Add Category",
+                "form": form,
+                }
+            return render(
+                request,
+                template,
+                context,
+            )
+        else:
+            raise ValidationError(
+                "The content is not valid or you do not\
+                     have the permiss to do this"
+                )
+            return redirect("home")
 
     def post(self, request, *args, **kwargs):
         """
         POST Function
         """
-        form_data = {
-            'author': request.POST['author'],
-            'title': request.POST['title'],
-            }
-        form_data['slug'] = slugify(request.POST['title'])
-        form = CatForm(form_data)
+        if request.user.is_superuser:
+            form_data = {
+                'author': request.POST['author'],
+                'title': request.POST['title'],
+                }
+            form_data['slug'] = slugify(request.POST['title'])
+            form = CatForm(form_data)
 
-        if form.is_valid():
-            category = form.save(commit=False)
-            category.save()
-            messages.success(request, 'The Category Was Added')
-            return redirect("products_manager")
+            if form.is_valid():
+                category = form.save(commit=False)
+                category.save()
+                messages.success(request, 'The Category Was Added')
+                return redirect("cats_manager")
+            else:
+                messages.error(request, 'An error has occurred. \
+                        Please check the information and try again.')
+                redirect("home")
         else:
-            messages.error(request, 'An error has occurred. \
-                    Please check the information and try again.')
-            redirect("home")
+            raise ValidationError(
+                "The content is not valid or you do not\
+                     have the permiss to do this"
+                )
+            return redirect("home")
 
 
 def ProductManager(request):
@@ -188,7 +218,6 @@ def DelItem(request, productid):
 
         if request.user.is_superuser:
             model = Prod
-            # productid = request.session.get('productid')
             product = get_object_or_404(model, id=productid)
             product.delete()
             messages.success(request, 'The Product Was Deleted as well')

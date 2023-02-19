@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django_summernote',
     # Allauth applications Credentials
-    # Selected providers, more at https://django-allauth.readthedocs.io/en/latest/installation.html
+    # Selected providers, more at
+    # https://django-allauth.readthedocs.io/en/latest/installation.html
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -153,7 +154,6 @@ SITE_ID = 1
 
 # # Allauth email functions settings
 
-
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
@@ -169,14 +169,6 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login'
 ACCOUNT_USERNAME_BLACKLIST = ['none',]
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 ACCOUNT_SESSION_REMEMBER = True
-
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'store.capricci.ch.gmail.com'
-# EMAIL_HOST_PASSWORD = 'hellsing123'
-# EMAIL_USE_TLS = True
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 AUTH_PASSWORD_VALIDATORS = [
     {
