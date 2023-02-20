@@ -113,6 +113,28 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 [MailChimp](https://mailchimp.com/es/)
 ##### Back to [top](#table-of-contents)
 
+### Search Engine optimizations
+
+- Sitemap
+
+Sitemap are files that optimize the viewers of the page because the browsers, like google, read this files and can reach efficiently 
+
+<details><summary>Sitemap</summary>
+<img src="media/readme/seo/sitemap.png">
+</details>
+
+
+- Meta Tags KeyWords
+
+It was used to inform the search engines about the content of the website and how to make the page appears in the search engine results. 
+
+<details><summary>Meta Tags</summary>
+<img src="media/readme/seo/meta_tags_keywords.png">
+</details>
+
+
+##### Back to [top](#table-of-contents)
+
 ### User Goals
 <hr>
 
