@@ -23,6 +23,7 @@
       - [Website pages](#website-pages)
       - [Database](#database)
     - [Wireframes](#wireframes)
+  - [Methodology Used](#methodology-used)
   - [Technologies Used](#technologies-used)
   - [Features](#features)
   - [Validation](#validation)
@@ -415,6 +416,37 @@ The following models represent the database model structure of the website:
   <img src="media/readme/wireframes/phone/About_us_phone.png">
   </details>
 </details>
+
+##### Back to [top](#table-of-contents)
+<hr>
+
+## Methodology Used
+
+### Agile
+
+Project management and a smooth development were accomplished using the Agile Methodology.
+As part of the agile methodology, this project was divided into three epics.
+
+- Views And navigation 
+
+Includes in the perspectives the broad keeping of responsive and UX design
+
+- Store and stock Management
+
+In essence, only the administrator is permitted to perform management operations like editing, adding, and deleting objects (super-users)
+
+- Transaction
+
+The tasks in this epic include checking the functionality of the card validator cart.
+The user must be given the option to check out, add items to the cart, browse and check.
+
+### Kanban Board
+
+A github kanban board was utilized for the project as an agile management tool to assist the developers and maximize project flow.
+
+<img src="media/readme/user_stories/epics/agile_Kanbanboard.png">
+
+<hr>
 
 ##### Back to [top](#table-of-contents)
 <hr>
@@ -823,19 +855,21 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
 
 #### Manager
 
+<hr>
+
+**Type**     | **Feature**  | **Description**| **Comment**   |
+------------ | ------------ | ------------   |  ------------ |
+Error        | Main View    | Django templates functions{% %}| The Validator Does not recognize it
+Error        | Add Product    | Django templates functions{% %}| The Validator Does not recognize it
+Error        | Edit Product    | Django templates functions{% %}| The Validator Does not recognize it
+
 - <details><summary>Main View</summary>
-  The errors here are the django templates function the validator
-  does not recognize them
   <img src="media/readme/validation/html/manager_main_view.png">
   </details>
 - <details><summary>Add Product</summary>
-  The errors here are the django templates function the validator
-  does not recognize them
   <img src="media/readme/validation/html/manager_add_product.png">
   </details>
 - <details><summary>Edit Product</summary>
-  The errors here are the django templates function the validator
-  does not recognize them
   <img src="media/readme/validation/html/manager_edit_product.png">
   </details>
 -  <details><summary>Add Category</summary>
