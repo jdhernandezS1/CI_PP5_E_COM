@@ -204,8 +204,7 @@ def ProductManager(request):
             )
     else:
         raise ValidationError(
-            "The content is not valid or you do not\
-                    have the permiss to do this"
+            "You do not have the permiss"
             )
         return redirect("home")
 
@@ -224,8 +223,7 @@ def DelItem(request, productid):
             return redirect('products_manager')
         else:
             raise ValidationError(
-                "The content is not valid or you do not\
-                     have the permiss to do this"
+                "You do not have the permiss"
                 )
             return redirect("home")
 
@@ -258,8 +256,7 @@ def AddItem(request):
                     Please check the information and try again.')
         else:
             raise ValidationError(
-                "The content is not valid or you do not\
-                     have the permiss to do this"
+                "You do not have the permiss"
                 )
             redirect("home")
 
@@ -277,8 +274,7 @@ def AddItem(request):
             )
     else:
         raise ValidationError(
-            "The content is not valid or you do not\
-                have the permiss to do this"
+            "You do not have the permiss"
             )
         redirect("home")
 
@@ -311,8 +307,7 @@ def EditItem(request, productid):
                     Please check the information and try again.')
         else:
             raise ValidationError(
-                "The content is not valid or you do not\
-                     have the permiss to do this"
+                "You do not have the permiss"
                 )
             redirect("home")
     # Get Response
@@ -333,7 +328,6 @@ def EditItem(request, productid):
             )
     else:
         raise ValidationError(
-            "The content is not valid or you do not\
-                 have the permiss to do this"
+            "You do not have the permiss"
             )
-        redirect("home")
+        return (redirect("home"))
