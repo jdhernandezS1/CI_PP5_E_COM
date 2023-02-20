@@ -26,3 +26,11 @@ class ViewsTests(TestCase):
         """
         response = self.client.get(views.index)
         self.assertEqual(response.status_code, 404)
+
+    def test_about_us_view(self):
+        """
+        page about us test
+        """
+        url = reverse('about_us')
+        response = self.client.get(url)
+        confirmation = self.assertEqual(response.status_code, 200)
