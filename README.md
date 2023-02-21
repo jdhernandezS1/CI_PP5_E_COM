@@ -110,6 +110,10 @@ Acording with the EMR (EXPERT MARKET RESEARCH) " The global handicrafts market s
 
 - Through the usage of Mail Chimp services, we obtained a mailing list that allowed us to easily create a client database and apply future plans, such as sending offers to our clients.
 
+<details><summary> Chimp mail</summary>
+<img src="media/readme/user_stories/chimpmail/chimpmail_sub.png">
+</details>
+
 [MailChimp](https://mailchimp.com/es/)
 ##### Back to [top](#table-of-contents)
 
@@ -1611,11 +1615,82 @@ Try to Submit The Contact form | Get the Email Answer | Works as expected
 Visit Orders Page after Login | Get a View Having or not preview orders | Works as expected |
 <hr>
 
-### Automated testing
+### Automated Testing
 
-Automated testing was done using the Django's unit tests from a Python standard library module: unittest. The reports were produced using the coverage tool.
+Automated testing was done using the Django's unit tests from a Python standard library module: unittest and to make the cover report was used Covered Python library. The reports were produced using the coverage tool.
 
 <hr>
+
+#### Home Application Testing
+
+- About Us Test
+
+  **Step** | **Expected Result** | **Actual Result**
+  ------------ | ------------ | ------------ |
+  Render the About us Page | Get the 200 StatusCode response | Work as well |
+
+  <details><summary>About Us</summary>
+  <img src="media/readme/automated_test/home_about_us_page.png">
+  </details>
+
+- Index View Test
+
+  **Step** | **Expected Result** | **Actual Result**
+  ------------ | ------------ | ------------ |
+  Render the Home us Page | Get the 200 StatusCode response | Work as well |
+
+  <details><summary>Home</summary>
+  <img src="media/readme/automated_test/home_index_page.png">
+  </details>
+
+  <details><summary>Home Python Test</summary>
+  <img src="media/readme/automated_test/home_test.png">
+  </details>
+
+<hr>
+
+#### Errors Application Testing
+
+- 404 PAGE
+
+  **Step** | **Expected Result** | **Actual Result**
+  ------------ | ------------ | ------------ |
+  Render the Home us Page with Wrong URL | Get the 404 StatusCode response | Work as well |
+
+  <details><summary>404</summary>
+  <img src="media/readme/automated_test/home_index_404.png">
+  </details>
+
+<hr>
+
+#### Manager Application Testing
+
+- Products and categories Manager Tests
+
+  **Step** | **Expected Result** | **Actual Result**
+  ------------ | ------------ | ------------ |
+  Go to the Product Manager Like Super user| Get the 200 StatusCode response | Work as well |
+  Go to the Product Manager Like normal user| Raise the error response | Work as well |
+  Go to the Category Manager Like Super user| Get the 200 StatusCode response | Work as well |
+  Go to the Category Manager Like normal user| Raise the error response | Work as well |
+
+    <details><summary>Test</summary>
+    <img src="media/readme/automated_test/products_manager.png">
+    <img src="media/readme/automated_test/categories_manager.png">
+    <img src="media/readme/automated_test/categories_manager1.png">
+
+    </details>
+
+<hr>
+
+### Coverage Report
+
+Python programs' code coverage were evaluated using the utility coverage.py. It observes the program and examines the source to find code that should have been executed but wasn't. With the report you can know wich part of the code have to be tested to get full tested.
+
+  <details><summary>Coverage</summary>
+  <img src="media/readme/automated_test/coverage1.png">
+  <img src="media/readme/automated_test/coverage2.png">
+  </details>
 
 ### Performing tests on various devices
 
