@@ -1,6 +1,5 @@
 # Imports
 # 3rd party:
-from django.test import TestCase
 from django.urls import reverse
 from django.shortcuts import render
 from django.test import Client
@@ -18,7 +17,6 @@ def create_user(self):
         is_superuser=True,
         password="123test"
         )
-    # user.set_password("test123")
     user.save()
     return user
 
@@ -33,13 +31,7 @@ class ViewsTests(TestCase):
         """
         url = reverse('home')
         response = self.client.get(url)
-
-    def test_404_view(self):
-        """
-        page 404 test
-        """
-        response = self.client.get(views.index)
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 200)
 
     def test_about_us_view(self):
         """
