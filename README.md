@@ -452,15 +452,21 @@ As part of the agile methodology, this project was divided into three epics.
 - Views And navigation 
 
 Includes in the perspectives the broad keeping of responsive and UX design
+<img src="media/readme/user_stories/epics/views_nav_epic.png">
+<img src="media/readme/user_stories/epics/views_nav_epic2.png">
 
 - Store and stock Management
 
 In essence, only the administrator is permitted to perform management operations like editing, adding, and deleting objects (super-users)
+<img src="media/readme/user_stories/epics/manager_epic.png">
 
 - Transaction
 
 The tasks in this epic include checking the functionality of the card validator cart.
 The user must be given the option to check out, add items to the cart, browse and check.
+
+<img src="media/readme/user_stories/epics/transaction_epic.png">
+
 
 ### Kanban Board
 
@@ -772,6 +778,7 @@ A github kanban board was utilized for the project as an agile management tool t
 ### Stock Manager 
   - The Admin users are Able To Add, edit and delete a product and a category of the Database.
   - The Admin users have a confortable view and easy to understand
+  
     <details><summary>Manager Categories View</summary>
     <img src="media/readme/user_stories/manager/category_manager.png">
     </details>
@@ -825,6 +832,10 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
 
 #### Base Structure
 
+**Type**     | **Feature**  | **Description**| **Comment**   |
+------------ | ------------ | ------------   |  ------------ |
+Error        | Base Template    | Django templates functions{% %}| The Validator Does not recognize it
+
 - <details><summary>Home</summary>
   <img src="media/readme/validation/html/home_validation.png">
   </details>
@@ -834,8 +845,6 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
   </details>
 
 - <details><summary>Base Template</summary>
-  The errors here are the django templates function the validator
-  does not recognize them
   <img src="media/readme/validation/html/base_template.png">
   </details>
 
