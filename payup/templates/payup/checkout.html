@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'payup/css/check.css' %}">
+<link rel="stylesheet" href="{% static 'payup/css/check.css' %}">
 {% endblock %}
 
 
@@ -57,7 +57,7 @@
                     <!-- client secret to the view so we can get the payment intent id -->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
-                <div class="w-100 text-center container mx-auto row">
+                <div class="w-100 text-center container mx-auto row p-0">
                     <div class="mx-auto">
                         <a href="{% url 'cart' %}" class="btn bg-warning rounded btn-lg text-black border-0">
                             <span class="icon">
@@ -131,7 +131,7 @@
         </div>
     </div>
 </div>
-<div id="loading-overlay" >
+<div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>

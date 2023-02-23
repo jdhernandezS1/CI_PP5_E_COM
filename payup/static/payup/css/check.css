@@ -1,3 +1,16 @@
+#id_full_name, #id_email{
+    width: auto;
+}
+#id_phone_number, #id_canton{
+    width: auto;
+}
+#id_city, #id_postcode{
+    width: auto;
+}
+#id_street_address1, #id_street_address2{
+    width: auto;
+}
+
 
 #loading-overlay {
 	display: none;
