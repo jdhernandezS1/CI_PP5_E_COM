@@ -12,5 +12,15 @@ urlpatterns = [
         '',
         views.Courses.as_view(),
         name='courses',
-        )
+        ),
+    path(
+        'add_course/',
+        views.AddCourse.as_view(),
+        name='add_course',
+        ),
+    path(
+        'details<int:id_post>/',
+        views.CourseDetails.as_view(),
+        name='course_datails',
+        ),
 ]

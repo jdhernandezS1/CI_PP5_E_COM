@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'courses/css/courses.css' %}">
+{% endblock %}
+
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="col-12 mx-0">
+    <h1>Add Course</h1>
+    <hr class="w-75 text-center">
+    <form action="{% url 'add_course' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group position-static p-0 mx-auto my-5">
+            {{form | crispy}}
+        </div>
+        <button type="submit" class="btn btn-primary text-black" value="Upload">
+            Submit</button>
+    </form>
+</div>
+{% endblock %}

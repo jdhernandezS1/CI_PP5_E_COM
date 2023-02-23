@@ -1,0 +1,7 @@
+#id_title{
+    width: auto;
+}
+
+#id_content, #id_featured_image{
+    width: 80%;
+}
