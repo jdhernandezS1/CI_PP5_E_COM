@@ -97,10 +97,12 @@ def PayUp(request):
             total = current_cart['grand_total']
             print(to)
             subject = 'Check Information'
+            url = reverse('check', order.order_number)
             message = f'Hi {request.POST["full_name"]}, thank you to buy \
-                with us \
+                with us /n \
                 Order Number {order.order_number}\
-                Total {total}'
+                Total {total}\
+                {url}'
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [to, ]
             send_mail(subject, message, email_from, recipient_list)
@@ -159,5 +161,4 @@ def PayUpCheck(request, order_number):
     context = {
         'order': order,
     }
-
     return render(request, template, context)
