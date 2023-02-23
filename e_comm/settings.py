@@ -71,6 +71,7 @@ INSTALLED_APPS = [
     'manager',
     'userprofile',
     'contact',
+    'courses',
     # Forms
     'crispy_forms',
 ]

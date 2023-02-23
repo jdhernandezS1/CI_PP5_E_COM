@@ -56,6 +56,9 @@ urlpatterns = [
         'contact/',
         include('contact.urls')),
     path(
+        'courses/',
+        include('courses.urls')),
+    path(
         'summernote/',
         include('django_summernote.urls')),
 
