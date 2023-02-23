@@ -52,14 +52,16 @@
 
         <form class="form" action="{% url 'add_to_cart' prod.id %}" method="POST">
             {% csrf_token %}
-            <div class="w-75 text-center d-flex justify-content-center">
+            <div class="text-center row">
                 <div class="w-50 input-group mb-3 ">
                     <div class="input-group-prepend ">
                         <p class="input-group-text bg-two"><strong>Quantity:</strong></p>
                     </div>
-                    <label for="id_qty_{{ prod.id }}" class="d-none">hiden</label>
-                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
+                    <div>
+                        <label for="id_qty_{{ prod.id }}" class="d-none">hiden</label>
+                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
                         max="{{prod.quantity}}" data-item_id="{{ prod.id }}" id="id_qty_{{ prod.id }}">
+                    </div>
                 </div>
             </div>
 

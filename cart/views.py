@@ -38,7 +38,7 @@ def AddCart(request, prod_id):
 
 class RemoveCart(View):
     """
-    Add one product to the cart
+    Remove one product to the cart
     """
     def get(self, request, prod_id):
         cart = request.session.get('cart', {})
@@ -56,7 +56,7 @@ class RemoveCart(View):
 
 class PlusCart(View):
     """
-    Remove one product of the cart
+    Add one product of the cart
     """
     def get(self, request, prod_id):
         cart = request.session.get('cart', {})
