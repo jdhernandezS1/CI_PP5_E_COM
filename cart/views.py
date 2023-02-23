@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import reverse, get_list_or_404, redirect
 from django.shortcuts import render
 from django.contrib import messages
+from django.views import generic, View
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Internal
 # ~~~~~~~~~~
@@ -33,3 +34,37 @@ def AddCart(request, prod_id):
     request.session['cart'] = cart
     messages.success(request, message)
     return redirect(redirect_url)
+
+
+class RemoveCart(View):
+    """
+    Add one product to the cart
+    """
+    def get(self, request, prod_id):
+        cart = request.session.get('cart', {})
+        if prod_id in list(cart.keys()) and cart[prod_id] > 0:
+            cart[prod_id] = cart[prod_id]-1
+            message = "Done"
+            if cart[prod_id] == 0:
+                cart.pop(prod_id)
+        else:
+            message = "The Product Is not in your cart"
+        request.session['cart'] = cart
+        messages.success(request, message)
+        return redirect("cart")
+
+
+class PlusCart(View):
+    """
+    Remove one product of the cart
+    """
+    def get(self, request, prod_id):
+        cart = request.session.get('cart', {})
+        if prod_id in list(cart.keys()) and cart[prod_id] > 0:
+            cart[prod_id] = cart[prod_id]+1
+        else:
+            message = "The Product Is not in your cart"
+        message = "Done"
+        request.session['cart'] = cart
+        messages.success(request, message)
+        return redirect("cart")

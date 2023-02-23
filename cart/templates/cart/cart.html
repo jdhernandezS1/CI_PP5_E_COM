@@ -61,7 +61,16 @@
                                 </div>
                             </td>
                             <td>{{item.product.price}}</td>
-                            <td>{{item.quantity}}</td>
+                            <td>
+
+                                <a href="{% url 'remove_one_cart' item.product.id %}">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </a>
+                                {{item.quantity}}
+                                <a href="{% url 'add_one_cart' item.product.id %}">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </a>
+                            </td>
                             <td>{{item.temp_tot}} </td>
                         </tr>
                     </tbody>
@@ -91,7 +100,7 @@
                         <span class="text-uppercase font-weight-light">checkout</span>
                     </a>
                 </div>
-                
+
             </div>
             {% else %}
             <div class="text-black mx-auto text-center">
