@@ -30,14 +30,13 @@ class CourseDetails(View):
     """
     Courses Details Views
     """
-    def get(self, id_post, request, *args, **kwargs):
+    def get(self, request, id_post):
         """
         GET Function
         """
-        # print(args)
         post = get_object_or_404(
             Post,
-            id=id_post
+            pk=id_post
             )
         context = {
             "post": post,
@@ -45,7 +44,13 @@ class CourseDetails(View):
         return render(
             request,
             'courses/course_details.html',
-            context)
+            context
+            )
+
+    def post(self, request, id_post, *args, **kwargs):
+        """
+        Post function to comment
+        """
 
 
 class AddCourse(View):
