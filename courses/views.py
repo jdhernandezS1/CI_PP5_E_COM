@@ -75,7 +75,7 @@ class CourseDetails(View):
         context = {
             "form": form,
         }
-        return redirect("course_datails",post.id)
+        return redirect("course_datails", post.id)
 
 
 class AddCourse(View):

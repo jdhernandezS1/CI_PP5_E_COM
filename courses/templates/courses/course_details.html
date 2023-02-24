@@ -39,8 +39,10 @@
     </form>
     {%endif%}
 </div>
+{%if comments%}
+<hr>
+<h1> Comments:</h1>
 <div class="mt-5 mx-auto col-10 p-0">
-{{comments}}
     {% for comment in comments %}
     <div class="comments" style="padding: 10px;">
         <!-- The commenter's name goes here. -->
@@ -54,5 +56,5 @@
     </div>
     {% endfor %}
 </div>
-
+{%endif%}
 {% endblock %}
