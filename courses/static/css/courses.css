@@ -26,3 +26,12 @@
 #id_email{
     width: auto;
 }
+
+.post_pic{
+    height: 400px;
+    width: 400px;
+}
+
+.form-control {
+    width: 80%;
+}

@@ -17,20 +17,18 @@
         </div>
         <div class="d-none d-md-block col-5 masthead-image">
             {% if "placeholder" in post.featured_image.url %}
-            <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="postpic">
+            <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="{{post.title}}" class="masthead-image">
             {% else %}
-            <img src="{{ post.featured_image.url }} " alt="postpic">
+            <img src="{{ post.featured_image.url }} " alt="{{post.title}}" class="masthead-image">
             {% endif %}
         </div>
     </div>
 </div>
 <hr>
-<div class="col-12 p-0">
-    <p>
-        {{post.content}}
-    </p>
+<div class="col-11 p-0 mx-auto text-justify">
+    {{post.content | safe}}
 </div>
-<div class="col-12 p-0 my-5">
+<div class="col-11 p-0 my-5 mx-auto">
     {% if user.is_authenticated %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
