@@ -9,25 +9,25 @@
 {% endblock %}
 
 {% block content %}
-<div class="master_head col-12 p-0">
-    <div class="row w-100">
-        <div class="col-7">
-            <h1 class="post-title text-capitalize">Post: {{post.title}}
-            </h1>
-        </div>
-        <div class="d-none d-md-block col-5 masthead-image">
-            {% if "placeholder" in post.featured_image.url %}
-            <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="{{post.title}}" class="masthead-image">
-            {% else %}
-            <img src="{{ post.featured_image.url }} " alt="{{post.title}}" class="masthead-image">
-            {% endif %}
-        </div>
+<div class="mx-auto col-12 p-0 master_head">
+    <div class="mx-auto w-100 text-center text-black">
+        <h1 class="post-title text-capitalize w-100">Post: {{post.title}}
+        </h1>
     </div>
 </div>
 <hr>
-<div class="col-11 p-0 mx-auto text-justify">
+<div class="col-11 p-0 mx-auto">
+    {% if "placeholder" in post.featured_image.url %}
+    <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="{{post.title}}" class="masthead_image">
+    {% else %}
+    <img src="{{ post.featured_image.url }} " alt="{{post.title}}" class="masthead_image">
+    {% endif %}
+</div>
+
+<div class="col-11 p-0 mt-5 mx-auto text-justify">
     {{post.content | safe}}
 </div>
+
 <div class="col-11 p-0 my-5 mx-auto">
     {% if user.is_authenticated %}
     <form method="post" enctype="multipart/form-data">
@@ -35,12 +35,12 @@
         <div class="form-group">
             {{form | crispy}}
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary text-black">Submit</button>
     </form>
     {%endif%}
 </div>
 <div class="mt-5 mx-auto col-10 p-0">
-
+{{comments}}
     {% for comment in comments %}
     <div class="comments" style="padding: 10px;">
         <!-- The commenter's name goes here. -->
@@ -52,7 +52,7 @@
             {{ comment.body | linebreaks }}
         </p>
     </div>
-    {% endfor %} 
+    {% endfor %}
 </div>
 
 {% endblock %}

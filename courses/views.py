@@ -8,7 +8,7 @@ from django.views import generic, View
 from django.utils.text import slugify
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Internal
-from .models import Post
+from .models import Post, Comment
 from .forms import PostForm, CommentForm
 # ~~~~~~~~~~
 
@@ -36,7 +36,7 @@ class CourseDetails(View):
         """
         post = get_object_or_404(
             Post,
-            pk=id_post
+            id=id_post
             )
         comments = post.comments.order_by('created_on')
         form = CommentForm()
