@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% load cloudinary %}      
+{% load cloudinary %}
 {% cloudinary photo.image width=993 height=993 crop="fill" %}
 
 {% block extra_css %}
@@ -18,8 +18,9 @@
 {% endblock %}
 
 {% block content %}
-<h1  class="text-center">Add item</h1>
-<form action="{% url 'add_item' %}" method="post" class="form-group text-left rounded" id="additem-form"  enctype="multipart/form-data"  >
+<h1 class="text-center">Add item</h1>
+<form action="{% url 'add_item' %}" method="post" class="form-group text-left rounded" id="additem-form"
+    enctype="multipart/form-data">
     {% csrf_token %}
     <div class="form-group container mx-auto w-75">
         {{product_form.category | as_crispy_field}}
