@@ -19,20 +19,20 @@
             {% endif %}
           </p>
         </a>
-        <div class="dropdown-menu border-0 border border-black p-1 btn btn-outline-secondary text-center text-black "
+        <div class="dropdown-menu p-1 btn btn-outline-secondary text-center text-black dropleft"
           aria-labelledby="user-options2">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
-          <a href="{% url 'products_manager' %}" class="dropdown-item py-2 rounded w-75 text-center">Product
+          <a href="{% url 'products_manager' %}" class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Product
             Management</a>
-          <a href="{% url 'cats_manager' %}" class="dropdown-item py-2 rounded w-75 text-center">Categories
+          <a href="{% url 'cats_manager' %}"   class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Categories
             Management</a>
           {% endif %}
-          <a href="{% url 'profile' %}" class="dropdown-item py-2 rounded w-75 text-center">Orders</a>
-          <a href="{% url 'account_logout' %}" class="dropdown-item py-2 rounded w-75 text-center">Logout</a>
+          <a href="{% url 'profile' %}"        class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Orders</a>
+          <a href="{% url 'account_logout' %}" class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Logout</a>
           {% else %}
-          <a href="{% url 'account_signup' %}" class="dropdown-item py-2 rounded w-75 text-center">Register</a>
-          <a href="{% url 'account_login' %}" class="dropdown-item py-2 rounded w-75 text-center">Login</a>
+          <a href="{% url 'account_signup' %}" class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Register</a>
+          <a href="{% url 'account_login' %}"  class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Login</a>
           {% endif %}
         </div>
         <!-- </div> -->

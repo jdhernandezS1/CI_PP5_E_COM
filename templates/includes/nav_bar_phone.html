@@ -8,8 +8,8 @@
             </span>
         </button>
     </div>
-    <div class="list-inline-item dropdown p-0 m-1 text-black">
-        <a class="nav-link d-block d-lg-none text-center p-0 m-0 text-decoration-none text-one" href="#"
+    <div class="list-inline-item btn-group text-black">
+        <a class=" nav-link d-block d-lg-none text-center p-0 m-1 text-one dropdown" href="#"
             id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <ion-icon name="person"></ion-icon>
             {% if request.user.is_authenticated %}
@@ -18,18 +18,19 @@
             <p class="my-0 pr-1">Account</p>
             {% endif %}
         </a>
-        <div class="dropdown-menu border-0 rounded-0 text-black" aria-labelledby="user-options">
+        <div class="dropdown-menu border-1 rounded-1 text-black" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-            <a href="{% url 'products_manager' %}" class="dropdown-item">Product Management</a>
-            <a href="{% url 'cats_manager' %}" class="dropdown-item py-2 rounded w-75 text-center">Categories
-                Management</a>
+            <a href="{% url 'products_manager' %}" class="dropdown-item py-2 px-1 text-center">
+                Product Management</a>
+            <a href="{% url 'cats_manager' %}" class="dropdown-item py-2 px-1 rounded w-75 text-center">
+                Categories Management</a>
             {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item">My Orders</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            <a href="{% url 'profile' %}" class="dropdown-item py-2 px-1 text-center">My Orders</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item py-2 px-1 text-center">Logout</a>
             {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item py-2 px-1 text-center">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item py-2 px-1 text-center">Login</a>
             {% endif %}
         </div>
     </div>
