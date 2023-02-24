@@ -9,7 +9,7 @@ from django.utils.text import slugify
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Internal
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, CommentForm
 # ~~~~~~~~~~
 
 
@@ -38,8 +38,12 @@ class CourseDetails(View):
             Post,
             pk=id_post
             )
+        comments = post.comments.order_by('created_on')
+        form = CommentForm()
         context = {
+            "form": form,
             "post": post,
+            "comments": comments,
         }
         return render(
             request,
@@ -47,10 +51,31 @@ class CourseDetails(View):
             context
             )
 
-    def post(self, request, id_post, *args, **kwargs):
+    def post(self, request, id_post):
         """
         Post function to comment
         """
+        post = get_object_or_404(
+                Post,
+                pk=id_post
+                )
+        form = CommentForm(data=request.POST)
+        if form.is_valid():
+            form.instance.post = post
+            form.instance.name = request.user.username
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+        else:
+            form = CommentForm()
+            raise ValidationError(
+                    "The Content is not valid"
+                )
+        form = CommentForm()
+        context = {
+            "form": form,
+        }
+        return redirect("course_datails",post.id)
 
 
 class AddCourse(View):

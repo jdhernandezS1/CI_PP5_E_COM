@@ -9,22 +9,52 @@
 {% endblock %}
 
 {% block content %}
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <h1 class="post-title text-capitalize">Post: {{post.title}}
-                </h1>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="postpic">
-                {% else %}
-                <img src="{{ post.featured_image.url }} " alt="postpic">
-                {% endif %}
-            </div>
+<div class="master_head col-12 p-0">
+    <div class="row w-100">
+        <div class="col-7">
+            <h1 class="post-title text-capitalize">Post: {{post.title}}
+            </h1>
+        </div>
+        <div class="d-none d-md-block col-5 masthead-image">
+            {% if "placeholder" in post.featured_image.url %}
+            <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="postpic">
+            {% else %}
+            <img src="{{ post.featured_image.url }} " alt="postpic">
+            {% endif %}
         </div>
     </div>
 </div>
 <hr>
+<div class="col-12 p-0">
+    <p>
+        {{post.content}}
+    </p>
+</div>
+<div class="col-12 p-0 my-5">
+    {% if user.is_authenticated %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            {{form | crispy}}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {%endif%}
+</div>
+<div class="mt-5 mx-auto col-10 p-0">
+
+    {% for comment in comments %}
+    <div class="comments" style="padding: 10px;">
+        <!-- The commenter's name goes here. -->
+        <span class="font-weight-bold text-capitalize">{{ comment.name }}</span>
+        <!-- The comment's created -->
+        <mark class="font-italic rounded border border-dark"> {{ comment.created_on|date}} </mark> wrote:
+        <!-- The body of the comment -->
+        <p class="bg-dark">
+            {{ comment.body | linebreaks }}
+        </p>
+    </div>
+    {% endfor %} 
+</div>
+
 {% endblock %}
