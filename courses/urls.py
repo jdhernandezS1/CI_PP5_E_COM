@@ -19,7 +19,7 @@ urlpatterns = [
         name='add_course',
         ),
     path(
-        'details<int:id_post>/',
+        'details/<id_post>/',
         views.CourseDetails.as_view(),
         name='course_datails',
         ),

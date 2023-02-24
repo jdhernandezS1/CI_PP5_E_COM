@@ -29,16 +29,16 @@
         {%for post in posts%}
         <div class="col-sm-10 col-md-5 col-lg-3 col-xl-3 m-xl-3 
         rounded p-0  hvr-float-shadow bg-white mx-auto mx-auto px-3">
-            <a class="text-black text-decoration-none " href="{% url 'course_datails' id_post=post.id %}">
+            <a class="text-black text-decoration-none " href="{% url 'course_datails' post.id %}">
                 <div class="card h-100 border-0 rounded-top p-0 bg-white text-center">
                     <div class="pt-1 px-1 bg-white rounded-top d-flex justify-content-center">
                         {% if "placeholder" in post.featured_image.url %}
-                            <img class="card-img-top rounded"
-                                src="https://res.cloudinary.com/djvwk7zf2/image/upload/v1674063110/add_image.png"
-                                alt="{{post.title}}" aria-label="{{post.title}}">
+                        <img class="card-img-top rounded"
+                            src="https://res.cloudinary.com/djvwk7zf2/image/upload/v1674063110/add_image.png"
+                            alt="{{post.title}}" aria-label="{{post.title}}">
                         {% else %}
-                            <img class="card-img-top rounded" src=" {{ post.featured_image.url }}"
-                                alt="{{post.title}}" aria-label="{{post.title}}">
+                        <img class="card-img-top rounded" src=" {{ post.featured_image.url }}" alt="{{post.title}}"
+                            aria-label="{{post.title}}">
                         {% endif %}
                     </div>
                     <h2>{{post.title}}</h2>

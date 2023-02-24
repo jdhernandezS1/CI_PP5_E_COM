@@ -5,6 +5,23 @@
 {% endblock %}
 
 {% block content %}
-<h1>detauks</h1>
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <h1 class="post-title text-light">{{post.title}}
+                </h1>
+                <h5 class="post-subtitle text-light"> {{post.title}} </h5>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in post.featured_image.url %}
+                <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="postpic">
+                {% else %}
+                <img src="{{ post.featured_image.url }} " alt="postpic">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

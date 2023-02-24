@@ -34,7 +34,7 @@ class CourseDetails(View):
         """
         GET Function
         """
-        print(args)
+        # print(args)
         post = get_object_or_404(
             Post,
             id=id_post
