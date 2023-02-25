@@ -334,6 +334,16 @@ The following models represent the database model structure of the website:
 
 <hr>
 
+##### Courses Models
+- Post model is made in the following fields: Id, Title, Content, featured_image, created_on, Likes
+- Comment model is made in the following fields: Id, Post, Name, Email, body, created_on
+
+<details><summary>Courses Models</summary>
+<img src="media/readme/database/courses.png">
+</details>
+
+<hr>
+
 ### Wireframes
 
 <details><summary>Laptop & Desktop</summary>
@@ -388,6 +398,13 @@ The following models represent the database model structure of the website:
   <details><summary>About Us</summary>
   <img src="media/readme/wireframes/pc/About_us_pc.png">
   </details>
+
+  <details><summary>Courses</summary>
+  <img src="media/readme/wireframes/pc/courses.png">
+  <img src="media/readme/wireframes/pc/course_details.png">
+  <img src="media/readme/wireframes/pc/add_course.png">
+  </details>
+
 </details>
 <details><summary> Tablet & Smartphone </summary>
 
@@ -442,6 +459,13 @@ The following models represent the database model structure of the website:
   <details><summary>About Us</summary>
   <img src="media/readme/wireframes/phone/About_us_phone.png">
   </details>
+
+  <details><summary>Courses</summary>
+  <img src="media/readme/wireframes/phone/courses.png">
+  <img src="media/readme/wireframes/phone/course_details.png">
+  <img src="media/readme/wireframes/phone/add_course.png">
+  </details>
+
 </details>
 
 ##### Back to [top](#table-of-contents)
@@ -925,6 +949,11 @@ Error        | Edit Product    | Django templates functions{% %}| The Validator 
    <img src="media/readme/validation/html/orders_view_validation.png">
    </details>
 
+#### Courses Page
+-  <details><summary>Courses</summary>
+   <img src="media/readme/validation/html/courses_list_validation.png">
+   <img src="media/readme/validation/html/courses_details_validation.png">
+   </details>
 
 #### Error Pages
 -  <details><summary>403</summary>
@@ -1057,15 +1086,34 @@ three other tools and combines their results: pep8 for checking style. pyflakes 
 - #### Contact Us
 
 <details><summary>Forms</summary>
-<img src="media/readme/validation/python/contact_us/errors_forms.png">
+<img src="media/readme/validation/python/contact_us/contact_forms.png">
 </details>
 
 <details><summary>Urls</summary>
-<img src="media/readme/validation/python/contact_us/errors_urls.png">
+<img src="media/readme/validation/python/contact_us/contact_urls.png">
 </details>
 
 <details><summary>Views</summary>
-<img src="media/readme/validation/python/contact_us/errors_views.png">
+<img src="media/readme/validation/python/contact_us/contact_views.png">
+</details>
+
+- #### Courses
+
+<details><summary>Forms</summary>
+<img src="media/readme/validation/python/courses/courses_forms.png">
+</details>
+
+<details><summary>Models</summary>
+<img src="media/readme/validation/python/courses/courses_models.png">
+</details>
+
+
+<details><summary>Urls</summary>
+<img src="media/readme/validation/python/courses/courses_urls_forms.png">
+</details>
+
+<details><summary>Views</summary>
+<img src="media/readme/validation/python/courses/courses_views_forms.png">
 </details>
 
 - #### Orders Details
@@ -1638,7 +1686,7 @@ Visit Orders Page after Login | Get a View Having or not preview orders | Works 
 27. As a Guest Have a Course Section to learn and comment with the community
 
 <details><summary>Courses</summary>
-<img src="media/readme/user_stories/courses/course_details.png">
+<img src="media/readme/user_stories/courses/course_list.png">
 <img src="media/readme/user_stories/courses/course_details.png">
 <img src="media/readme/user_stories/courses/comment.png">
 </details>
