@@ -66,6 +66,9 @@ class CourseDetails(View):
             comment = form.save(commit=False)
             comment.post = post
             comment.save()
+            message = "Commented"
+            messages.success(request, message)
+
         else:
             form = CommentForm()
             raise ValidationError(

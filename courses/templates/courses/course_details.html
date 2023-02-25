@@ -18,7 +18,8 @@
 <hr>
 <div class="col-11 p-0 mx-auto">
     {% if "placeholder" in post.featured_image.url %}
-    <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="{{post.title}}" class="masthead_image">
+    <img src="https://www.mend.io/wp-content/media/2020/03/5-tips_small.jpg" alt="{{post.title}}"
+        class="masthead_image">
     {% else %}
     <img src="{{ post.featured_image.url }} " alt="{{post.title}}" class="masthead_image">
     {% endif %}
@@ -48,11 +49,9 @@
         <!-- The commenter's name goes here. -->
         <span class="font-weight-bold text-capitalize">{{ comment.name }}</span>
         <!-- The comment's created -->
-        <mark class="font-italic rounded border border-dark"> {{ comment.created_on|date}} </mark> wrote:
+        <span class="font-italic rounded text-danger border-dark"> {{ comment.created_on|date}} </span>:
         <!-- The body of the comment -->
-        <p class="bg-dark">
-            {{ comment.body | linebreaks }}
-        </p>
+        <p class="bg-light">{{ comment.body | safe }}</p>
     </div>
     {% endfor %}
 </div>

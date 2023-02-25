@@ -157,6 +157,7 @@ It was used to inform the search engines about the content of the website and ho
 - Create a simple, aesthetically pleasing design.
 - Provide full responsive application with comfortable navigation.
 - Security payment method to make feel safe the user.
+- Provide a Community with hand-made course.
 <hr>
 
 ##### Back to [top](#table-of-contents)
@@ -213,7 +214,7 @@ It was used to inform the search engines about the content of the website and ho
 - 
 25. As a Guest, i want to Contact The Staff By Form And Receive an email Confirmation.
 26. As a Guest and owner, i want to Get the Orders Description in a View.
-
+27. As a Guest Have a Course Section to learn and comment with the community
 ##### Back to [top](#table-of-contents)
 
 <hr>
@@ -1161,6 +1162,20 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 <hr>
 
+#### Courses
+
+<details><summary>Add</summary>
+<img src="media/readme/wave_accessibility/course_add_wave.png">
+</details>
+<details><summary>Details</summary>
+<img src="media/readme/wave_accessibility/course_details_wave.png">
+</details>
+<details><summary>List</summary>
+<img src="media/readme/wave_accessibility/course_list_wave.png">
+</details>
+
+<hr>
+
 ### Wave
 
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
@@ -1231,6 +1246,11 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 </details>
 
+<details><summary>Course</summary>
+<img src="media/readme/wave_accessibility/course_add_wave.png">
+<img src="media/readme/wave_accessibility/course_details_wave.png">
+<img src="media/readme/wave_accessibility/course_list_wave.png">
+</details>
 
 <details><summary>Profile Orders</summary>
 <img src="media/readme/wave_accessibility/orders_profile_wave.png">
@@ -1615,6 +1635,21 @@ Try to Submit The Contact form | Get the Email Answer | Works as expected
 Visit Orders Page after Login | Get a View Having or not preview orders | Works as expected |
 <hr>
 
+27. As a Guest Have a Course Section to learn and comment with the community
+
+<details><summary>Courses</summary>
+<img src="media/readme/user_stories/courses/course_details.png">
+<img src="media/readme/user_stories/courses/course_details.png">
+<img src="media/readme/user_stories/courses/comment.png">
+</details>
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Visit Courses Page | Get a List View With the courses | Works as expected |
+Visit a Course Detail | Get a detail course View | Works as expected |
+Comment a course | Get a List View With the courses | Works as expected |
+<hr>
+
 ### Automated Testing
 
 Automated testing was done using the Django's unit tests from a Python standard library module: unittest and to make the cover report was used Covered Python library. The reports were produced using the coverage tool.
@@ -1719,7 +1754,6 @@ The website was tested on the following devices:
 | ------- | ------- |
 |   Send Email Did not Work   | Set the Email Protocol |
 |    Stripe Go in a Ciclical while|Java Script Get Form By Id Correctly|
-|         | |
 
 ##### Back to [top](#table-of-contents)
 <hr>
