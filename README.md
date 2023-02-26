@@ -955,16 +955,12 @@ Error        | Edit Product    | Django templates functions{% %}| The Validator 
    <img src="media/readme/validation/html/courses_details_validation.png">
    </details>
 
-#### Error Pages
--  <details><summary>403</summary>
-   <img src="media/readme/validation/html/error403.png">
-   </details>
+#### Error Page
+
 -  <details><summary>404</summary>
-   <img src="media/readme/validation/html/error403.png">
+   <img src="media/readme/validation/html/error_page.png">
    </details>
--  <details><summary>500</summary>
-   <img src="media/readme/validation/html/error403.png">
-   </details>
+
 <hr>
 
 ### CSS Validation
