@@ -32,8 +32,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = [
     'www.capricci.herokuapp.com',
     'https://www.capricci.herokuapp.com',
@@ -123,11 +122,11 @@ WSGI_APPLICATION = 'e_comm.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),  # Elephant SQL Server
     'default1': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    }  # To Test Change Default 1 to Default
 }
 # Cloudinary storage
 

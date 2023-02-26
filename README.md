@@ -1213,13 +1213,13 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 #### Courses
 
 <details><summary>Add</summary>
-<img src="media/readme/wave_accessibility/course_add_wave.png">
+<img src="media/readme/lighthouse/course_add_lighthouse.png">
 </details>
 <details><summary>Details</summary>
-<img src="media/readme/wave_accessibility/course_details_wave.png">
+<img src="media/readme/lighthouse/course_details_lighthouse.png">
 </details>
 <details><summary>List</summary>
-<img src="media/readme/wave_accessibility/course_list_wave.png">
+<img src="media/readme/lighthouse/course_list_lighthouse.png">
 </details>
 
 <hr>
@@ -1229,7 +1229,7 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
 
 <details><summary>Home Wave</summary>
-<img src="media/readme/wave_accessibility/Edit_product_wave.png">
+<img src="media/readme/wave_accessibility/home_wave.png">
 </details>
 
 <details><summary>About Us Wave</summary>
