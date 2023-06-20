@@ -6,11 +6,11 @@
 }
 .productsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 50px;
     padding: 10px;
     justify-content: center;
-    margin: 100px 0
+    margin: 100px 0;
 }
 
 @media (max-width: 500px) {
