@@ -10,3 +10,4 @@ cloudinary_python.txt
 *.sqlite3
 staticfiles
 .coverage
+virtual

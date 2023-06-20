@@ -4,3 +4,18 @@
 #id_body {
     width: 100%;
 }
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 50px;
+    padding: 10px;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+@media (max-width: 500px) {
+    .productsGrid {
+        grid-template-columns: 100%;
+        margin: 0;
+    }
+}

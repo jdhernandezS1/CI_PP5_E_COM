@@ -11,7 +11,9 @@
     width: auto;
 }
 
-
+.checkoutForm{
+    margin:0 25%;
+}
 #loading-overlay {
 	display: none;
 	position: fixed;
@@ -29,4 +31,10 @@
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+@media (max-width: 500px) {
+    .checkoutForm{
+        margin: 0 5%;
+    }
 }
