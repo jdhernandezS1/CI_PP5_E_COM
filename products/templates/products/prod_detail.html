@@ -55,7 +55,7 @@
 
         <form class="form" action="{% url 'add_to_cart' prod.id %}" method="POST">
             {% csrf_token %}
-            <div class="text-center row">
+            <div class="text-center row mx-3">
                 <div class="w-50 input-group mb-3 ">
                     <div class="input-group-prepend ">
                         <p class="input-group-text bg-two"><strong>Quantity:</strong></p>
