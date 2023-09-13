@@ -2,16 +2,20 @@
 
 .NavLi {
     display: inline;
-    float:right;
+    float: right;
 }
+
 .NavLi a {
     display: block;
     padding: 10px;
-    color: $Background !important;
     text-decoration: none;
-    background-color: $Fontcolor !important;
 }
 
-.HeaderStandard{
+.HeaderStandard {
     height: 10px;
+}
+
+.Nav {
+    color: $Background !important;
+    background-color: $Fontcolor !important;
 }
