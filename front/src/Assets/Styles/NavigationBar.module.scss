@@ -6,16 +6,26 @@
 }
 
 .NavLi a {
+    font-size: x-large !important;
     display: block;
     padding: 10px;
     text-decoration: none;
+    color: $Background !important;
+    background-color: $Fontcolor !important;
+    margin: 10px;
 }
-
+.NavLi a:hover {
+    font-size: xx-large !important;
+}
 .HeaderStandard {
     height: 10px;
 }
 
-.Nav {
+.Nav{
+    padding: 0px!important;
+    margin: 0px!important;
     color: $Background !important;
     background-color: $Fontcolor !important;
+    width: 100%;
+    height: 70px;
 }

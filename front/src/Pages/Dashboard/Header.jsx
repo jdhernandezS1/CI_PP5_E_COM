@@ -8,7 +8,7 @@ function Header() {
     return (
         <header className={`${styles.HeaderStandard}`}>
                 <nav>
-                    <ul>
+                    <ul  className={styles.Nav}>
                         <li className={styles.NavLi}>
                             <Link to="/">Home</Link>
                         </li>
