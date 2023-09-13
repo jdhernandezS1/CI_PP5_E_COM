@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+.NavLi{
+    display: inline;
+    float: left;
+
+}
+.NavLi a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    text-decoration: none;
+    color: wheat;
+  }
