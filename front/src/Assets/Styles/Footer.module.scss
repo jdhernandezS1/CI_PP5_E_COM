@@ -40,3 +40,25 @@
 .BorderLeft {
     border-left: 1px solid $Fontcolor !important;
 }
+
+@media (min-width: 1250px) {
+    .FooterDiv1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 480px);
+        gap: 20px;
+        padding: 10px;
+        justify-content: center;
+    }
+    
+}
+
+@media (min-width: 1450px) {
+    .FooterDiv1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 700px);
+        gap: 20px;
+        padding: 10px;
+        justify-content: center;
+    }
+    
+}
