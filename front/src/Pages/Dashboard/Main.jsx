@@ -6,7 +6,7 @@ import body from '../../Assets/Styles/Body.module.scss'
 function Main() {
     return (
         <>
-        <hr></hr>
+        <hr className={body.MainContent}></hr>
             <main className={body.Standard}>
                 <Outlet />
             </main>

@@ -2,7 +2,7 @@
 
 .NavLi {
     display: inline;
-    float: left;
+    float:right;
 }
 .NavLi a {
     display: block;
@@ -12,14 +12,6 @@
     background-color: $Fontcolor !important;
 }
 
-.NavSyze{
-    width: 100%;
-    height: fit-content;
-}
-
-.NavSyze ul{
-    width: 100%;
-    height: fit-content;
-    padding: 0px;
-    margin: 0px;
+.HeaderStandard{
+    height: 10px;
 }
