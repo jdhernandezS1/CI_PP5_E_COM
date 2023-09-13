@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.Standard{
+    background-color: $Background;
+    color: $Fontcolor;
+    margin-top: 0px;
+    padding: 0px;
+
+}
+.Standard a{
+    background-color: $Background;
+    color: $Fontcolor;
+    font-size: large;
+    text-decoration: none !important;
+}
+
+.Standard a:hover{
+    font-size: x-large;
+}

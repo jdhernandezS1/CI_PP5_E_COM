@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.FooterDiv1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Hiden{
+    display: none;
+}
+.ColLG6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.ColLG3{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.W50{
+    width: 50%;
+}
+
+.Padding{
+    padding-top: 3rem!important;
+}
+.BorderLeft{
+    border-left: 1px solid $Fontcolor!important;
+}

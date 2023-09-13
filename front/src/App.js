@@ -1,12 +1,11 @@
 import './App.css';
-import Index from './Pages/Dashboard/Index';
+import Router from './Pages/Dashboard/Router';
+import body from './Assets/Styles/Body.module.scss'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <Index />
-      </header>
+    <div className={`${body.Standard} ` + "App"}>
+      <Router />
     </div>
   );
 }

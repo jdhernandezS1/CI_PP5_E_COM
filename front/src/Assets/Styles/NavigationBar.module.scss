@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.NavLi {
+    display: inline;
+    float: left;
+}
+.NavLi a {
+    display: block;
+    padding: 10px;
+    color: $Background !important;
+    text-decoration: none;
+    background-color: $Fontcolor !important;
+}
+
+.NavSyze{
+    width: 100%;
+    height: fit-content;
+}
+
+.NavSyze ul{
+    width: 100%;
+    height: fit-content;
+    padding: 0px;
+    margin: 0px;
+}
