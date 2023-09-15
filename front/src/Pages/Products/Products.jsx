@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchDataFromApi } from '../../Services/Utils//httpClient'; // Import the reusable function
 import styles from '../../Assets/Styles/Products.module.scss'
+import { Outlet, Link } from 'react-router-dom';
 
 class Products extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class Products extends Component {
 
   async componentDidMount() {
     try {
+
       // Use the fetchDataFromApi function to make a GET request
       const data = await fetchDataFromApi('products/'); // Replace with your specific path
       this.setState({ responseData: data });
@@ -40,25 +42,27 @@ class Products extends Component {
       <div>
         <h1>Stock:</h1>
         <ul className={styles.ProductsGrid}>
-            {responseData.map((item) => (
-              <li key={item.id} className={styles.ProductCard}>
-                {/* {item.category} */}
-                {/* {item.price} */}
-                {/* {item.scount} */}
-                <div>
+          {responseData.map((item) => (
+            <li key={item.id} className={styles.ProductCard}>
+              {/* {item.category} */}
+              {/* {item.price} */}
+              {/* {item.scount} */}
+              <div>
+                <Link to={`${item.id}`}>
                   <picture className={styles.ProductPicture}>
-                    <img src={`https://res.cloudinary.com/djvwk7zf2/${item.featured_image}`} alt={item.slug_title}  className={styles.ProductImage}/>
+                    <img src={`https://res.cloudinary.com/djvwk7zf2/${item.featured_image}`} alt={item.slug_title} className={styles.ProductImage} />
                   </picture>
-                </div>
-                <div className={styles.ProductDescription}>
-                  {item.title}
+                </Link>
+
+              </div>
+              <div className={styles.ProductDescription}>
+                {item.title}
                 <p>Remains: {item.quantity}</p>
                 <p>{item.description}</p>
-                </div>
-                {/* {item.scountbool} */}
-
-              </li>
-            ))}
+              </div>
+              {/* {item.scountbool} */}
+            </li>
+          ))}
         </ul>
       </div >
     );

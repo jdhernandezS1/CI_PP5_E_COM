@@ -13,7 +13,7 @@ function Header() {
                             <Link to="/">Home</Link>
                         </li>
                         <li className={styles.NavLi}>
-                            <Link to="/Products">Products</Link>
+                            <Link to="/Products/">Products</Link>
                         </li>
                         <li className={styles.NavLi}>
                             <Link to="/Courses">About</Link>

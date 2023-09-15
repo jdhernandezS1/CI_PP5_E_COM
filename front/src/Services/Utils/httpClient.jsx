@@ -4,7 +4,7 @@ import axios from 'axios';
 export async function fetchDataFromApi(path) {
   try {
     const apiUrl = `http://127.0.0.1:8000/api/${path}`; // Replace with your API base URL
-    const response = await axios.get(apiUrl);
+    const response = await axios.get(apiUrl, { withCredentials: true });
 
     // Return the response data
     return response.data;
