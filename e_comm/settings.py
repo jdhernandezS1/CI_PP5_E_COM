@@ -73,6 +73,9 @@ INSTALLED_APPS = [
     'courses',
     # Forms
     'crispy_forms',
+    # Rest framework
+    'corsheaders',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +88,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+CORS_ORIGIN_WHITELIST = [
+     'http://localhost:3000'
 ]
 
 ROOT_URLCONF = 'e_comm.urls'
@@ -96,7 +104,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'front/build/', 'react-template'),
+            os.path.join(BASE_DIR, 'front/build/', 'react'),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
             ],
         'APP_DIRS': True,
