@@ -1,0 +1,40 @@
+@import './variables.scss';
+
+.ProductsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $CardSize);
+    gap: 50px;
+    padding: 10px;
+    justify-content: center;
+    margin: 100px 0
+}
+
+.ProductCard {
+    list-style: none;
+    text-align: center;
+    border-radius: 5%;
+    background-color: $Fontcolor;
+    color: $Background;
+    padding: 0 0px;
+    
+}
+.ProductPicture{
+    border-radius: 0%;
+    opacity: 90%;
+}
+
+.ProductImage {
+    border-radius: 20%;
+    width: $ImagesSize;
+    margin: 10px 0px;
+}
+
+.ProductPicture :hover {
+    transform: scale(1.3);
+    transition: transform .2s;
+    border-radius: 10%;
+}
+
+.ProductDescription{
+    margin: $DescriptionDivMargin;
+}
