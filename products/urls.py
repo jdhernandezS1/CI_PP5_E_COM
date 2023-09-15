@@ -5,7 +5,9 @@ from django.contrib import admin
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Internal
 from . import views
+from e_comm.urls import router
 # ~~~~~~~~~~
+router.register(r'products', views.ProductsView, 'products')
 
 urlpatterns = [
     path(

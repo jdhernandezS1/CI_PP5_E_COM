@@ -10,10 +10,20 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.core.exceptions import ValidationError
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
+
 # Internal
 from .models import Cat, Prod
 from .forms import CommentForm
+from .serializers import ProductSerializer
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+class ProductsView(viewsets.ModelViewSet):
+    serializer_class = ProductSerializer
+    queryset = Prod.objects.filter(quantity__gt=0).all()
 
 
 def ProdSearch(request):
