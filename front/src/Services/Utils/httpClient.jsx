@@ -1,0 +1,15 @@
+import axios from 'axios';
+
+// Create a reusable function for making GET requests
+export async function fetchDataFromApi(path) {
+  try {
+    const apiUrl = `http://127.0.0.1:8000/api/${path}`; // Replace with your API base URL
+    const response = await axios.get(apiUrl);
+
+    // Return the response data
+    return response.data;
+  } catch (error) {
+    // Handle errors here
+    throw error;
+  }
+}
