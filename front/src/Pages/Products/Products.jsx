@@ -41,12 +41,11 @@ class Products extends Component {
     // Render the component with the received data
     return (
       <div>
-        <h1>Stock:</h1>
+        <h1>Our Room show</h1>
         <ul className={styles.ProductsGrid}>
           {responseData.map((item) => (
             <li key={item.id} className={styles.ProductCard}>
               {/* {item.category} */}
-              {/* {item.scount} */}
               <div>
                 <Link to={`${item.id}`}>
                   <picture className={styles.ProductPicture}>
@@ -61,7 +60,7 @@ class Products extends Component {
                 {
                   item.scount > 0 &&
                   <h2>% {item.scount} Off</h2>
-                  }
+                }
                 {/* <p>{item.description}</p> */}
               </div>
               {/* {item.scountbool} */}

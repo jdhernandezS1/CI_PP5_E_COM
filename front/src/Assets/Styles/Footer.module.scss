@@ -8,6 +8,10 @@ footer a{
     background-color: $Fontcolor !important;
     text-decoration:dotted !important;
 }
+footer p{
+    text-align: justify;
+}
+
 .FooterDiv1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px);

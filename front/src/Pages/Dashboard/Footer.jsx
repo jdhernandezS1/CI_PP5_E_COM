@@ -72,16 +72,18 @@ function Footer() {
                     </div>
 
                     <div>
+                        <p>
                         <small>All rights reserved</small>
                         <small>The images used are purely fiction and for academic purposes we do not seek to profit and if
                             there is any copyright problem, please contact us to remove it.</small>
+                        </p>
                     </div>
                 </div>
                 <div>
                     <h3 >Developed By</h3>
                     <hr className={`${styles.W50}`}></hr>
-                    <p>David Hernandez </p>
-                    <a href="https://www.linkedin.com/in/david-hern%C3%A1ndez-b3764b171/">
+                    <h4>David Hernandez </h4>
+                    <a href="https://www.linkedin.com/in/david-hern%C3%A1ndez-b3764b171/" target='_blank'>
                         <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
                     </a>
                 </div>
