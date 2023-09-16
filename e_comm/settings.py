@@ -92,7 +92,7 @@ MIDDLEWARE = [
 
 # Cors Setting
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [os.environ.get('CORS_ALLOWED_ORIGINS')]
+CORS_ALLOWED_ORIGINS = [os.environ.get('CORS_ALLOWED_ORIGINS'), 'http://localhost:3000']
 CORS_ALLOW_CREDENTIALS = True
 # Local Settings
 ROOT_URLCONF = 'e_comm.urls'

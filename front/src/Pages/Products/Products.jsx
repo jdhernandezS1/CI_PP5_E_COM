@@ -45,7 +45,6 @@ class Products extends Component {
           {responseData.map((item) => (
             <li key={item.id} className={styles.ProductCard}>
               {/* {item.category} */}
-              {/* {item.price} */}
               {/* {item.scount} */}
               <div>
                 <Link to={`${item.id}`}>
@@ -58,7 +57,8 @@ class Products extends Component {
               <div className={styles.ProductDescription}>
                 {item.title}
                 <p>Remains: {item.quantity}</p>
-                <p>{item.description}</p>
+                <p>{item.price}</p>
+                {/* <p>{item.description}</p> */}
               </div>
               {/* {item.scountbool} */}
             </li>
