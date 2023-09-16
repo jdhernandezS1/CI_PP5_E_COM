@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchDataFromApi } from '../../Services/Utils/httpClient'; // Import the reusable function
 import styles from '../../Assets/Styles/Products.module.scss';
+import { FaShoppingCart, FaDollarSign } from 'react-icons/fa';
+
 
 function Product() {
   const { id } = useParams(); // Access the 'id' parameter from the URL
@@ -35,21 +37,24 @@ function Product() {
   // Render the component with the received data
   return (
     <div>
-      <h1>Product:</h1>
+      <h1>{responseData.title}</h1>
       <ul className={styles.ProductsGrid}>
-          <li key={responseData.id} className={styles.ProductCard}>
+          <li key={responseData.id} >
             {/* {responseData.category} */}
-            {/* {responseData.price} */}
             {/* {responseData.scount} */}
             <div>
                 <picture className={styles.ProductPicture}>
                     <img src={`https://res.cloudinary.com/djvwk7zf2/${responseData.featured_image}`} alt={responseData.slug_title} className={styles.ProductImage} />
                   </picture>
             </div>
-            <div className={styles.ProductDescription}>
-              {responseData.title}
-              <p>Remains: {responseData.quantity}</p>
+            </li>
+            <li>
+              
+            <div className={styles.SingleProductDescription}>
+              <p>Remain: {responseData.quantity}</p>
               <p>{responseData.description}</p>
+              <p><FaDollarSign/>{responseData.price}</p>
+              <button><FaShoppingCart/></button>
             </div>
             {/* {responseData.scountbool} */}
           </li>

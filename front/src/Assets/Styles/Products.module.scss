@@ -8,7 +8,9 @@
     justify-content: center;
     margin: 100px 0
 }
-
+.ProductsGrid li{
+    list-style: none;
+}
 .ProductCard {
     list-style: none;
     text-align: center;
@@ -36,5 +38,11 @@
 }
 
 .ProductDescription{
+    text-align: center;
+    margin: $DescriptionDivMargin;
+}
+
+.SingleProductDescription{
+    text-align: justify;
     margin: $DescriptionDivMargin;
 }

@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { fetchDataFromApi } from '../../Services/Utils//httpClient'; // Import the reusable function
 import styles from '../../Assets/Styles/Products.module.scss'
 import { Outlet, Link } from 'react-router-dom';
+import { FaDollarSign } from 'react-icons/fa';
 
 class Products extends Component {
   constructor(props) {
@@ -56,8 +57,11 @@ class Products extends Component {
               </div>
               <div className={styles.ProductDescription}>
                 {item.title}
-                <p>Remains: {item.quantity}</p>
-                <p>{item.price}</p>
+                <p>Remain: {item.quantity}</p>
+                {
+                  item.scount > 0 &&
+                  <h2>% {item.scount} Off</h2>
+                  }
                 {/* <p>{item.description}</p> */}
               </div>
               {/* {item.scountbool} */}
