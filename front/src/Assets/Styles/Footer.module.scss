@@ -1,5 +1,12 @@
 @import './variables.scss';
-
+footer{
+    color: $Background !important;
+    background-color: $Fontcolor !important;
+}
+footer a{
+    color: $Background !important;
+    background-color: $Fontcolor !important;
+}
 .FooterDiv1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px);
