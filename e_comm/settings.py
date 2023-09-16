@@ -34,10 +34,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = [
+    'https://markexpress-a63194cbc386.herokuapp.com',
+    'https://www.markexpress-a63194cbc386.herokuapp.com',
     'www.capricci.herokuapp.com',
-    'https://www.capricci.herokuapp.com',
-    'https://capricci.herokuapp.com',
-    'capricci.herokuapp.com',
+    'markexpress-a63194cbc386.herokuapp.com',
     '127.0.0.1',
     'localhost']
 
