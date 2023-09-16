@@ -18,7 +18,7 @@ import dj_database_url
 # Internal
 import os
 if os.path.isfile('env.py'):
-    import env
+    import env  # noqa: F401
 # ~~~~~~~~~~
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -120,7 +120,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'cart.contexts.cart_contents',
             ],
-            'builtins':[
+            'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
             ]
@@ -135,7 +135,7 @@ WSGI_APPLICATION = 'e_comm.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),  # Elephant SQL Server
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),  # Elephant SQL Server  # noqa: E501
     'default1': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',

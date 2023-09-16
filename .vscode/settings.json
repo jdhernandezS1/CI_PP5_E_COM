@@ -38,5 +38,6 @@
    },
    "[python]": {
       "editor.defaultFormatter": "ms-python.python"
-   }
+   },
+   "python.pipenvPath": "venv"
 }
