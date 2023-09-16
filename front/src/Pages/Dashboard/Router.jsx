@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { HashRouter, Routes, Route, useParams } from "react-router-dom";
 import Index from './Index';
 import ContactUs from '../ContactUs/ContactUs';
 import Products from '../Products/Products';
@@ -10,7 +10,7 @@ import Error from '../Error/Error';
 
 function Router() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Index />}>
           <Route index element={<Home />} />
@@ -23,7 +23,7 @@ function Router() {
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
 
   );
 }
