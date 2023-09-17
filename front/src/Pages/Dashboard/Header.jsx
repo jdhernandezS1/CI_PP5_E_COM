@@ -30,11 +30,7 @@ function Header() {
             <div className={styles.DropdownMenu}>
                 <DropdownMenu
                     triggerText="Select an Option" // Text for the button that triggers the dropdown
-                    items={[
-                        { id: 1, label: 'Option 1' },
-                        { id: 2, label: 'Option 2' },
-                        { id: 3, label: 'Option 3' },
-                    ]} // Array of dropdown menu items
+                     // Array of dropdown menu items
                     onItemSelected={handleItemSelected} // Callback function for item selection
                 />
 

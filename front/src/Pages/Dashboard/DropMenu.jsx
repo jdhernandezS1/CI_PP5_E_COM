@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from '../../Assets/Styles/NavigationBar.module.scss'
+import { Outlet, Link } from 'react-router-dom';
 
 class DropdownMenu extends Component {
   constructor(props) {
@@ -25,12 +26,10 @@ class DropdownMenu extends Component {
           {this.props.triggerText}
         </button>
         {isOpen && (
-          <ul className="dropdown-menu">
-            {this.props.items.map((item) => (
-              <li key={item.id} onClick={() => this.props.onItemSelected(item)}>
-                {item.label}
-              </li>
-            ))}
+          <ul className={styles.DropdownMenu}>
+            <li ><Link to="/">Home</Link></li>
+            <li ><Link to="/Products/">Products</Link></li>
+            <li ><Link to="/">Home</Link></li>
           </ul>
         )}
       </div>
