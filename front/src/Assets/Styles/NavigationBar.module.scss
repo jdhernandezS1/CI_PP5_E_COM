@@ -38,7 +38,14 @@
     margin: 0px;
 
 }
+.TitleLink{
+    font-size: xx-large !important;
 
+}
+.TitleLink a:hover{
+    font-size: xx-large !important;
+    
+}
 .DropdownMenuTitle {
     display: flex;
     justify-content: space-around;
@@ -84,5 +91,8 @@
         width: 100%;
         height: 200px;
 
+    }
+    .DropdownMenuTitle{
+        display: none;
     }
 }

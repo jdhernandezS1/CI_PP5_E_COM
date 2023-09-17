@@ -14,7 +14,7 @@ function Header() {
             <nav>
                 <ul className={styles.Nav}>
                     <li className={styles.NavLi}>
-                        <Link to="/">Home</Link>
+                        <Link to="/">Capricio</Link>
                     </li>
                     <li className={styles.NavLi}>
                         <Link to="/Products/">Products</Link>
