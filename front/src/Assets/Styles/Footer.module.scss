@@ -74,5 +74,25 @@ footer p{
         padding: 10px;
         justify-content: center;
     }
+}
 
+@media (max-width: 600px) {
+    .FooterDiv1 {
+        display: inline!important;
+        justify-content: center;
+        grid-template-columns:none!important;
+        width: 100%;
+
+    }
+    .FooterDiv2 {
+        display: inline!important;
+        margin: 0 10px!important;
+        grid-template-columns: none !important;
+        gap: 0px;
+        padding: 0px;
+        justify-content: center;
+    }
+    footer p{
+        margin: 0px 10px!important;
+    }
 }

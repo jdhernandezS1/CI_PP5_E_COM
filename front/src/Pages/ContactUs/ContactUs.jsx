@@ -37,7 +37,7 @@ class ContactUs extends Component {
       <div>
         <h1>Data</h1>
         {responseData.map((item) => (
-          <li key={item.id}>{item.username}</li>
+          <li key={item.id}>{item.email}</li>
         ))}
       </div>
     );

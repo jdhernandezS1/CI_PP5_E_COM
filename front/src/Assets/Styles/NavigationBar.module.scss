@@ -14,18 +14,42 @@
     background-color: $Fontcolor !important;
     margin: 10px;
 }
+
 .NavLi a:hover {
     font-size: xx-large !important;
 }
+
 .HeaderStandard {
     height: 10px;
 }
 
-.Nav{
-    padding: 0px!important;
-    margin: 0px!important;
+.Nav {
+    padding: 0px !important;
+    margin: 0px !important;
     color: $Background !important;
     background-color: $Fontcolor !important;
     width: 100%;
     height: 70px;
+}
+
+.DropdownMenu {
+    color: $Fontcolor !important;
+    background-color: $Background !important;
+}
+.DropdownMenuButton{
+    width: 200px;
+    height: 50px;
+}
+@media(max-width: 600px) {
+    .Nav {
+        display: none;
+    }
+}
+
+@media(min-width: 600px) {
+    .DropdownMenu {
+        width: 100%;
+        height: 200px;
+        display:none;
+    }
 }

@@ -41,7 +41,7 @@ class Products extends Component {
     // Render the component with the received data
     return (
       <div>
-        <h1>Our Room show</h1>
+        <h1>Our Show Room</h1>
         <ul className={styles.ProductsGrid}>
           {responseData.map((item) => (
             <li key={item.id} className={styles.ProductCard}>
