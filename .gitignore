@@ -12,3 +12,4 @@ staticfiles
 .coverage
 virtual
 venv
+pipenv
