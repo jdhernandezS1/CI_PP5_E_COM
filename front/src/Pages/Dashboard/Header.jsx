@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import { Outlet, Link } from 'react-router-dom';
+
 import styles from '../../Assets/Styles/NavigationBar.module.scss'
-import body from '../../Assets/Styles/Body.module.scss'
-import Footer from './Footer';
+import '../../Assets/Styles/variables.scss'
 import DropdownMenu from './DropMenu';
+
 function Header() {
+    /**
+     * A description of the entire function.
+     *
+     * @param {type} paramName - description of parameter
+     * @return {type} description of return value
+     */
     const handleItemSelected = (item) => {
         // Handle the selected item here
         console.log(`Selected item: ${item.label}`);
@@ -13,8 +20,8 @@ function Header() {
         <header className={`${styles.HeaderStandard}`}>
             <nav>
                 <ul className={styles.Nav}>
-                    <li className={styles.NavLi}>
-                        <Link to="/">Capricio</Link>
+                    <li className={`${styles.NavLi} ${styles.HomeButton}`}>
+                        <Link to="/" > Capricio</Link>
                     </li>
                     <li className={styles.NavLi}>
                         <Link to="/Products/">Products</Link>
@@ -30,7 +37,7 @@ function Header() {
             <div className={styles.DropdownMenu}>
                 <DropdownMenu
                     triggerText="Select an Option" // Text for the button that triggers the dropdown
-                     // Array of dropdown menu items
+                    // Array of dropdown menu items
                     onItemSelected={handleItemSelected} // Callback function for item selection
                 />
 

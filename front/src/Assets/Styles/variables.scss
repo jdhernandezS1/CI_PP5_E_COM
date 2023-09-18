@@ -1,7 +1,22 @@
 // Body
-$Background: wheat;
+$Background: #f5deb3;
+// $Background: #303030;
 $Fontcolor: #303030;
+// $Fontcolor: #f5deb3;
+// NavBar
+$NavHeight: 70px;
+$NavWidth: 100%;
+$TitleSize: 30vw;
+$HeaderHeight: 7vh;
+    // Drop Menu
+        $DropMenuWidth: 100%;
+        $DropMenuHeight: 200px;
 // Products
 $ImagesSize: 300px;
 $CardSize: 350px;
 $DescriptionDivMargin:10px; 
+// Decorators
+    // Screen
+    $ScreenLittle: 600px;
+    $ScreenMedium: 800px;
+    $ScreenBig: 1000px;

@@ -5,20 +5,17 @@
     color: $Fontcolor;
     margin-top: 0px;
     padding: 0px;
+    min-height: 90vh;
 
 }
 .Standard a{
     background-color: transparent;
     color: $Fontcolor;
-    font-size: large;
     text-decoration: none !important;
-}
-
-.Standard a:hover{
-    font-size: x-large;
 }
 
 .MainContent{
     margin:0px;
-    margin-top: 5rem;
+    padding-top: $HeaderHeight;
+    margin-top: $HeaderHeight;
 }

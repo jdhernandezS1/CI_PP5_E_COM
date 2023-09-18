@@ -2,25 +2,35 @@
 
 .NavLi {
     display: inline;
-    float: left;
+    float:left;
 }
 
 .NavLi a {
-    font-size: x-large !important;
+    font-size: x-large ;
     display: block;
     padding: 10px;
     text-decoration: none;
     color: $Background !important;
     background-color: $Fontcolor !important;
-    margin: 10px;
+    margin: 12px 10px;
 }
 
 .NavLi a:hover {
+    color: $Fontcolor !important;
+
+}
+.HomeButton a{
     font-size: xx-large !important;
+    margin: 5px;
+    width: $TitleSize;
 }
 
 .HeaderStandard {
-    height: 10px;
+    height: $HeaderHeight;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1;
 }
 
 .Nav {
@@ -28,15 +38,15 @@
     margin: 0px !important;
     color: $Background !important;
     background-color: $Fontcolor !important;
-    width: 100%;
-    height: 70px;
+    width: $NavWidth;
+    height: $NavHeight;
 }
 
 .DropdownMenu {
     color: $Fontcolor !important;
     background-color: $Background !important;
     margin: 0px;
-
+    max-height: $HeaderHeight;
 }
 .TitleLink{
     font-size: xx-large !important;
@@ -57,7 +67,7 @@
     position: relative;
 }
 
-@media(max-width: 600px) {
+@media(max-width: $ScreenLittle) {
     .Nav {
         display: none;
     }
@@ -88,9 +98,9 @@
 
 @media(min-width: 600px) {
     .DropdownMenu {
-        width: 100%;
-        height: 200px;
-
+        width: $DropMenuWidth;
+        height: $DropMenuHeight;
+        display: none;
     }
     .DropdownMenuTitle{
         display: none;

@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-.home{
+.home {
     margin: auto;
     text-align: center;
     width: 80%;
@@ -10,36 +10,44 @@
     background-position: center;
     background-image: url('https://res.cloudinary.com/djvwk7zf2/image/upload/v1676284938/logo_gdxcay.jpg');
 }
-.mainDiv a{
+
+.mainDiv a {
     font-size: xx-large;
     color: $Background !important;
     background-color: $Fontcolor !important;
+    padding: 0px 10px;
+    border-radius: 5%;
 
 }
-.mainDiv button{
+
+.mainDiv button {
+    padding: 0px;
     border-radius: 5%;
     color: $Background !important;
     background-color: $Fontcolor !important;
+    border: 0px;
 }
 
-.mainDiv button:hover{
+.mainDiv button:hover {
     color: $Fontcolor !important;
     background-color: $Background !important;
 }
-.mainDiv a:hover{
+
+.mainDiv a:hover {
     opacity: 90%;
     font-size: xx-large !important;
     color: $Fontcolor !important;
     background-color: $Background !important;
 }
+
 @media (max-width: 700px) {
-    .home{
+    .home {
         margin: auto;
         text-align: center;
         width: 100%;
         height: 100vh;
-        background-repeat:no-repeat;
-        background-position:center;
+        background-repeat: no-repeat;
+        background-position: center;
         background-image: url('https://res.cloudinary.com/djvwk7zf2/image/upload/v1676316225/logo_phone_l9fft4_wz1wpf.webp');
     }
 }

@@ -1,8 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { fetchDataFromApi } from '../../Services/Utils//httpClient'; // Import the reusable function
-import styles from '../../Assets/Styles/Home.module.scss'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { Outlet, Link } from 'react-router-dom';
 import { FaShopify } from 'react-icons/fa';
+
+import styles from '../../Assets/Styles/Home.module.scss'
 
 class Home extends Component {
   constructor(props) {
@@ -16,7 +20,6 @@ class Home extends Component {
 
   async componentDidMount() {
     try {
-
       // Use the fetchDataFromApi function to make a GET request
       const data = await fetchDataFromApi('products/'); // Replace with your specific path
       this.setState({ responseData: data });
@@ -33,7 +36,6 @@ class Home extends Component {
         <div>Error: {error.message}</div>
       );
     }
-
     if (!responseData) {
       return <div>Loading...</div>;
     }
@@ -46,7 +48,7 @@ class Home extends Component {
             Look around our new stock
           </h1>
           <h4>
-            <button>
+            <button className={styles.ShopButton}>
 
               <Link to={`Products`}>
                 <FaShopify /> Shop Now
