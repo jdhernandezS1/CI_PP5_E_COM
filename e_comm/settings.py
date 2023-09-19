@@ -14,9 +14,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from django.contrib.messages import constants as messages
 import dj_database_url
+from datetime import timedelta
+import os
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Internal
-import os
 if os.path.isfile('env.py'):
     import env  # noqa: F401
 # ~~~~~~~~~~
@@ -76,7 +77,8 @@ INSTALLED_APPS = [
     # Rest framework
     'corsheaders',
     'rest_framework',
-]
+    'rest_framework.authtoken',
+    'rest_auth',]
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -90,9 +92,13 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
+
 # Cors Setting
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [os.environ.get('CORS_ALLOWED_ORIGINS'), 'http://localhost:3000']
+CORS_ALLOWED_ORIGINS = [
+    os.environ.get('CORS_ALLOWED_ORIGINS'),
+    'http://localhost:3000'
+    ]
 CORS_ALLOW_CREDENTIALS = True
 # Local Settings
 ROOT_URLCONF = 'e_comm.urls'
@@ -126,7 +132,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'e_comm.wsgi.application'
 
+# Rest Framework
 
+REST_FRAMEWORK = {
+     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+      ],
+}
+SIMPLE_JWT = {
+     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
+     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+     'ROTATE_REFRESH_TOKENS': True,
+     'BLACKLIST_AFTER_ROTATION': True
+}
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
