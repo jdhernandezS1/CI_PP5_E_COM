@@ -7,6 +7,7 @@ import Product from '../Products/ProductId';
 import Courses from '../Courses/Courses';
 import Home from '../Home/Home';
 import Error from '../Error/Error';
+import Auth from '../Auth/Auth';
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
             <Route index element={<Products />} />
             <Route path=":id" element={<Product />} />
           </Route>
+          <Route path="Auth" element={<Auth />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

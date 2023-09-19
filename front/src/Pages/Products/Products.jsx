@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { fetchDataFromApi } from '../../Services/Utils//httpClient'; // Import the reusable function
+import { fetchDataFromApi } from '../../Services/Utils/httpClient'; // Import the reusable function
 import styles from '../../Assets/Styles/Products.module.scss'
 import { Outlet, Link } from 'react-router-dom';
 import { FaDollarSign } from 'react-icons/fa';
