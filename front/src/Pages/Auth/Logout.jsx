@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import { postDataFromApi } from '../../Services/Utils/postDataClient'; // Import the reusable function
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext'; // Import useAuth
 
-class Logout extends Component {
-    constructor(props) {
-        super(props);
+function Logout() {
+  const { logout } = useAuth(); // Access the logout function from AuthContext
+  const navigate = useNavigate();
+  const { token } = useAuth(); // Access the logout function from AuthContext
 
-        this.state = {
-            username: '',
-            password: '',
-            responseData: null,
-            error: null,
-        };
-    }
+  const handleLogout = () => {
+    logout(); // Call the logout function to clear the token
 
-    render() {
-        const { responseData, error } = this.state;
+    // Redirect to the login or home page after logout
+    navigate('/'); // Replace with the desired redirect route
+  };
 
-        return (
-            <div>
-                Loged successful
-            </div>
-        );
-    }
+  return (
+    <div>
+      <p>Logged Out</p>
+      <button onClick={handleLogout}>Logout</button>
+      <p>Token: {token}</p>
+    </div>
+  );
 }
 
 export default Logout;

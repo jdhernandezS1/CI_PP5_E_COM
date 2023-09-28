@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { postDataFromApi } from '../../Services/Utils/postDataClient'; // Import the reusable function
+import { postDataFromApi } from '../../Services/Utils/postDataClient';
 import { useNavigate } from 'react-router-dom';
-import Loged from './Loged'; // Import useNavigate
+import Loged from './Loged';
+import styles from '../../Assets/Styles/Auth.module.scss';
+import { AuthProvider } from './AuthContext'; // Import AuthProvider
 
-class Auth extends Component {
+class LogIn extends Component {
   constructor(props) {
     super(props);
 
@@ -12,6 +14,7 @@ class Auth extends Component {
       password: '',
       responseData: null,
       error: null,
+      data:'',
     };
   }
 
@@ -25,15 +28,15 @@ class Auth extends Component {
     const { username, password } = this.state;
 
     try {
-      // Replace 'token/' with the actual endpoint for authentication
       const data = await postDataFromApi('token/', { username, password });
       this.setState({ responseData: data });
 
-      // Check if the authentication was successful
       if (data && data.token) {
-        // Use the navigate function to redirect to a new route
+        // Store the token in the AuthProvider
+        AuthProvider.login(data.token);
+        console.log(data.token);
         const navigate = useNavigate();
-        navigate('/home'); // Replace with the desired redirect route
+        navigate('/home');
       }
     } catch (error) {
       this.setState({ error: error });
@@ -50,7 +53,7 @@ class Auth extends Component {
 
     if (!responseData) {
       return (
-        <div>
+        <div className={styles.Login}>
           <input
             type="text"
             name="username"
@@ -68,13 +71,12 @@ class Auth extends Component {
       );
     }
 
-    // Render the component with the received data (if needed)
     return (
       <div>
-        {<Loged/>}
+        {<Loged />}
       </div>
     );
   }
 }
 
-export default Auth;
+export default LogIn;

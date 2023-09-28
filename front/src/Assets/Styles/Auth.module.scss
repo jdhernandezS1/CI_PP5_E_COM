@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.Login{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px auto;
+    
+}
+.Login input{
+    margin: 5vh 0px;
+    height: 30px;
+
+}
+.Login button{
+    margin: 5vh auto;
+    width: 50%;
+    color: $Background;
+    background-color: $Fontcolor;
+}
+.Login button:hover{
+    color: $Fontcolor;
+    background-color: $Background;
+}
+

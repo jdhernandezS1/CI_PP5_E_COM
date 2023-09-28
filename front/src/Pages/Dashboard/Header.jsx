@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../Assets/Styles/NavigationBar.module.scss';
 import DropdownMenu from './DropMenu';
+import { useAuth } from '../Auth/AuthContext'; // Import useAuth
 
 function Header() {
+  const { logout } = useAuth(); // Access the logout function from AuthContext
   const [isAuthenticated, setIsAuthenticated] = useState(
     sessionStorage.getItem('isAuthenticated') === 'true'
   );
@@ -14,7 +16,9 @@ function Header() {
   };
 
   const toggleAuthentication = () => {
+    //  i need to veryfy the token here 
     // Toggle the authentication state
+    console.log(useAuth.token);
     const newIsAuthenticated = !isAuthenticated;
     setIsAuthenticated(newIsAuthenticated);
 
@@ -46,9 +50,9 @@ function Header() {
           </li>
           <li className={styles.NavLi} onClick={toggleAuthentication}>
             {isAuthenticated ? (
-              <Link to="/Logout">Logout</Link>
+              <Link to="/auth/LogOut">Logout</Link>
             ) : (
-              <Link to="/Auth" >{isAuthenticated ? 'Logout' : 'Login'}</Link>
+              <Link to="/auth/LogIn" >{isAuthenticated ? 'Logout' : 'Login'}</Link>
             )}
 
           </li>

@@ -7,21 +7,24 @@ import Product from '../Products/ProductId';
 import Courses from '../Courses/Courses';
 import Home from '../Home/Home';
 import Error from '../Error/Error';
-import Auth from '../Auth/Auth';
-
+import Auth from '../Auth/LogIn';
+import LogOut from '../Auth/Logout';
 function Router() {
   return (
     <HashRouter>
       <Routes>
         <Route path="/" element={<Index />}>
           <Route index element={<Home />} />
-          <Route path="Courses" element={<Courses />} />
-          <Route path="ContactUs" element={<ContactUs />} />
-          <Route path="Products">
+          <Route path="courses" element={<Courses />} />
+          <Route path="contactUs" element={<ContactUs />} />
+          <Route path="products">
             <Route index element={<Products />} />
             <Route path=":id" element={<Product />} />
           </Route>
-          <Route path="Auth" element={<Auth />} />
+          <Route path="auth" >
+            <Route path="login" element={<Auth />} />
+            <Route path="logout" element={<LogOut />} />
+          </Route>
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 class Loged extends Component {
     constructor(props) {
         super(props);
-
+        
         this.state = {
             username: '',
             password: '',
