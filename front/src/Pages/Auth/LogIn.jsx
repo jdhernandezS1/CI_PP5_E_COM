@@ -17,7 +17,7 @@ function LogIn() {
       var response = await postDataFromApi('token/', { username, password });
       console.log(response);
       if (response && response.access) {
-        login(response.access);
+        login(response.refresh ,response.access);
         // authenticated = true;
         navigate('/'); // Replace with the desired redirect route
       }

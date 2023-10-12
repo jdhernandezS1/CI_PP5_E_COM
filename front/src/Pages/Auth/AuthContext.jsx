@@ -3,18 +3,20 @@ import React, { createContext, useContext, useState } from 'react';
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  var [token, setToken] = useState(null);
-
-  const login = (newToken) => {
-    setToken(newToken);
+  var [refresh, setRefresh] = useState(null);
+  var [access, setAccess] = useState(null);
+  const login = (newRefres, newAccess) => {
+    setRefresh(newRefres);
+    setAccess(newAccess);
   };
 
   const logout = () => {
-    setToken(null);
+    setRefresh(null);
+    setAccess(null);
   };
 
   return (
-    <AuthContext.Provider value={{ token, login, logout }}>
+    <AuthContext.Provider value={{ refresh, access, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

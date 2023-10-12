@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 
 function Logout(props) {
-  const { token, logout } = useAuth();
+  const { refresh, access, logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -18,7 +18,6 @@ function Logout(props) {
     <div>
       <p>Logged Out</p>
       <button onClick={handleLogout}>Logout</button>
-      <p>Token: {token} .</p>
     </div>
   );
 }
