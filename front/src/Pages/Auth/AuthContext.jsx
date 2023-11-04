@@ -5,18 +5,23 @@ const AuthContext = createContext();
 export function AuthProvider({ children }) {
   var [refresh, setRefresh] = useState(null);
   var [access, setAccess] = useState(null);
-  const login = (newRefres, newAccess) => {
+  var [user, setUser] = useState(null);
+  const login = (newRefres, newAccess, newUser) => {
+
     setRefresh(newRefres);
     setAccess(newAccess);
+    setUser(newUser);
   };
 
   const logout = () => {
     setRefresh(null);
     setAccess(null);
+    setUser(null);
+
   };
 
   return (
-    <AuthContext.Provider value={{ refresh, access, login, logout }}>
+    <AuthContext.Provider value={{ refresh, access, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

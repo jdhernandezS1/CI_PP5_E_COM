@@ -5,7 +5,7 @@ import DropdownMenu from './DropMenu';
 import { useAuth } from '../Auth/AuthContext'; // Import useAuth
 
 function Header() {
-  const { logout } = useAuth(); // Access the logout function from AuthContext
+  const { refresh, access, user, logout } = useAuth(); // Access the useAuth credentials
   const [isAuthenticated, setIsAuthenticated] = useState(
     sessionStorage.getItem('isAuthenticated') === 'true'
   );
@@ -48,13 +48,8 @@ function Header() {
           <li className={styles.NavLi}>
             <Link to="/ContactUs">Contact</Link>
           </li>
-          <li className={styles.NavLi} onClick={toggleAuthentication}>
-            {isAuthenticated ? (
-              <Link to="/auth/LogOut">Logout</Link>
-            ) : (
-              <Link to="/auth/LogIn" >{isAuthenticated ? 'Logout' : 'Login'}</Link>
-            )}
-
+          <li className={styles.NavLi}>
+            {user ? (<Link to="/auth/LogOut"> Wellcome {user}</Link>) : (<Link to="/auth/LogIn" >Login</Link>)}
           </li>
         </ul>
       </nav>
