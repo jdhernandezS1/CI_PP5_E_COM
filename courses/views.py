@@ -6,11 +6,19 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.views import generic, View
 from django.utils.text import slugify
+from rest_framework import viewsets
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Internal
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
+from .serializers import CoursesSerializer
 # ~~~~~~~~~~
+
+class CoursesView(viewsets.ModelViewSet):
+    serializer_class = CoursesSerializer
+    queryset = Post.objects.all()
+
+
 
 
 class Courses(View):

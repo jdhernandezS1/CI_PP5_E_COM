@@ -6,6 +6,7 @@ export function AuthProvider({ children }) {
   const [refresh, setRefresh] = useState(localStorage.getItem('refresh') || null);
   const [access, setAccess] = useState(localStorage.getItem('access') || null);
   const [user, setUser] = useState(localStorage.getItem('user') || null);
+  
 
   const login = (newRefresh, newAccess, newUser) => {
     localStorage.setItem('refresh', newRefresh);

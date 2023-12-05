@@ -40,12 +40,12 @@
     background-color: $Background !important;
 }
 
-@media (max-width: 700px) {
+@media (max-width: $ScreenLittle) {
     .home {
         margin: auto;
         text-align: center;
         width: 100%;
-        height: 100vh;
+        height: 115vh;
         background-repeat: no-repeat;
         background-position: center;
         background-image: url('https://res.cloudinary.com/djvwk7zf2/image/upload/v1676316225/logo_phone_l9fft4_wz1wpf.webp');
