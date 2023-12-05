@@ -64,7 +64,7 @@ function Header() {
           </li>
           <li className={styles.NavLi}>
             <Link to="/Courses">Courses</Link>
-          </li>
+          </li> 
           <li className={styles.NavLi}>
             <Link to="/ContactUs">Contact</Link>
           </li>
