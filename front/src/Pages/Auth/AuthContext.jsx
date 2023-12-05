@@ -1,23 +1,30 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  var [refresh, setRefresh] = useState(null);
-  var [access, setAccess] = useState(null);
-  var [user, setUser] = useState(null);
-  const login = (newRefres, newAccess, newUser) => {
+  const [refresh, setRefresh] = useState(localStorage.getItem('refresh') || null);
+  const [access, setAccess] = useState(localStorage.getItem('access') || null);
+  const [user, setUser] = useState(localStorage.getItem('user') || null);
 
-    setRefresh(newRefres);
+  const login = (newRefresh, newAccess, newUser) => {
+    localStorage.setItem('refresh', newRefresh);
+    localStorage.setItem('access', newAccess);
+    localStorage.setItem('user', newUser);
+
+    setRefresh(newRefresh);
     setAccess(newAccess);
     setUser(newUser);
   };
 
   const logout = () => {
+    localStorage.removeItem('refresh');
+    localStorage.removeItem('access');
+    localStorage.removeItem('user');
+
     setRefresh(null);
     setAccess(null);
     setUser(null);
-
   };
 
   return (
