@@ -2,12 +2,20 @@
 html {
     height: 100%;
 }
+:root{
+    --bg-color: #F5F5F5;
+    --sc-color: #4CAF50;
+    --txt-color: #2C3E50;
+
+}
+
 
 body {
     background: no-repeat center center fixed;
     background-size: cover;
+    background-color: var(--bg-color);
     height: calc(100vh - 164px);
-    color: black;
+    color: var(--txt-color);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -28,7 +36,7 @@ body {
 
 /* general Classes */
 .bg-one {
-    background-color: #e15717e6;
+    background-color: #F5F5F5;
 }
 
 .bg-two {
