@@ -11,3 +11,5 @@ cloudinary_python.txt
 staticfiles
 .coverage
 virtual
+venv
+pipenv
