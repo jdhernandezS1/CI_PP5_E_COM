@@ -13,3 +13,5 @@ staticfiles
 virtual
 venv
 pipenv
+.idea
+.env
