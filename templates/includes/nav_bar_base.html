@@ -23,16 +23,16 @@
           aria-labelledby="user-options2">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
-          <a href="{% url 'products_manager' %}" class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Product
+          <a href="{% url 'products_manager' %}" class="bg-two dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Product
             Management</a>
-          <a href="{% url 'cats_manager' %}"   class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Categories
+          <a href="{% url 'cats_manager' %}"   class="bg-two dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Categories
             Management</a>
           {% endif %}
-          <a href="{% url 'profile' %}"        class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Orders</a>
-          <a href="{% url 'account_logout' %}" class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Logout</a>
+          <a href="{% url 'profile' %}"        class="bg-two dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Orders</a>
+          <a href="{% url 'account_logout' %}" class="bg-two dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Logout</a>
           {% else %}
-          <a href="{% url 'account_signup' %}" class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Register</a>
-          <a href="{% url 'account_login' %}"  class="dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Login</a>
+          <a href="{% url 'account_signup' %}" class="bg-two dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Register</a>
+          <a href="{% url 'account_login' %}"  class="bg-two dropdown-item py-2 rounded w-100 text-center mx-auto px-0">Login</a>
           {% endif %}
         </div>
         <!-- </div> -->
@@ -58,7 +58,7 @@
       </div>
       <div class="pl-2 text-one">
         <a href="{% url 'home' %}" class="nav-link main-logo-link" id="logo-pc">
-          <h2 class="rounded text-danger bg-two my-0 text-capitalize font-weight-bold font-dancing p-1">
+          <h2 class="rounded  bg-two text-warning my-0 text-capitalize font-weight-bold font-dancing p-1">
             <ion-icon name="ribbon-outline" class=""></ion-icon>Capricio
           </h2>
         </a>

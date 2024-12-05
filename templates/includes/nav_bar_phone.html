@@ -1,15 +1,15 @@
-<div class="mx-auto row text-black mx-auto">
+<div class="mx-auto row bg-two mx-auto">
     <div id="app_icon" class="p-0 mx-0 my-auto">
-        <button class="list-inline-item navbar-toggler py-2 mx-2 bg-white mx-auto border-0 text-one" type="button"
+        <button class="list-inline-item navbar-toggler py-2 mx-2 bg-two mx-auto border-0 bg-two" type="button"
             data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="text-one">
+            <span class="bg-two">
                 <ion-icon name="grid-outline"></ion-icon>
             </span>
         </button>
     </div>
-    <div class="list-inline-item btn-group text-black">
-        <a class=" nav-link d-block d-lg-none text-center p-0 m-1 text-one dropdown" href="#"
+    <div class="list-inline-item btn-group bg-two">
+        <a class=" nav-link d-block d-lg-none text-center p-0 m-1 bg-two dropdown" href="#"
             id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <ion-icon name="person"></ion-icon>
             {% if request.user.is_authenticated %}
@@ -18,24 +18,24 @@
             <p class="my-0 pr-1">Account</p>
             {% endif %}
         </a>
-        <div class="dropdown-menu border-1 rounded-1 text-black" aria-labelledby="user-options">
+        <div class="dropdown-menu border-1 rounded-1 bg-two" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-            <a href="{% url 'products_manager' %}" class="dropdown-item py-2 px-1 text-center">
+            <a href="{% url 'products_manager' %}" class="bg-two dropdown-item py-2 px-1 text-center">
                 Product Management</a>
-            <a href="{% url 'cats_manager' %}" class="dropdown-item py-2 px-1 rounded w-75 text-center">
+            <a href="{% url 'cats_manager' %}" class="bg-two dropdown-item py-2 px-1 rounded w-75 text-center">
                 Categories Management</a>
             {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item py-2 px-1 text-center">My Orders</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item py-2 px-1 text-center">Logout</a>
+            <a href="{% url 'profile' %}" class="bg-two dropdown-item py-2 px-1 text-center">My Orders</a>
+            <a href="{% url 'account_logout' %}" class="bg-two dropdown-item py-2 px-1 text-center">Logout</a>
             {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item py-2 px-1 text-center">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item py-2 px-1 text-center">Login</a>
+            <a href="{% url 'account_signup' %}" class="bg-two dropdown-item py-2 px-1 text-center">Register</a>
+            <a href="{% url 'account_login' %}" class="bg-two dropdown-item py-2 px-1 text-center">Login</a>
             {% endif %}
         </div>
     </div>
-    <div class="list-inline-item text-one p-0 m-1">
-        <a class="nav-link d-block d-lg-none p-0 m-0 text-decoration-none text-one" href="#" id="mobile-search"
+    <div class="list-inline-item bg-two p-0 m-1">
+        <a class="nav-link d-block d-lg-none p-0 m-0 text-decoration-none bg-two" href="#" id="mobile-search"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center ">
                 <div>
@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="list-inline-item p-0 m-1">
-        <a class="{% if grand_total %}font-weight-bold{% else %} {% endif %} nav-link d-block d-lg-none p-0 m-0 text-one text-decoration-none"
+        <a class="{% if grand_total %}font-weight-bold{% else %} {% endif %} nav-link d-block d-lg-none p-0 m-0 bg-two text-decoration-none"
             href="{% url 'cart' %}">
             <div class="text-center">
                 <div class="pr-1">

@@ -2,7 +2,7 @@
     <ul class="navbar-nav w-auto mx-auto p-3 bg-two">
         <li class="nav-item dropdown" id="logo">
             <a href="{% url 'home' %}" class=" main-logo-link">
-                <h2 class="bg-white text-danger my-0 text-capitalize  font-dancing p-1 rounded">
+                <h2 class="bg-two text-warning my-0 font-dancing p-1 rounded">
                     <ion-icon name="ribbon-outline" class=""></ion-icon> Capricio
                 </h2>
             </a>
@@ -19,11 +19,11 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Look Our Season Gifts
             </a>
-            <div class="dropdown-menu bg-one btn btn-outline-warning w-75 " aria-labelledby="products-link">
-                <a href="{% url 'prods_cat' %}?categ=winter" class="bg-two dropdown-item w-50 rounded ">Winter</a>
-                <a href="{% url 'prods_cat' %}?categ=easter" class="bg-two dropdown-item w-50 rounded">Easter</a>
-                <a href="{% url 'prods_cat' %}?categ=summer" class="bg-two dropdown-item w-50 rounded">Summer</a>
-                <a href="{% url 'prods_cat' %}?categ=valentines" class="bg-two dropdown-item w-50 rounded">Valentine's Day</a>
+            <div class="dropdown-menu bg-two btn " aria-labelledby="products-link">
+                <a href="{% url 'prods_cat' %}?categ=winter" class="bg-two dropdown-item w-100 rounded ">Winter</a>
+                <a href="{% url 'prods_cat' %}?categ=easter" class="bg-two dropdown-item w-100 rounded">Easter</a>
+                <a href="{% url 'prods_cat' %}?categ=summer" class="bg-two dropdown-item w-100 rounded">Summer</a>
+                <a href="{% url 'prods_cat' %}?categ=valentines" class="bg-two dropdown-item w-100 rounded">Valentine's Day</a>
             </div>
         </li>
         <li class="nav-item dropdown ">

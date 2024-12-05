@@ -18,7 +18,18 @@ body {
     font-weight: 200;
     font-style: normal;
 }
-
+/* Header */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+/* content */
+#content{
+    margin-top: 164px;
+}
 /* FOOTER */
 /*  Bootstrap */
 *,
@@ -42,7 +53,6 @@ body {
     background-color: #2C3E50;
     color: #F5F5F5;
 }
-
 .text-two {
     color: #F5F5F5;
 }
@@ -74,6 +84,7 @@ body {
 
 #nav_pc {
     width: 100%;
+    margin: 0px;
 }
 
 .icon {
