@@ -1,17 +1,17 @@
-  <div id="nav_pc" class="row w-100">
-    <div class="mx-auto row">
+  <div id="nav_pc" class="row bg-two">
+    <div class="mx-auto row bg-two">
 
-      <div class="list-inline-item dropdown ">
-        <a class="nav-link text-center row text-decoration-none text-black ml-auto" href="#" id="user-options2"
+      <div class="list-inline-item dropdown bg-two">
+        <a class="nav-link text-center row text-decoration-none bg-two ml-auto" href="#" id="user-options2"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <div class="w-100 text-black">
+          <div class="w-100 bg-two">
             {% if request.user.is_authenticated %}
             <ion-icon name="person" class=""></ion-icon>
             {% else %}
             <ion-icon name="person-add" class=""></ion-icon>
             {% endif %}
           </div>
-          <p class="my-0 p-0 w-100 text-capitalize text-black">
+          <p class="my-0 p-0 w-100 text-capitalize bg-two">
             {% if request.user.is_authenticated %}
             {{user}}
             {% else %}
@@ -19,7 +19,7 @@
             {% endif %}
           </p>
         </a>
-        <div class="dropdown-menu p-1 btn btn-outline-secondary text-center text-black dropleft"
+        <div class="dropdown-menu p-1 btn btn-outline-secondary text-center bg-two dropleft"
           aria-labelledby="user-options2">
           {% if request.user.is_authenticated %}
           {% if request.user.is_superuser %}
@@ -38,9 +38,9 @@
         <!-- </div> -->
       </div>
       <div class="list-inline-item">
-        <a class="{% if grand_total %} font-weight-bold{% else %} {% endif %} text-black nav-link"
+        <a class="{% if grand_total %} font-weight-bold{% else %} {% endif %} bg-two nav-link"
           href="{% url 'cart' %}">
-          <div class="text-center row px-3 text-black">
+          <div class="text-center row px-3 bg-two">
             <div class="w-100">
               <ion-icon name="cart" class=""></ion-icon>
             </div>
@@ -58,7 +58,7 @@
       </div>
       <div class="pl-2 text-one">
         <a href="{% url 'home' %}" class="nav-link main-logo-link" id="logo-pc">
-          <h2 class="rounded text-danger bg-white my-0 text-capitalize font-weight-bold font-dancing p-1">
+          <h2 class="rounded text-danger bg-two my-0 text-capitalize font-weight-bold font-dancing p-1">
             <ion-icon name="ribbon-outline" class=""></ion-icon>Capricio
           </h2>
         </a>
@@ -67,9 +67,9 @@
 
     <div class="mx-auto p-3">
       <form method="GET" action="{% url 's_prods' %}">
-        <div class="input-group w-100 ">
-          <label for="search-bar" class="d-none">empty</label>
-          <input class="form-control bg-light  border border-black font-weight-bold rounded-left" type="text" name="q"
+        <div class="input-group w-100 bg-two">
+          <label for="search-bar" class="d-none bg-two">empty</label>
+          <input class="form-control bg-one  border border-black font-weight-bold rounded-left" type="text" name="q"
             placeholder="Search our site" id="search-bar">
           <div class="input-group-append text-one">
             <button class="form-control btn btn-light border border-black rounded-right text-one" type="submit">
