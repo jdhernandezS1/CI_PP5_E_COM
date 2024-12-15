@@ -34,12 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = [
-    'www.capricci.herokuapp.com',
-    'https://www.capricci.herokuapp.com',
-    'https://capricci.herokuapp.com',
-    'capricci.herokuapp.com',
-    '127.0.0.1',
-    'localhost']
+    '*']
 
 # Application definition
 
