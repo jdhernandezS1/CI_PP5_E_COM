@@ -1,15 +1,35 @@
-html {
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --sc-color: #F5F5F5;
+    --bg-color: #a0d6a2;
+    --txt-color: #2C3E50;
+
 }
+
 
 body {
     background: no-repeat center center fixed;
+    
     background-size: cover;
     height: calc(100vh - 164px);
-    color: black;
-    font-family: 'Roboto', sans-serif;
+    /* color: #2C3E50; */
+    font-family: 'poppins-light', sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
-
+/* Header */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+/* content */
+#content{
+    margin-top: 164px;
+}
 /* FOOTER */
 /*  Bootstrap */
 *,
@@ -25,15 +45,16 @@ body {
 
 /* general Classes */
 .bg-one {
-    background-color: #e15717e6;
+    background-color: #F5F5F5;
+    color: #2C3E50;
 }
 
 .bg-two {
-    background-color: #3c7fffcf;
+    background-color: #2C3E50;
+    color: #F5F5F5;
 }
-
 .text-two {
-    color: #3c7fffcf;
+    color: #F5F5F5;
 }
 
 .text-two:link {
@@ -63,6 +84,7 @@ body {
 
 #nav_pc {
     width: 100%;
+    margin: 0px;
 }
 
 .icon {

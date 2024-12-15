@@ -12,3 +12,6 @@ staticfiles
 .coverage
 virtual
 venv
+pipenv
+.idea
+.env

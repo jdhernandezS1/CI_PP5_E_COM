@@ -93,12 +93,11 @@
   <title>Capricio {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body class="text-black w-100 h-100">
-  <header class="container-fluid absolute-top p-0 m-0 bg-white w-100">
-    <hr class="w-100 bg-one m-0 py-2">
+<body class="w-100 h-100">
+  <header id="header" class="container-fluid absolute-top p-0 m-0 ">
     {% include 'includes/nav_bar_base.html' %}
-    <nav class="navbar navbar-expand-lg navbar-light p-0 m-0  bg-white w-100 mr-2">
-      <div id="nav_phone" class="mx-auto row bg-white text-black p-0">
+    <nav class="navbar navbar-expand-lg navbar-light p-0 m-0  bg-two w-100 mr-2">
+      <div id="nav_phone" class="mx-auto row bg-two text-black p-0">
         {% include 'includes/nav_bar_phone.html' %}
       </div>
       {% include 'includes/nav_bar_large_products.html' %}
@@ -109,7 +108,7 @@
 
 
   </header>
-  <div class="p-0 m-0 bg-white text-black">
+  <div id="content" class="p-0 bg-white text-black">
     {% block content %}
     {% endblock %}
   </div>
